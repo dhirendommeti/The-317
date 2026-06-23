@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 317 — Midwest M&A and Markets</title>
+<meta name="description" content="Middle-market deals and Midwest markets, covered with depth.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The 317 — Midwest M&A and Markets">
+<meta property="og:description" content="Middle-market deals and Midwest markets, covered with depth.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:url" content="https://the317.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The 317 — Midwest M&A and Markets">
+<meta name="twitter:description" content="Middle-market deals and Midwest markets, covered with depth.">
+<meta name="twitter:image" content="og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #0f1623;
+    --paper-2: #1a2640;
+    --ink: #edf1fa;
+    --ink-mute: #8b9bbd;
+    --rule: #1f2c47;
+    --rule-dark: #2c3c5e;
+    --ember: #5b8def;
+    --ember-bright: #82aef2;
+    --green-tick: #16a34a;
+    --red-tick: #dc2626;
+    --nav-height: 52px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--ember); }
+
+  .label {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+
+  .label-ember { color: var(--ember); }
+
+  /* ── UTILITY BAR ── */
+  #utility-bar {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    padding: 6px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    position: relative;
+    z-index: 100;
+  }
+
+  #utility-bar .util-left { display: flex; gap: 16px; align-items: center; }
+  #utility-bar .util-right { display: flex; gap: 20px; }
+  #utility-bar .util-right a { color: var(--ink-mute); transition: color 0.15s; }
+  #utility-bar .util-right a:hover { color: var(--ember); }
+
+  /* ── MARKET TICKER ── */
+  #ticker-bar {
+    background: var(--ink);
+    overflow: hidden;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 90;
+  }
+
+  #ticker-bar::before, #ticker-bar::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 40px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  #ticker-bar::before { left: 0; background: linear-gradient(to right, var(--ink), transparent); }
+  #ticker-bar::after  { right: 0; background: linear-gradient(to left, var(--ink), transparent); }
+
+  .ticker-track {
+    display: flex;
+    gap: 0;
+    white-space: nowrap;
+    animation: ticker-scroll 38s linear infinite;
+    will-change: transform;
+  }
+
+  #ticker-bar:hover .ticker-track { animation-play-state: paused; }
+
+  @keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #1a2640;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .ticker-sym { font-weight: 500; letter-spacing: 0.04em; }
+  .ticker-price { color: rgba(26,38,64,0.7); }
+  .ticker-chg { font-size: 10px; }
+  .ticker-up { color: #4ade80; }
+  .ticker-down { color: #f87171; }
+
+  /* ── MASTHEAD ── */
+  #masthead {
+    text-align: center;
+    padding: 52px 24px 36px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .masthead-kicker {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 20px;
+  }
+
+  .masthead-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 20px;
+  }
+
+  .masthead-tagline {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-mute);
+    letter-spacing: 0.01em;
+  }
+
+  /* ── NAVIGATION ── */
+  #main-nav {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    transition: box-shadow 0.2s;
+  }
+
+  #main-nav.scrolled {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+
+  .nav-inner {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+
+  .nav-inner a {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    padding: 16px 20px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    cursor: pointer;
+  }
+
+  .nav-inner a:hover {
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+  }
+
+  /* ── SHARED SECTION WRAPPER ── */
+  .section-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── LEAD STORY GRID ── */
+  #lead-section {
+    padding: 52px 0 0;
+  }
+
+  .lead-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  @media (min-width: 768px) {
+    .lead-grid {
+      grid-template-columns: 1.85fr 1px 1fr;
+    }
+  }
+
+  .lead-divider {
+    background: var(--rule);
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .lead-divider { display: block; }
+  }
+
+  .lead-main {
+    padding: 0 0 48px;
+  }
+
+  @media (min-width: 768px) {
+    .lead-main { padding: 0 40px 48px 0; }
+  }
+
+  .lead-img-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .lead-img-placeholder .img-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.15;
+    background-image:
+      linear-gradient(var(--rule-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule-dark) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .lead-headline {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 12px 0 14px;
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+  .lead-headline:hover { color: var(--ember); }
+
+  .lead-dek {
+    font-size: 17px;
+    color: var(--ink-mute);
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .byline-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+
+  .byline-dot { color: var(--rule-dark); }
+
+  .lead-secondary {
+    padding: 0;
+  }
+
+  @media (min-width: 768px) {
+    .lead-secondary { padding: 0 0 48px 40px; }
+  }
+
+  .secondary-item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--rule);
+    cursor: pointer;
+  }
+
+  .secondary-item:first-child { padding-top: 0; }
+  .secondary-item:last-child { border-bottom: none; }
+
+  .secondary-headline {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 6px 0 8px;
+    transition: color 0.15s;
+  }
+
+  .secondary-item:hover .secondary-headline { color: var(--ember); }
+
+  .secondary-summary {
+    font-size: 14px;
+    color: var(--ink-mute);
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 40px 0 16px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 0;
+  }
+
+  .section-title {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .section-link {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    transition: color 0.15s;
+  }
+  .section-link:hover { color: var(--ember); }
+
+  /* ── DEAL FLOW TABLE ── */
+  #deal-flow {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .deal-module {
+    border: 1px solid var(--rule-dark);
+  }
+
+  .deal-module-header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .deal-module-title {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .deal-updated {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(15,22,35,0.5);
+  }
+
+  .deal-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .deal-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+  }
+
+  .deal-table th {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    padding: 12px 24px;
+    text-align: left;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper-2);
+    white-space: nowrap;
+  }
+
+  .deal-table th.right { text-align: right; }
+
+  .deal-table td {
+    padding: 14px 24px;
+    font-size: 14px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--rule);
+    vertical-align: middle;
+  }
+
+  .deal-table td.company {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .deal-table td.value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    text-align: right;
+    color: var(--ink);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .deal-table td.sector {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink-mute);
+  }
+
+  .deal-table td.date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-mute);
+    white-space: nowrap;
+  }
+
+  .deal-table tr:last-child td { border-bottom: none; }
+
+  .deal-table tr:hover td { background: var(--paper-2); }
+
+  .deal-tag {
+    display: inline-block;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 7px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+
+  .tag-ma       { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+  .tag-pe       { background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; }
+  .tag-growth   { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+  .tag-ipo      { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+  .tag-private  { background: #e0f2fe; color: #075985; border: 1px solid #7dd3fc; }
+
+  /* ── COVERAGE GRID ── */
+  #latest-coverage {
+    padding: 0 0 52px;
+  }
+
+  .coverage-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (min-width: 600px) {
+    .coverage-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .coverage-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .article-card {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--rule);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  @media (min-width: 600px) {
+    .article-card {
+      padding: 28px 24px;
+      border-right: 1px solid var(--rule);
+    }
+    .article-card:nth-child(2n) { border-right: none; }
+  }
+
+  @media (min-width: 900px) {
+    .article-card:nth-child(2n) { border-right: 1px solid var(--rule); }
+    .article-card:nth-child(3n) { border-right: none; }
+  }
+
+  .card-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-thumb::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image:
+      linear-gradient(var(--ink) 1px, transparent 1px),
+      linear-gradient(90deg, var(--ink) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .card-headline {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 6px 0 8px;
+    transition: color 0.15s;
+  }
+
+  .article-card:hover .card-headline { color: var(--ember); }
+
+  .card-summary {
+    font-size: 14px;
+    color: var(--ink-mute);
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  /* ── NEWSLETTER BLOCK ── */
+  #newsletter {
+    background: var(--ink);
+    padding: 72px 24px;
+  }
+
+  .newsletter-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  @media (min-width: 700px) {
+    .newsletter-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+  }
+
+  .newsletter-label {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ember-bright);
+    margin-bottom: 16px;
+  }
+
+  .newsletter-headline {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--paper);
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .newsletter-input-row {
+    display: flex;
+    gap: 0;
+  }
+
+  .newsletter-input {
+    flex: 1;
+    background: rgba(15,22,35,0.06);
+    border: 1px solid rgba(15,22,35,0.2);
+    border-right: none;
+    color: var(--paper);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    padding: 12px 16px;
+    outline: none;
+    transition: border-color 0.15s, background 0.15s;
+    min-width: 0;
+  }
+
+  .newsletter-input::placeholder {
+    color: rgba(15,22,35,0.4);
+  }
+
+  .newsletter-input:focus {
+    border-color: rgba(15,22,35,0.4);
+    background: rgba(15,22,35,0.1);
+  }
+
+  .newsletter-btn {
+    background: var(--ember);
+    color: var(--paper);
+    border: 1px solid var(--ember);
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+
+  .newsletter-btn:hover { background: var(--ember-bright); border-color: var(--ember-bright); }
+
+  .newsletter-small {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: rgba(15,22,35,0.45);
+  }
+
+  .newsletter-success {
+    display: none;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #4ade80;
+    padding-top: 4px;
+  }
+
+  /* ── FOOTER ── */
+  #footer {
+    background: var(--paper);
+    border-top: 3px double var(--rule-dark);
+    padding: 48px 24px 40px;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  @media (min-width: 700px) {
+    .footer-inner {
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+    }
+  }
+
+  .footer-brand { }
+
+  .footer-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  .footer-tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-mute);
+    line-height: 1.5;
+  }
+
+  .footer-col-title {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--ink-mute);
+    transition: color 0.15s;
+  }
+
+  .footer-links a:hover { color: var(--ember); }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 32px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* ── FADE-IN ANIMATIONS (CSS only, no JS required) ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    animation: fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) both;
+  }
+
+  .reveal-delay-1 { animation-delay: 0.08s; }
+  .reveal-delay-2 { animation-delay: 0.16s; }
+  .reveal-delay-3 { animation-delay: 0.24s; }
+  .reveal-delay-4 { animation-delay: 0.32s; }
+  .reveal-delay-5 { animation-delay: 0.40s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; }
+    .ticker-track { animation: none; }
+  }
+
+  /* ── MISC ── */
+  .kicker {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ember);
+  }
+
+  .hairline { height: 1px; background: var(--rule); }
+
+  .lead-img-link { display: block; }
+  .lead-hero-photo {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--rule);
+    margin: 20px 0;
+  }
+  .lead-img-placeholder { margin: 20px 0; }
+
+  .read-more {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ember);
+    transition: color 0.15s;
+  }
+  .read-more:hover { color: var(--ink); }
+
+  /* ── MARKETS SECTION ── */
+  #markets { padding: 0 0 52px; }
+
+  /* ── MARKET DIGEST ── */
+  .digest-card {
+    border: 1px solid var(--rule);
+    background: var(--paper-2);
+    padding: 20px 24px;
+    margin-bottom: 24px;
+  }
+  .digest-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .digest-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .digest-status-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--ink-mute);
+    flex-shrink: 0;
+  }
+  .digest-status-dot.live {
+    background: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74,222,128,0.18);
+  }
+  .digest-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-mute);
+  }
+  .digest-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── M&A ACTIVITY NEWS PANEL ── */
+  .deal-news-card {
+    border: 1px solid var(--rule);
+    margin-bottom: 24px;
+  }
+  .deal-news-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 16px 20px;
+    background: var(--paper-2);
+    border-bottom: 1px solid var(--rule);
+  }
+  .deal-news-title {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .deal-news-disclaimer {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--ink-mute);
+    line-height: 1.5;
+    padding: 12px 20px 0;
+  }
+  .deal-news-disclaimer a { color: var(--ember); }
+  .deal-news-list { padding: 8px 0 4px; }
+  .deal-news-item {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--rule);
+    transition: background 0.15s;
+  }
+  .deal-news-item:last-child { border-bottom: none; }
+  .deal-news-item:hover { background: var(--paper-2); }
+  .deal-news-sym {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--ember);
+    flex-shrink: 0;
+    min-width: 36px;
+  }
+  .deal-news-headline {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+    flex: 1;
+  }
+  .deal-news-meta {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    color: var(--ink-mute);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .deal-news-empty {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--ink-mute);
+    padding: 16px 20px;
+  }
+  @media (max-width: 600px) {
+    .deal-news-item { flex-wrap: wrap; }
+    .deal-news-meta { width: 100%; }
+  }
+
+  .markets-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border: 1px solid var(--rule);
+    border-top: none;
+    cursor: pointer;
+    transition: border-color 0.15s;
+  }
+
+  @media (min-width: 700px) {
+    .markets-card { grid-template-columns: 1.2fr 1fr; }
+  }
+
+  .markets-card:hover { border-color: var(--rule-dark); }
+
+  .markets-card-img { position: relative; overflow: hidden; }
+
+  .markets-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    min-height: 220px;
+  }
+
+  .markets-photo-fallback {
+    width: 100%;
+    min-height: 220px;
+    background: var(--paper-2);
+    background-image:
+      linear-gradient(var(--rule-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule-dark) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.4;
+  }
+
+  .markets-card-body {
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    background: var(--paper);
+    border-left: 1px solid var(--rule);
+  }
+
+  @media (max-width: 699px) {
+    .markets-card-body { border-left: none; border-top: 1px solid var(--rule); }
+  }
+
+  .markets-headline {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ink);
+    transition: color 0.15s;
+  }
+
+  .markets-card:hover .markets-headline { color: var(--ember); }
+
+  .markets-dek {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-mute);
+  }
+
+  /* Mobile nav scrollable */
+  @media (max-width: 600px) {
+    #utility-bar .util-right { display: none; }
+    .nav-inner { justify-content: flex-start; }
+    .nav-inner a { padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- UTILITY BAR -->
+<div id="utility-bar">
+  <div class="util-left">
+    <span id="util-date"></span>
+    <span>Indianapolis</span>
+  </div>
+  <div class="util-right">
+    <a href="deal-flow.html">Deals</a>
+    <a href="#markets">Markets</a>
+    <a href="#newsletter">Newsletter</a>
+    <a href="about.html">About</a>
+  </div>
+</div>
+
+<!-- MARKET TICKER -->
+<div id="ticker-bar" role="marquee" aria-label="Live market data">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<!-- MASTHEAD -->
+<header id="masthead">
+  <p class="masthead-kicker">Established 2026 · Indianapolis</p>
+  <div class="masthead-logo" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+    <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:13px;letter-spacing:.3em;color:#5b8def;text-transform:uppercase;">The</div>
+    <div style="flex-shrink:0;width:80px;height:80px;border-radius:10px;overflow:hidden;background:#0f1623;position:relative;">
+      <div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div>
+      <div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:32px;letter-spacing:-1.5px;color:#edf1fa;">317</span>
+      </div>
+      <div style="position:absolute;top:8px;right:9px;width:6px;height:6px;border-radius:50%;background:#5b8def;"></div>
+    </div>
+  </div>
+  <p class="masthead-tagline">Middle-market deals and Midwest markets, covered with depth.</p>
+</header>
+
+<!-- PRIMARY NAV -->
+<nav id="main-nav" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a href="deal-flow.html">Deals</a>
+    <a href="#markets">Markets</a>
+    <a href="#">Pharma</a>
+    <a href="#">Banking</a>
+    <a href="#">Industrials</a>
+    <a href="#newsletter">Newsletter</a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- LEAD STORY GRID -->
+  <section id="lead-section" aria-label="Lead stories">
+    <div class="section-wrap">
+      <div class="lead-grid">
+
+        <!-- Left: Main story (populated by renderLeadAndSecondary) -->
+        <article class="lead-main reveal" id="lead-main"></article>
+
+        <!-- Vertical divider -->
+        <div class="lead-divider" aria-hidden="true"></div>
+
+        <!-- Right: Secondary stories (populated by renderLeadAndSecondary) -->
+        <div class="lead-secondary" id="lead-secondary"></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DEAL FLOW MODULE -->
+  <section id="deal-flow" aria-label="Deal flow">
+    <div class="section-wrap">
+      <div class="section-header reveal">
+        <span class="section-title">The Deal Flow</span>
+        <a href="deal-flow.html" class="section-link">View all deals →</a>
+      </div>
+      <div class="deal-module reveal reveal-delay-1">
+        <div class="deal-module-header">
+          <span class="deal-module-title">Recent Transactions</span>
+          <span class="deal-updated">Updated weekly</span>
+        </div>
+        <div class="deal-table-wrap">
+          <table class="deal-table" id="deal-table">
+            <thead>
+              <tr>
+                <th>Target</th>
+                <th>Counterparty</th>
+                <th>Sector</th>
+                <th>Type</th>
+                <th class="right">Value</th>
+                <th>Announced</th>
+              </tr>
+            </thead>
+            <tbody id="deal-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKETS SECTION -->
+  <section id="markets" aria-label="Markets coverage">
+    <div class="section-wrap">
+      <div class="section-header reveal">
+        <span class="section-title">Markets</span>
+        <a href="fed-warsh-rate-hold-june-2026.html" class="section-link">View all →</a>
+      </div>
+      <div class="digest-card reveal" id="market-digest">
+        <div class="digest-header">
+          <span class="digest-status"><span class="digest-status-dot"></span>Loading market digest…</span>
+        </div>
+        <p class="digest-body">Pulling the latest quotes for the Midwest-anchored names we track.</p>
+      </div>
+
+      <div class="deal-news-card reveal">
+        <div class="deal-news-header">
+          <span class="deal-news-title">M&amp;A Activity — Companies We Track</span>
+          <a href="deal-flow.html" class="section-link" style="font-size:10px;">Full Deal Flow →</a>
+        </div>
+        <p class="deal-news-disclaimer">Live news mentioning the 19 public companies on our ticker — not comprehensive Midwest deal coverage. For sourced, manually verified middle-market deals, see <a href="deal-flow.html">The Deal Flow</a>.</p>
+        <div id="deal-news" class="deal-news-list">
+          <p class="deal-news-empty">Loading recent M&amp;A activity…</p>
+        </div>
+      </div>
+
+      <div class="markets-featured reveal reveal-delay-1">
+        <a href="fed-warsh-rate-hold-june-2026.html" class="markets-card">
+          <div class="markets-card-img">
+            <img src="warsh-fed-press-conference.jpg" alt="Fed Chairman Kevin Warsh" class="markets-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <div class="markets-photo-fallback" style="display:none"></div>
+          </div>
+          <div class="markets-card-body">
+            <p class="kicker">Federal Reserve · Breaking</p>
+            <h2 class="markets-headline">Warsh Holds Rates, Signals the Next Move Is Up</h2>
+            <p class="markets-dek">The new Fed chairman kept borrowing costs unchanged for a fourth straight meeting — but nine FOMC members now project a hike before year-end, rattling markets and resetting the outlook for Midwest dealmaking through 2026.</p>
+            <div class="byline-row">
+              <span>By The 317 Staff</span>
+              <span class="byline-dot">·</span>
+              <span>June 18, 2026</span>
+              <span class="byline-dot">·</span>
+              <span>8 min read</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST COVERAGE GRID -->
+  <section id="latest-coverage" aria-label="Latest coverage">
+    <div class="section-wrap">
+      <div class="section-header reveal">
+        <span class="section-title">Latest Coverage</span>
+        <a href="#" class="section-link">View all →</a>
+      </div>
+      <div class="coverage-grid" id="coverage-grid"></div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER BLOCK -->
+  <section id="newsletter" aria-label="Newsletter signup">
+    <div class="newsletter-inner">
+      <div class="reveal">
+        <p class="newsletter-label">Coming Soon · The Weekly Briefing</p>
+        <h2 class="newsletter-headline">The deals the national press misses, in your inbox every Sunday.</h2>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <div class="newsletter-input-row">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="your@email.com"
+              id="newsletter-email"
+              aria-label="Email address"
+              required
+            >
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </div>
+          <!-- TODO: Connect to email capture API (Beehiiv / ConvertKit) here -->
+          <p class="newsletter-small">No spam. Unsubscribe anytime.</p>
+          <p class="newsletter-success" id="newsletter-success" role="status">✓ You're on the list.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-wrap">
+        <div style="display:inline-flex;align-items:center;gap:10px;">
+          <div style="flex-shrink:0;width:36px;height:36px;border-radius:5px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
+          <span style="font-family:'DM Serif Display',Georgia,serif;font-size:20px;color:#edf1fa;">The 317</span>
+        </div>
+      </div>
+      <p class="footer-tagline">Middle-market deals and Midwest markets, covered with depth.</p>
+    </div>
+
+    <div>
+      <p class="footer-col-title">Sections</p>
+      <ul class="footer-links">
+        <li><a href="deal-flow.html">Deals</a></li>
+        <li><a href="#markets">Markets</a></li>
+        <li><a href="#">Pharma</a></li>
+        <li><a href="#">Banking</a></li>
+        <li><a href="#">Industrials</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-col-title">The Publication</p>
+      <ul class="footer-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Pitch a story</a></li>
+        <li><a href="#">Advertise</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-col-title">Follow</p>
+      <ul class="footer-links">
+        <li>
+          <a href="#" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:6px" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="X (Twitter)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:6px" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+            X / Twitter
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="RSS Feed">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:6px" aria-hidden="true"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>
+            RSS
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 The 317. All rights reserved.</span>
+    <span>Indianapolis, Indiana</span>
+  </div>
+</footer>
+
+<script src="ticker.js"></script>
+<script>
+  /* ── DATE ── */
+  (function() {
+    const now = new Date();
+    const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const dateStr = now.toLocaleDateString('en-US', opts).toUpperCase();
+    const el = document.getElementById('util-date');
+    if (el) el.textContent = dateStr;
+
+    const leadDate = document.getElementById('lead-date');
+    if (leadDate) leadDate.textContent = now.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  })();
+
+  /* ── TICKER (shared across all pages — see ticker.js) ── */
+  initTicker();
+
+  /* ── M&A ACTIVITY NEWS (see ticker.js) ── */
+  initDealNews();
+
+  /* ── STICKY NAV SHADOW ── */
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', function() {
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 120);
+  }, { passive: true });
+
+  /* ── DEAL FLOW DATA ── */
+  /* Real, sourced deals — five most recent. Full list with source links at deal-flow.html */
+  const deals = [
+    {
+      target: 'Material Handling Exchange, LLC',
+      counterparty: 'Architect Equity',
+      sector: 'Industrials',
+      dealType: 'PE Buyout',
+      value: null,
+      valueDisplay: 'Undisclosed',
+      dateAnnounced: '2026-06-15',
+      source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana',
+    },
+    {
+      target: 'Tallman Equipment Company',
+      counterparty: 'Platte River Equity',
+      sector: 'Energy',
+      dealType: 'Growth Equity',
+      value: null,
+      valueDisplay: 'Undisclosed',
+      dateAnnounced: '2026-06-15',
+      source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana',
+    },
+    {
+      target: 'Crowe LLP',
+      counterparty: 'KKR',
+      sector: 'Professional Services',
+      dealType: 'PE Buyout',
+      value: 3000000000,
+      valueDisplay: '$3B',
+      dateAnnounced: '2026-06-12',
+      source: 'https://www.chicagobusiness.com/banking-finance/ccb-crowe-kkr-stake-20260612/',
+    },
+    {
+      target: 'A. Hattersley & Sons',
+      counterparty: 'Foundral (McNally Capital)',
+      sector: 'Industrials',
+      dealType: 'PE Buyout',
+      value: null,
+      valueDisplay: 'Undisclosed',
+      dateAnnounced: '2026-05-15',
+      source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana',
+    },
+    {
+      target: 'CAI',
+      counterparty: 'JLL Partners',
+      sector: 'Healthcare',
+      dealType: 'Growth Equity',
+      value: null,
+      valueDisplay: 'Undisclosed',
+      dateAnnounced: '2026-05-15',
+      source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana',
+    },
+  ];
+
+  const tagClasses = {
+    'M&A': 'tag-ma',
+    'PE Buyout': 'tag-pe',
+    'Growth Equity': 'tag-growth',
+    'IPO': 'tag-ipo',
+    'Private Placement': 'tag-private',
+  };
+
+  function renderDeals(data) {
+    const tbody = document.getElementById('deal-tbody');
+    if (!tbody) return;
+    tbody.innerHTML = data.map(d => `
+      <tr>
+        <td class="company">${d.source ? `<a href="${d.source}" target="_blank" rel="noopener" title="View source">${d.target} <span style="font-size:11px;opacity:0.5;">↗</span></a>` : d.target}</td>
+        <td>${d.counterparty}</td>
+        <td class="sector">${d.sector}</td>
+        <td><span class="deal-tag ${tagClasses[d.dealType] || ''}">${d.dealType}</span></td>
+        <td class="value">${d.valueDisplay}</td>
+        <td class="date">${d.dateAnnounced}</td>
+      </tr>
+    `).join('');
+  }
+
+  renderDeals(deals);
+
+  /* ── ARTICLE DATA ── */
+  const articles = [
+    {
+      title: 'The $13 Billion Fan Tax: Why the 2026 World Cup Is Pricing Out the World',
+      dek: 'FIFA used dynamic pricing to turn the world\'s game into a revenue optimization exercise. Interactive data shows just how wide the affordability gap really is.',
+      category: 'Markets',
+      author: 'The 317 Staff',
+      readTime: '7 min read',
+      slug: 'worldcup-dynamic-pricing-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'worldcup-fans-hero.jpg',
+      date: '2026-06-18',
+    },
+    {
+      title: 'Warsh Holds Rates, Signals the Next Move Is Up',
+      dek: 'The new Fed chairman kept rates steady for a fourth consecutive meeting but made clear the next move may be up — with nine FOMC members projecting a hike before year-end.',
+      category: 'Markets',
+      author: 'The 317 Staff',
+      readTime: '6 min read',
+      slug: 'fed-warsh-rate-hold-june-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'warsh-fed-press-conference.jpg',
+      date: '2026-06-18',
+    },
+    {
+      title: 'Indiana\'s Labor Market Nearly Treads Water in Q3 2025',
+      dek: 'Indiana shed a net 664 private-sector jobs — a dramatic improvement over the prior quarter\'s 15,254-job loss, but a sign the state is running on thin margins.',
+      category: 'Indiana Economy',
+      author: 'The 317 Staff',
+      readTime: '6 min read',
+      slug: 'indiana-employment-dynamics-q3-2025',
+      thumbBg: '#dde8d6',
+      date: '2026-05-18',
+    },
+    {
+      title: 'Private Equity Eyes Indiana\'s Fragmented Home Health Market',
+      dek: 'Three national sponsors are reportedly in early conversations with mid-sized Indiana operators as aging demographics accelerate consolidation.',
+      category: 'Healthcare',
+      author: 'Alicia Monroe',
+      readTime: '5 min read',
+      slug: 'pe-indiana-home-health',
+      thumbBg: '#dde8d6',
+      date: '2026-05-02',
+    },
+    {
+      title: 'Carmel\'s Tech Corridor Draws Its First $100M Venture Round',
+      dek: 'A Fishers-based SaaS company raised Indiana\'s largest venture round this decade, signaling shifting attention from coastal LPs.',
+      category: 'Markets',
+      author: 'James Okafor',
+      readTime: '4 min read',
+      slug: 'carmel-tech-venture-round',
+      thumbBg: '#d6dff5',
+      date: '2026-04-21',
+    },
+    {
+      title: 'Steel Dynamics Eyes Acquisition of Two Ohio Micro-Mills',
+      dek: 'The Fort Wayne company is said to be in advanced due diligence on targets that would expand its flat-rolled capacity by 15%.',
+      category: 'Industrials',
+      author: 'Sarah Ellison',
+      readTime: '6 min read',
+      slug: 'stld-ohio-micro-mills',
+      thumbBg: '#f0e6d6',
+      date: '2026-04-09',
+    },
+    {
+      title: 'Indiana Community Banks See First Wave of Mergers Since 2020',
+      dek: 'Rising deposit costs and pressure on net interest margins are forcing smaller institutions to consider combinations once thought unlikely.',
+      category: 'Banking',
+      author: 'Marcus Webb',
+      readTime: '7 min read',
+      slug: 'indiana-community-bank-mergers',
+      thumbBg: '#f5e8e8',
+      date: '2026-03-27',
+    },
+    {
+      title: 'Lilly\'s Midsize Deals Strategy: Why the Pharma Giant Is Bypassing Blockbuster Acquisitions',
+      dek: 'Rather than megadeals, Eli Lilly is deploying capital in the $150M–$400M range, betting on pipeline optionality over proven assets.',
+      category: 'Pharma',
+      author: 'Priya Nair',
+      readTime: '8 min read',
+      slug: 'lilly-midsize-deal-strategy',
+      thumbBg: '#e8eff5',
+      date: '2026-03-12',
+    },
+    {
+      title: 'Columbus Warehousing Corridor Sparks Three Industrial REIT Bids',
+      dek: 'The logistics hub south of Indianapolis has drawn interest from Simon Property\'s industrial arm and two out-of-state REITs.',
+      category: 'Markets',
+      author: 'Tom Kavanaugh',
+      readTime: '5 min read',
+      slug: 'columbus-reit-bids',
+      thumbBg: '#ede8f5',
+      date: '2026-02-25',
+    },
+  ];
+
+  /* Newest first — re-sort whenever a new article is added, regardless of array order above */
+  articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  function formatArticleDate(iso) {
+    const d = new Date(iso + 'T00:00:00');
+    return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  }
+
+  /* ── LEAD STORY + SECONDARY STORIES ── */
+  /* Always pulls the newest article as the lead and the next three as secondary picks. */
+  function renderLeadAndSecondary(data) {
+    const lead = data[0];
+    const secondary = data.slice(1, 4);
+    const leadEl = document.getElementById('lead-main');
+    const secEl = document.getElementById('lead-secondary');
+    if (!lead || !leadEl || !secEl) return;
+
+    const leadHref = lead.slug + '.html';
+    leadEl.innerHTML = `
+      <p class="kicker">${lead.category}</p>
+      <h1 class="lead-headline"><a href="${leadHref}">${lead.title}</a></h1>
+      <a href="${leadHref}" class="lead-img-link">
+        <div class="lead-img-placeholder">
+          ${lead.thumbImg
+            ? `<img src="${lead.thumbImg}" alt="${lead.title}" class="lead-hero-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="img-grid" style="display:none"></div>`
+            : `<div class="img-grid"></div>`
+          }
+        </div>
+      </a>
+      <p class="lead-dek">${lead.dek}</p>
+      <div class="byline-row">
+        <span>By ${lead.author}</span>
+        <span class="byline-dot">·</span>
+        <span>${lead.readTime}</span>
+        <span class="byline-dot">·</span>
+        <span>${formatArticleDate(lead.date)}</span>
+        <span class="byline-dot">·</span>
+        <a href="${leadHref}" class="read-more">Read full story →</a>
+      </div>
+    `;
+
+    secEl.innerHTML = secondary.map((a, i) => `
+      <article class="secondary-item reveal reveal-delay-${i + 1}" style="cursor:pointer" data-slug="${a.slug}">
+        <p class="kicker">${a.category}</p>
+        <h2 class="secondary-headline">${a.title}</h2>
+        <p class="secondary-summary">${a.dek}</p>
+        <div class="byline-row">
+          <span>By ${a.author}</span>
+          <span class="byline-dot">·</span>
+          <span>${a.readTime}</span>
+        </div>
+      </article>
+    `).join('');
+
+    secEl.querySelectorAll('.secondary-item').forEach(item => {
+      item.addEventListener('click', () => {
+        window.location.href = item.dataset.slug + '.html';
+      });
+    });
+  }
+
+  renderLeadAndSecondary(articles);
+
+  function renderArticleCards(data) {
+    const grid = document.getElementById('coverage-grid');
+    if (!grid) return;
+    grid.innerHTML = data.map((a, i) => `
+      <article class="article-card reveal reveal-delay-${(i % 3) + 1}" tabindex="0" aria-label="${a.title}">
+        <div class="card-thumb" style="background:${a.thumbBg}; overflow:hidden; position:relative;" role="img" aria-label="Article thumbnail">
+          ${a.thumbImg ? `<img src="${a.thumbImg}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;" onerror="this.style.display='none'">` : ''}
+        </div>
+        <p class="kicker">${a.category}</p>
+        <h3 class="card-headline">${a.title}</h3>
+        <p class="card-summary">${a.dek}</p>
+        <div class="byline-row">
+          <span>${a.author}</span>
+          <span class="byline-dot">·</span>
+          <span>${a.readTime}</span>
+        </div>
+      </article>
+    `).join('');
+
+    grid.querySelectorAll('article').forEach((card, i) => {
+      const slug = data[i].slug;
+      if (slug) card.style.cursor = 'pointer';
+      card.addEventListener('click', () => {
+        if (slug) window.location.href = slug + '.html';
+      });
+    });
+  }
+
+  /* Skip the lead + 3 secondary picks already shown above so nothing repeats */
+  renderArticleCards(articles.slice(4));
+
+  /* ── NEWSLETTER FORM (no-op handler) ── */
+  const form = document.getElementById('newsletter-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletter-email');
+      if (!email || !email.value.includes('@')) return;
+      /* TODO: POST to email capture API (Beehiiv/ConvertKit) */
+      document.getElementById('newsletter-success').style.display = 'block';
+      email.value = '';
+      email.disabled = true;
+      form.querySelector('button').disabled = true;
+    });
+  }
+</script>
+</body>
+</html>

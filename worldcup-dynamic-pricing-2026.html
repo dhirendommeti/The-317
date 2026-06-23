@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The $13 Billion Fan Tax: Why the 2026 World Cup Is Pricing Out the World — The 317</title>
+<meta name="description" content="FIFA expects $13 billion from the 2026 World Cup. A deep dive into how dynamic pricing turned the world's game into a luxury product.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The $13 Billion Fan Tax: Why the 2026 World Cup Is Pricing Out the World — The 317">
+<meta property="og:description" content="FIFA expects $13 billion from the 2026 World Cup. A deep dive into how dynamic pricing turned the world's game into a luxury product.">
+<meta property="og:image" content="worldcup-fans-hero.jpg">
+<meta property="og:url" content="https://the317.com/worldcup-dynamic-pricing-2026.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The $13 Billion Fan Tax — The 317">
+<meta name="twitter:description" content="FIFA expects $13 billion from the 2026 World Cup. Here's who dynamic pricing left behind.">
+<meta name="twitter:image" content="worldcup-fans-hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #0f1623;
+  --paper-2: #1a2640;
+  --ink: #edf1fa;
+  --ink-mute: #8b9bbd;
+  --rule: #1f2c47;
+  --rule-dark: #2c3c5e;
+  --ember: #5b8def;
+  --ember-2: #3a5da0;
+  --gold: #5b8def;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Inter', system-ui, sans-serif;font-size:18px;line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--ember)}
+
+/* UTILITY */
+#utility-bar{background:var(--paper);border-bottom:1px solid var(--rule);padding:6px 24px;display:flex;align-items:center;justify-content:space-between;font-family:'Inter', Arial, sans-serif;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute)}
+.util-right{display:flex;gap:20px}
+.util-right a{color:var(--ink-mute);transition:color .15s}
+.util-right a:hover{color:var(--ember)}
+@media(max-width:600px){.util-right{display:none}}
+
+/* TICKER */
+#ticker-bar{background:var(--ink);overflow:hidden;height:34px;display:flex;align-items:center;position:relative}
+#ticker-bar::before,#ticker-bar::after{content:'';position:absolute;top:0;bottom:0;width:32px;z-index:2;pointer-events:none}
+#ticker-bar::before{left:0;background:linear-gradient(to right,var(--ink),transparent)}
+#ticker-bar::after{right:0;background:linear-gradient(to left,var(--ink),transparent)}
+.ticker-track{display:flex;white-space:nowrap;animation:ticker-scroll 38s linear infinite}
+#ticker-bar:hover .ticker-track{animation-play-state:paused}
+@keyframes ticker-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{display:inline-flex;align-items:center;gap:6px;padding:0 22px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#1a2640;border-right:1px solid rgba(255,255,255,.08)}
+.ticker-sym{font-weight:500}
+.ticker-price{color:rgba(26,38,64,.65)}
+.ticker-up{color:#4ade80;font-size:10px}
+.ticker-down{color:#f87171;font-size:10px}
+
+/* NAV */
+#main-nav{background:var(--paper);border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:80;transition:box-shadow .2s}
+#main-nav.scrolled{box-shadow:0 2px 12px rgba(0,0,0,.4)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;overflow-x:auto;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-logo{display:flex;align-items:center;gap:3px;flex-shrink:0}
+.nav-links{display:flex}
+.nav-links a{font-family:'Inter', Arial, sans-serif;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);padding:14px 16px;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.nav-links a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* PROGRESS */
+#read-progress{position:fixed;top:0;left:0;height:2px;background:var(--ember);width:0%;z-index:200;transition:width .05s linear}
+
+/* HERO */
+.hero{position:relative;width:100%;max-height:580px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#0a0f18}
+.hero img{width:100%;max-height:580px;object-fit:cover;object-position:center 30%;display:block;filter:brightness(0.55)}
+.hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:40px 48px;background:linear-gradient(to top,rgba(15,10,6,.92) 0%,rgba(15,10,6,.4) 50%,transparent 100%)}
+.hero-kicker{font-family:'Inter', Arial, sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#82aef2;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.hero-kicker-dot{color:rgba(255,255,255,.3)}
+.hero-headline{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(26px,4.5vw,52px);font-weight:400;line-height:1.05;letter-spacing:-.03em;color:#edf1fa;margin-bottom:16px;max-width:800px}
+.hero-dek{font-family:'Inter', sans-serif;font-size:17px;font-style:italic;color:rgba(245,241,232,.72);max-width:620px;line-height:1.5;margin-bottom:20px}
+.hero-meta{font-family:'Inter', Arial, sans-serif;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,241,232,.5)}
+.hero-caption{position:absolute;bottom:14px;right:18px;font-family:'Inter', Arial, sans-serif;font-size:9px;letter-spacing:.05em;color:rgba(245,241,232,.35)}
+@media(max-width:600px){.hero-overlay{padding:24px 20px}}
+
+/* ARTICLE WRAP */
+.article-wrap{max-width:720px;margin:0 auto;padding:0 24px}
+.article-body{font-size:18px;line-height:1.78;color:var(--ink);padding:44px 0 0}
+.article-body p{margin-bottom:1.45em}
+.article-body > p:first-child::first-letter{font-family:'DM Serif Display', Georgia, serif;font-size:64px;font-weight: 400;line-height:.85;float:left;margin-right:8px;margin-top:6px;color:var(--ink)}
+.article-body h2{font-family:'DM Serif Display', Georgia, serif;font-size:24px;font-weight: 400;line-height:1.25;color:var(--ink);margin:2.2em 0 .6em;letter-spacing:-.01em}
+
+/* STAT TICKER ROW */
+.stat-row{background:var(--ink);padding:32px 0;margin:2.6em -24px}
+.stat-row-inner{display:grid;grid-template-columns:repeat(3,1fr);max-width:720px;margin:0 auto;padding:0 24px}
+.stat-cell{text-align:center;padding:0 16px;border-right:1px solid rgba(255,255,255,.1)}
+.stat-cell:last-child{border-right:none}
+.stat-num{font-family:'DM Serif Display', Georgia, serif;font-size:clamp(28px,5vw,48px);font-weight: 400;color:#0f1623;letter-spacing:-.03em;display:block}
+.stat-num span{color:#82aef2}
+.stat-label{font-family:'Inter', Arial, sans-serif;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(15,22,35,.5);margin-top:6px;display:block}
+@media(max-width:500px){.stat-row-inner{grid-template-columns:1fr}.stat-cell{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);padding:16px 0}.stat-cell:last-child{border-bottom:none}}
+
+/* PULL QUOTE */
+.pull-quote{border-left:3px solid var(--ember);padding:4px 0 4px 28px;margin:2.4em 0}
+.pull-quote blockquote{font-family:'DM Serif Display', Georgia, serif;font-size:22px;font-style:italic;font-weight:400;line-height:1.4;color:var(--ink);margin-bottom:10px}
+.pull-quote cite{font-family:'Inter', Arial, sans-serif;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);font-style:normal}
+
+/* PRICE COMPARE WIDGET */
+.widget-box{border:1px solid var(--rule);background:var(--paper-2);padding:28px 28px 24px;margin:2.6em 0}
+.widget-title{font-family:'Inter', Arial, sans-serif;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:4px}
+.widget-sub{font-family:'Inter', sans-serif;font-size:14px;font-style:italic;color:var(--ink-mute);margin-bottom:20px}
+
+/* BAR CHART MANUAL */
+.bar-chart{display:flex;flex-direction:column;gap:10px}
+.bar-row{display:flex;align-items:center;gap:10px;font-size:13px}
+.bar-label{font-family:'Inter', Arial, sans-serif;font-size:10px;font-weight:500;letter-spacing:.04em;color:var(--ink-mute);min-width:100px;text-align:right}
+.bar-track{flex:1;background:rgba(255,255,255,.08);height:28px;position:relative;overflow:hidden}
+.bar-fill{height:100%;display:flex;align-items:center;padding-left:8px;transition:width 1.2s cubic-bezier(.16,1,.3,1)}
+.bar-fill.y22{background:rgba(107,101,90,.45)}
+.bar-fill.y26{background:var(--ember)}
+.bar-val{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--ink);white-space:nowrap;padding-left:8px}
+.bar-legend{display:flex;gap:20px;margin-top:14px}
+.bar-legend-item{display:flex;align-items:center;gap:6px;font-family:'Inter', Arial, sans-serif;font-size:10px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-mute)}
+.leg-dot{width:10px;height:10px;flex-shrink:0}
+.leg-dot.y22{background:rgba(107,101,90,.45)}
+.leg-dot.y26{background:var(--ember)}
+
+/* AFFORDABILITY WIDGET */
+.afford-widget{border:1px solid var(--rule);margin:2.6em 0;overflow:hidden}
+.afford-header{background:var(--ink);padding:20px 24px}
+.afford-header-title{font-family:'DM Serif Display', Georgia, serif;font-size:20px;font-weight: 400;color:#0f1623;margin-bottom:4px}
+.afford-header-sub{font-family:'Inter', Arial, sans-serif;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(15,22,35,.5)}
+.afford-body{padding:24px}
+.afford-select-row{display:flex;align-items:center;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+.afford-select-label{font-family:'Inter', Arial, sans-serif;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute)}
+.afford-select{font-family:'Inter', Arial, sans-serif;font-size:13px;border:1px solid var(--rule-dark);background:var(--paper);color:var(--ink);padding:8px 12px;cursor:pointer;outline:none}
+.afford-select:focus{border-color:var(--ember)}
+.afford-result{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.afford-card{background:var(--paper-2);padding:16px 18px;border:1px solid var(--rule)}
+.afford-card-label{font-family:'Inter', Arial, sans-serif;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px}
+.afford-card-value{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:500;color:var(--ink)}
+.afford-card-value.danger{color:#b91c1c}
+.afford-card-value.ok{color:#15803d}
+.afford-bar-wrap{margin-top:6px}
+.afford-pct-bar{height:6px;background:rgba(255,255,255,.12);border-radius:3px;overflow:hidden;margin-bottom:4px}
+.afford-pct-fill{height:100%;background:var(--ember);border-radius:3px;transition:width 0.8s cubic-bezier(.16,1,.3,1)}
+.afford-pct-fill.safe{background:#15803d}
+.afford-pct-fill.warn{background:#5b8def}
+.afford-pct-fill.danger{background:#b91c1c}
+.afford-context{font-family:'Inter', sans-serif;font-size:14px;font-style:italic;color:var(--ink-mute);padding-top:14px;border-top:1px solid var(--rule)}
+@media(max-width:500px){.afford-result{grid-template-columns:1fr}}
+
+/* TOOLTIP POPUP */
+.tooltip-trigger{border-bottom:1px dashed var(--ember);color:var(--ember);cursor:help;position:relative;display:inline-block}
+.tooltip-box{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--ink);color:#0f1623;font-family:'Inter', Arial, sans-serif;font-size:12px;font-style:normal;line-height:1.5;padding:10px 14px;white-space:nowrap;z-index:100;pointer-events:none;min-width:200px;text-align:left}
+.tooltip-box::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--ink)}
+.tooltip-trigger:hover .tooltip-box,.tooltip-trigger:focus .tooltip-box{display:block}
+
+/* WHO WINS SECTION */
+.who-wins{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:2.6em 0;border:1px solid var(--rule)}
+.who-card{padding:24px}
+.who-card:first-child{border-right:1px solid var(--rule)}
+.who-header{font-family:'Inter', Arial, sans-serif;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.who-header.wins{color:#15803d}
+.who-header.loses{color:#b91c1c}
+.who-header-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.who-header-dot.wins{background:#15803d}
+.who-header-dot.loses{background:#b91c1c}
+.who-item{font-family:'Inter', sans-serif;font-size:14px;color:var(--ink);padding:8px 0;border-bottom:1px solid var(--rule);display:flex;align-items:flex-start;gap:8px}
+.who-item:last-child{border-bottom:none}
+.who-item-icon{margin-top:3px;flex-shrink:0;font-size:12px}
+.who-item-icon.wins{color:#15803d}
+.who-item-icon.loses{color:#b91c1c}
+@media(max-width:500px){.who-wins{grid-template-columns:1fr}.who-card:first-child{border-right:none;border-bottom:1px solid var(--rule)}}
+
+/* SECTION RULE */
+.section-rule{height:1px;background:var(--rule);margin:2.8em 0}
+
+/* CALLOUT BOX */
+.callout{border-top:2px solid var(--ink);padding:22px 0 20px;margin:2.6em 0}
+.callout-title{font-family:'Inter', Arial, sans-serif;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:12px}
+.callout-body{font-size:15px;line-height:1.65;color:var(--ink-mute)}
+
+/* TAGS */
+.article-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:3em;padding-top:24px;border-top:1px solid var(--rule)}
+.tag{font-family:'Inter', Arial, sans-serif;font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border:1px solid var(--rule-dark);color:var(--ink-mute);cursor:pointer;transition:color .15s,border-color .15s}
+.tag:hover{color:var(--ember);border-color:var(--ember)}
+
+/* RELATED */
+.related-section{max-width:1200px;margin:0 auto;padding:48px 24px 64px;border-top:2px solid var(--ink);margin-top:52px}
+.related-title{font-family:'Inter', Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:28px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border-top:1px solid var(--rule)}
+.related-card{padding:24px 24px 24px 0;border-right:1px solid var(--rule);cursor:pointer}
+.related-card:last-child{border-right:none;padding-right:0}
+@media(max-width:600px){.related-card{border-right:none;border-bottom:1px solid var(--rule);padding:20px 0}}
+.related-kicker{font-family:'Inter', Arial, sans-serif;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);margin-bottom:8px}
+.related-headline{font-family:'DM Serif Display', Georgia, serif;font-size:16px;font-weight: 400;line-height:1.3;color:var(--ink);transition:color .15s}
+.related-card:hover .related-headline{color:var(--ember)}
+
+/* FOOTER */
+#footer{background:var(--paper);border-top:3px double var(--rule-dark);padding:36px 24px 28px}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-copy{font-family:'Inter', Arial, sans-serif;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.fade{animation:fadeUp .65s ease both}
+.fade-1{animation-delay:.07s}
+.fade-2{animation-delay:.14s}
+
+@media(prefers-reduced-motion:reduce){.fade,.ticker-track,.bar-fill,.afford-pct-fill{animation:none;transition:none}}
+</style>
+</head>
+<body>
+
+<div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+<!-- UTILITY BAR -->
+<div id="utility-bar">
+  <div class="util-left"><span id="util-date"></span>&nbsp;&nbsp;Indianapolis</div>
+  <div class="util-right">
+    <a href="deal-flow.html">Deals</a>
+    <a href="index.html#markets">Markets</a>
+    <a href="index.html#newsletter">Newsletter</a>
+    <a href="about.html">About</a>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div id="ticker-bar" aria-label="Live market data">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="The 317 homepage">
+      <div style="flex-shrink:0;width:30px;height:30px;border-radius:4px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:11px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
+    </a>
+    <div class="nav-links">
+      <a href="deal-flow.html">Deals</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="index.html">Pharma</a>
+      <a href="index.html">Banking</a>
+      <a href="index.html">Industrials</a>
+      <a href="index.html#newsletter">Newsletter</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img
+    src="worldcup-fans-hero.jpg"
+    alt="US soccer fans watching the World Cup in despair at a public screening, draped in American flags"
+    onerror="this.style.display='none';document.querySelector('.hero').style.minHeight='420px';document.querySelector('.hero').style.background='#0a0f18'"
+  >
+  <div class="hero-overlay">
+    <p class="hero-kicker">
+      <span>Markets &amp; Sports Finance</span>
+      <span class="hero-kicker-dot">·</span>
+      <span>Analysis</span>
+    </p>
+    <h1 class="hero-headline">The $13 Billion Fan Tax</h1>
+    <p class="hero-dek">FIFA used dynamic pricing to turn the world's game into a revenue optimization exercise. Who won, who lost, and what the economics actually tell us.</p>
+    <p class="hero-meta">By The 317 Staff &nbsp;·&nbsp; June 18, 2026 &nbsp;·&nbsp; 7 min read</p>
+  </div>
+  <p class="hero-caption">Watch party, Chicago. Fans react to a USMNT loss. Photo: Associated Press</p>
+</div>
+
+<!-- ARTICLE -->
+<main>
+<div class="article-wrap">
+<div class="article-body">
+
+<p>FIFA expects to generate $13 billion from the 2026 World Cup — the most lucrative tournament in its history. But to get there, the organization made a strategic choice that's now causing a backlash: embrace <span class="tooltip-trigger" tabindex="0">dynamic pricing<span class="tooltip-box">Prices adjust in real-time based on demand — same model used by Uber, airlines, and concert promoters.</span></span>. The results offer a case study in how a business model can be economically rational while creating real problems for the people it's supposed to serve.</p>
+
+<!-- STAT ROW -->
+<div class="stat-row" id="stat-row">
+  <div class="stat-row-inner">
+    <div class="stat-cell">
+      <span class="stat-num"><span id="cnt-requests">0</span><span style="font-size:.55em;letter-spacing:0;color:#82aef2">M</span></span>
+      <span class="stat-label">Ticket requests received</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num"><span id="cnt-tickets">0</span><span style="font-size:.55em;letter-spacing:0;color:#82aef2">M</span></span>
+      <span class="stat-label">Tickets actually available</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num" id="cnt-revenue">$<span id="cnt-rev-num">0</span><span>B</span></span>
+      <span class="stat-label">Projected FIFA revenue</span>
+    </div>
+  </div>
+</div>
+
+<p>The demand is genuinely enormous. FIFA received <strong>500 million</strong> ticket requests for 7 million available seats. For context, the 2022 tournament in Qatar saw fewer than 100 million requests. That supply-demand imbalance alone would justify higher prices. Dynamic pricing amplified it — and then some.</p>
+
+<h2>The Numbers Are Staggering</h2>
+
+<p>Category 1 tickets (sideline seats) for the final started at $6,400. By the final sales phase, they'd climbed to <span class="tooltip-trigger" tabindex="0">$11,000<span class="tooltip-box">2022 World Cup final: avg Cat. 1 ticket ~$3,500. Adjusted for inflation, 2026 is still roughly double.</span></span>. Group stage seats ranged from a few hundred dollars to nearly $23,000 on the resale market. Compare that to 2022:</p>
+
+<!-- PRICE COMPARE CHART -->
+<div class="widget-box fade">
+  <p class="widget-title">Final Ticket Prices: 2022 vs. 2026</p>
+  <p class="widget-sub">Category 1 (sideline) seats, at time of final sales phase</p>
+  <div class="bar-chart">
+    <div class="bar-row">
+      <span class="bar-label">2022 Qatar</span>
+      <div class="bar-track">
+        <div class="bar-fill y22" id="bar-22" style="width:0%">
+          <span class="bar-val">$3,500</span>
+        </div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">2026 USA</span>
+      <div class="bar-track">
+        <div class="bar-fill y26" id="bar-26" style="width:0%">
+          <span class="bar-val">$11,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">2026 Resale peak</span>
+      <div class="bar-track">
+        <div class="bar-fill y26" id="bar-resale" style="width:0%;opacity:0.55">
+          <span class="bar-val">$23,000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bar-legend">
+    <div class="bar-legend-item"><div class="leg-dot y22"></div>2022 Qatar</div>
+    <div class="bar-legend-item"><div class="leg-dot y26"></div>2026 United States</div>
+  </div>
+</div>
+
+<h2>How Dynamic Pricing Actually Works</h2>
+
+<p>The business logic is compelling. By pricing tickets higher during peak demand windows, FIFA captures more <span class="tooltip-trigger" tabindex="0">consumer surplus<span class="tooltip-box">The gap between what a buyer would have paid vs. what they actually paid. Dynamic pricing shrinks that gap in FIFA's favor.</span></span> — the excess value buyers would have paid but didn't have to. An England fan willing to pay $15,000 for a ticket priced at $8,700 creates $6,300 in value that didn't reach FIFA. Dynamic pricing recaptures that.</p>
+
+<p>The model also works in reverse. In some host cities, resale prices fell below $100 as demand dried up. FIFA priced less popular games lower to clear inventory — revenue optimization working exactly as intended. From a pure business perspective, this is textbook good management.</p>
+
+<div class="pull-quote fade">
+  <blockquote>"An England fan willing to pay $15,000 for a ticket priced at $8,700 creates $6,300 that never reached FIFA. Dynamic pricing recaptures that. It is economically rational. It is also how you price out most of the world."</blockquote>
+  <cite>— The 317 Analysis</cite>
+</div>
+
+<h2>The Accessibility Problem Is Real</h2>
+
+<p>Here's where the model breaks down: it's economically efficient only if you assume everyone can pay the market rate. They can't — and the gap is staggering depending on where you're from.</p>
+
+<!-- AFFORDABILITY WIDGET -->
+<div class="afford-widget fade">
+  <div class="afford-header">
+    <p class="afford-header-title">The Affordability Gap</p>
+    <p class="afford-header-sub">Cheapest available ticket ($450) as % of annual income by country</p>
+  </div>
+  <div class="afford-body">
+    <div class="afford-select-row">
+      <span class="afford-select-label">Select a country</span>
+      <select class="afford-select" id="country-select" aria-label="Select country to see ticket affordability">
+        <option value="Haiti">Haiti</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="India">India</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Turkey">Turkey</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="UK">United Kingdom</option>
+        <option value="Germany">Germany</option>
+        <option value="USA" selected>United States</option>
+      </select>
+    </div>
+    <div class="afford-result">
+      <div class="afford-card">
+        <p class="afford-card-label">Avg. annual income</p>
+        <p class="afford-card-value" id="afford-income">—</p>
+      </div>
+      <div class="afford-card">
+        <p class="afford-card-label">Ticket cost as % of income</p>
+        <p class="afford-card-value" id="afford-pct">—</p>
+        <div class="afford-bar-wrap">
+          <div class="afford-pct-bar"><div class="afford-pct-fill" id="afford-fill" style="width:0%"></div></div>
+        </div>
+      </div>
+    </div>
+    <p class="afford-context" id="afford-context">Select a country above to see how a single World Cup ticket stacks up against a year's income.</p>
+  </div>
+</div>
+
+<p>The resale market compounds the problem. In the US and parts of Canada, there's minimal regulation. A ticket bought for $1,000 can be flipped for $5,000. FIFA takes 15% from both buyer and seller — revenue-positive, accessibility-negative. Mexico caps resale at face value. Ontario restricts it below face value. These aren't arbitrary rules; they exist because governments recognize that unregulated resale turns access into arbitrage.</p>
+
+<h2>Who Wins. Who Loses.</h2>
+
+<!-- WHO WINS TABLE -->
+<div class="who-wins fade">
+  <div class="who-card">
+    <p class="who-header wins"><span class="who-header-dot wins"></span>Winners</p>
+    <div class="who-item"><span class="who-item-icon wins">+</span><span>FIFA — $13B projected revenue, a record</span></div>
+    <div class="who-item"><span class="who-item-icon wins">+</span><span>Scalpers and resellers in unregulated markets</span></div>
+    <div class="who-item"><span class="who-item-icon wins">+</span><span>Fans in high-income countries (US, UK, Germany)</span></div>
+    <div class="who-item"><span class="who-item-icon wins">+</span><span>Host city economies — hotels, restaurants, tourism</span></div>
+    <div class="who-item"><span class="who-item-icon wins">+</span><span>Late-buy fans: some games dropped below $100</span></div>
+  </div>
+  <div class="who-card">
+    <p class="who-header loses"><span class="who-header-dot loses"></span>Losers</p>
+    <div class="who-item"><span class="who-item-icon loses">−</span><span>Fans in developing economies — Haiti, Nigeria, India</span></div>
+    <div class="who-item"><span class="who-item-icon loses">−</span><span>First-time World Cup attendees on fixed budgets</span></div>
+    <div class="who-item"><span class="who-item-icon loses">−</span><span>Youth and student fans priced out entirely</span></div>
+    <div class="who-item"><span class="who-item-icon loses">−</span><span>The tournament's claim to global accessibility</span></div>
+    <div class="who-item"><span class="who-item-icon loses">−</span><span>FIFA's long-term brand with the global south</span></div>
+  </div>
+</div>
+
+<p>Some fans get creative. Muhammad Faraj from Boston bought tickets to all three of Iraq's group stage games for $850 total, funding the trip through social media content and business partnerships. That works if you have an audience or entrepreneurial energy. Most people don't — and shouldn't have to.</p>
+
+<h2>The Broader Lesson</h2>
+
+<p>Dynamic pricing isn't inherently wrong. It's a tool that maximizes revenue by pricing based on demand. It works well when the product is fungible — a flight seat, a concert ticket, a theme park entry — and when consumers have similar ability to pay. The World Cup is different. For many countries, watching your national team is a once-in-a-generation experience. Pricing it dynamically is economically sensible and culturally exclusionary at the same time.</p>
+
+<div class="section-rule"></div>
+
+<div class="callout fade">
+  <p class="callout-title">The Bottom Line</p>
+  <p class="callout-body">FIFA's $13 billion windfall comes from optimizing price for high-demand matches and affluent regions while pricing out everyone else. That's not a bug in the business model — it's a feature. It raises a real question: at what point does revenue maximization undermine the event's legitimacy as a global competition for fans everywhere? The 2026 World Cup will likely be the richest tournament ever. It may also be the one where the most fans watched from home. Not by choice — but because they simply couldn't afford to attend.</p>
+</div>
+
+<div class="article-tags">
+  <span class="tag">Sports Finance</span>
+  <span class="tag">FIFA 2026</span>
+  <span class="tag">Dynamic Pricing</span>
+  <span class="tag">Consumer Economics</span>
+  <span class="tag">Markets</span>
+  <span class="tag">Revenue Models</span>
+</div>
+
+</div>
+</div>
+
+<!-- RELATED -->
+<div class="related-section">
+  <p class="related-title">More from The 317</p>
+  <div class="related-grid">
+    <article class="related-card" onclick="window.location='fed-warsh-rate-hold-june-2026.html'">
+      <p class="related-kicker">Markets</p>
+      <h3 class="related-headline">Warsh Holds Rates, Signals the Next Move Is Up</h3>
+    </article>
+    <article class="related-card" onclick="window.location='indiana-employment-dynamics-q3-2025.html'">
+      <p class="related-kicker">Indiana Economy</p>
+      <h3 class="related-headline">Indiana's Labor Market Nearly Treads Water in Q3 2025</h3>
+    </article>
+    <article class="related-card">
+      <p class="related-kicker">M&amp;A</p>
+      <h3 class="related-headline">Private Equity Eyes Indiana's Fragmented Home Health Market</h3>
+    </article>
+  </div>
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <a href="index.html" aria-label="The 317 homepage">
+      <div style="flex-shrink:0;width:26px;height:26px;border-radius:3px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:10px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
+    </a>
+    <p class="footer-copy">© 2026 The 317 · Indianapolis, Indiana · <a href="index.html" style="color:var(--ink-mute)">Return to homepage</a></p>
+  </div>
+</footer>
+
+<script src="ticker.js"></script>
+<script>
+// DATE
+const dateEl = document.getElementById('util-date');
+if (dateEl) dateEl.textContent = new Date().toLocaleDateString('en-US', {weekday:'long',year:'numeric',month:'long',day:'numeric'}).toUpperCase();
+
+// TICKER (shared across all pages — see ticker.js)
+initTicker();
+
+// NAV SCROLL
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav && nav.classList.toggle('scrolled', window.scrollY > 80), {passive:true});
+
+// PROGRESS BAR
+const bar = document.getElementById('read-progress');
+window.addEventListener('scroll', () => {
+  if (!bar) return;
+  const d = document.documentElement;
+  bar.style.width = Math.min((d.scrollTop / (d.scrollHeight - d.clientHeight)) * 100, 100) + '%';
+}, {passive:true});
+
+// ANIMATED COUNTERS
+function animateCount(el, target, prefix, suffix, duration) {
+  let start = null;
+  function step(ts) {
+    if (!start) start = ts;
+    const progress = Math.min((ts - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const val = Math.round(eased * target);
+    el.textContent = prefix + val.toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// Trigger counters when stat row scrolls into view
+const statRow = document.getElementById('stat-row');
+let counted = false;
+const statObs = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting && !counted) {
+    counted = true;
+    animateCount(document.getElementById('cnt-requests'), 500, '', '', 1800);
+    animateCount(document.getElementById('cnt-tickets'), 7, '', '', 1400);
+    animateCount(document.getElementById('cnt-rev-num'), 13, '', '', 1200);
+  }
+}, {threshold: 0.3});
+if (statRow) statObs.observe(statRow);
+
+// PRICE BARS — animate on scroll
+function animateBars() {
+  const b22 = document.getElementById('bar-22');
+  const b26 = document.getElementById('bar-26');
+  const bRes = document.getElementById('bar-resale');
+  if (b22) b22.style.width = '32%';
+  if (b26) b26.style.width = '100%';
+  if (bRes) bRes.style.width = '100%';
+}
+const barSection = document.querySelector('.widget-box');
+let barsAnimated = false;
+if (barSection) {
+  const barObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !barsAnimated) {
+      barsAnimated = true;
+      setTimeout(animateBars, 200);
+    }
+  }, {threshold: 0.2});
+  barObs.observe(barSection);
+}
+
+// AFFORDABILITY WIDGET
+const countryData = {
+  'Haiti':     {income: 1786,  pct: 89.2, context: "A fan in Haiti would spend nearly their entire year's wages to attend one group stage match. The cheapest available ticket represented 89.2% of average annual income."},
+  'Nigeria':   {income: 2000,  pct: 22.5, context: "In Nigeria, the cheapest ticket costs roughly a quarter of the average annual income — a significant sacrifice, but manageable for wealthier urban earners."},
+  'India':     {income: 2500,  pct: 18.0, context: "For an Indian fan, a $450 ticket represents nearly two months of average income. Regional variation is enormous — a Mumbai software engineer faces a very different number."},
+  'Brazil':    {income: 6250,  pct: 7.2,  context: "Brazil's figure is 7.2% — equal to Turkey's. Both are manageable for middle-class earners but still represent a significant discretionary spend for most fans."},
+  'Turkey':    {income: 6250,  pct: 7.2,  context: "Turkey mirrors Brazil at 7.2% of annual income for the cheapest ticket — a notable share, particularly given recent inflation pressures on Turkish household finances."},
+  'Mexico':    {income: 10000, pct: 4.5,  context: "Mexico's position as a co-host created significant local demand — but even at 4.5% of income, price still filters out a significant share of Mexican fans."},
+  'Argentina': {income: 12000, pct: 3.75, context: "Argentina's passionate football culture runs deep, but 3.75% of average income for one ticket is still a real barrier for fans outside Buenos Aires's wealthier neighborhoods."},
+  'UK':        {income: 45000, pct: 1.0,  context: "For a UK fan, $450 is roughly 1% of average annual income — meaningful, but well within reach for most working adults who plan ahead."},
+  'Germany':   {income: 50000, pct: 0.9,  context: "German fans face the lowest relative cost in this group at 0.9% of income — the same ticket that wipes out a year's wages in Haiti costs a German fan less than a weekend trip."},
+  'USA':       {income: 60000, pct: 0.75, context: "US fans face the lowest barrier in this group: 0.75% of average income. The same ticket that represents a year's wages in Haiti costs an American fan a long weekend away."},
+};
+
+const sel = document.getElementById('country-select');
+const incEl = document.getElementById('afford-income');
+const pctEl = document.getElementById('afford-pct');
+const fillEl = document.getElementById('afford-fill');
+const ctxEl = document.getElementById('afford-context');
+
+function updateAffordability(country) {
+  const d = countryData[country];
+  if (!d) return;
+  incEl.textContent = '$' + d.income.toLocaleString();
+  pctEl.textContent = d.pct + '%';
+  pctEl.className = 'afford-card-value ' + (d.pct > 20 ? 'danger' : d.pct > 5 ? 'warn' : 'ok');
+  const fillPct = Math.min(d.pct, 100);
+  const cls = d.pct > 20 ? 'danger' : d.pct > 5 ? 'warn' : 'safe';
+  fillEl.className = 'afford-pct-fill ' + cls;
+  setTimeout(() => { fillEl.style.width = fillPct + '%'; }, 50);
+  ctxEl.textContent = d.context;
+}
+if (sel) {
+  sel.addEventListener('change', () => updateAffordability(sel.value));
+  updateAffordability(sel.value);
+}
+</script>
+</body>
+</html>

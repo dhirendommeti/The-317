@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indiana's Labor Market Nearly Treads Water in Q3 2025 — The 317</title>
+<meta name="description" content="Indiana shed a net 664 private-sector jobs in the third quarter of 2025 — a dramatic improvement over the prior quarter's 15,254-job loss, but a sign that the state's labor market is running on thin margins.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Indiana's Labor Market Nearly Treads Water in Q3 2025 — The 317">
+<meta property="og:description" content="Indiana shed a net 664 private-sector jobs in the third quarter of 2025 — a dramatic improvement over the prior quarter's 15,254-job loss.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:url" content="https://the317.com/indiana-employment-dynamics-q3-2025.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Indiana's Labor Market Nearly Treads Water in Q3 2025 — The 317">
+<meta name="twitter:description" content="Indiana shed a net 664 private-sector jobs in Q3 2025 — a dramatic improvement over the prior quarter's losses.">
+<meta name="twitter:image" content="og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #0f1623;
+    --paper-2: #1a2640;
+    --ink: #edf1fa;
+    --ink-mute: #8b9bbd;
+    --rule: #1f2c47;
+    --rule-dark: #2c3c5e;
+    --ember: #5b8def;
+    --ember-bright: #82aef2;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--ember); }
+
+  /* ── UTILITY BAR ── */
+  #utility-bar {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    padding: 6px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .util-right { display: flex; gap: 20px; }
+  .util-right a { color: var(--ink-mute); transition: color 0.15s; }
+  .util-right a:hover { color: var(--ember); }
+  @media (max-width: 600px) { .util-right { display: none; } }
+
+  /* ── TICKER ── */
+  #ticker-bar {
+    background: var(--ink); overflow: hidden; height: 34px;
+    display: flex; align-items: center; position: relative;
+  }
+  #ticker-bar::before, #ticker-bar::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 32px; z-index: 2; pointer-events: none;
+  }
+  #ticker-bar::before { left: 0; background: linear-gradient(to right, var(--ink), transparent); }
+  #ticker-bar::after  { right: 0; background: linear-gradient(to left, var(--ink), transparent); }
+  .ticker-track { display: flex; white-space: nowrap; animation: ticker-scroll 38s linear infinite; }
+  #ticker-bar:hover .ticker-track { animation-play-state: paused; }
+  @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .ticker-item {
+    display: inline-flex; align-items: center; gap: 6px; padding: 0 22px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #1a2640;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .ticker-sym { font-weight: 500; }
+  .ticker-price { color: rgba(26,38,64,0.65); }
+  .ticker-up   { color: #4ade80; font-size: 10px; }
+  .ticker-down { color: #f87171; font-size: 10px; }
+
+  /* ── NAV ── */
+  #main-nav {
+    background: var(--paper); border-bottom: 1px solid var(--rule);
+    position: sticky; top: 0; z-index: 80; transition: box-shadow 0.2s;
+  }
+  #main-nav.scrolled { box-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+  .nav-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-logo { display: flex; align-items: center; gap: 3px; flex-shrink: 0; }
+  .nav-links { display: flex; }
+  .nav-links a {
+    font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute);
+    padding: 14px 16px; white-space: nowrap;
+    border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s;
+  }
+  .nav-links a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* ── ARTICLE ── */
+  .article-wrap { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+
+  .article-header { padding: 52px 0 36px; border-bottom: 1px solid var(--rule); margin-bottom: 40px; }
+
+  .kicker {
+    font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--ember);
+    margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+  }
+  .kicker-dot { color: var(--rule-dark); }
+
+  .article-headline {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(26px, 4.5vw, 42px); font-weight: 900;
+    line-height: 1.08; letter-spacing: -0.025em; color: var(--ink); margin-bottom: 18px;
+  }
+
+  .article-dek {
+    font-family: 'Inter', sans-serif; font-size: 19px; line-height: 1.55;
+    color: var(--ink-mute); margin-bottom: 24px; font-style: italic;
+  }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute);
+    padding-top: 20px; border-top: 1px solid var(--rule);
+  }
+  .meta-dot { color: var(--rule-dark); }
+
+  /* ── BODY ── */
+  .article-body { font-size: 18px; line-height: 1.75; color: var(--ink); }
+  .article-body p { margin-bottom: 1.4em; }
+
+  .article-body p:first-child::first-letter {
+    font-family: 'DM Serif Display', Georgia, serif; font-size: 64px; font-weight: 400;
+    line-height: 0.85; float: left; margin-right: 8px; margin-top: 6px; color: var(--ink);
+  }
+
+  .article-body h2 {
+    font-family: 'DM Serif Display', Georgia, serif; font-size: 24px; font-weight: 400;
+    line-height: 1.25; color: var(--ink); margin: 2.2em 0 0.6em; letter-spacing: -0.01em;
+  }
+
+  /* ── DATA STRIP ── */
+  .data-strip {
+    background: var(--paper-2); border: 1px solid var(--rule);
+    border-left: 3px solid var(--ink); padding: 24px 28px; margin: 2.4em 0;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 20px 28px;
+  }
+  .data-label {
+    font-family: 'Inter', Arial, sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 4px;
+  }
+  .data-value {
+    font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 500;
+    color: var(--ink); line-height: 1.1;
+  }
+  .data-value.neg { color: #dc2626; }
+  .data-value.pos { color: #16a34a; }
+  .data-sub { font-family: 'Inter', Arial, sans-serif; font-size: 10px; color: var(--ink-mute); margin-top: 2px; }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote { border-left: 3px solid var(--ember); padding: 4px 0 4px 28px; margin: 2.4em 0; }
+  .pull-quote blockquote {
+    font-family: 'DM Serif Display', Georgia, serif; font-size: 21px; font-style: italic;
+    font-weight: 400; line-height: 1.4; color: var(--ink); margin-bottom: 10px;
+  }
+  .pull-quote cite {
+    font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); font-style: normal;
+  }
+
+  /* ── CHART FIGURE ── */
+  .chart-figure { margin: 2.4em 0; }
+  .chart-box {
+    width: 100%; background: var(--paper-2); border: 1px solid var(--rule);
+    padding: 28px 24px 20px; box-sizing: border-box;
+  }
+  .chart-title {
+    font-family: 'Inter', Arial, sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 18px;
+  }
+  .chart-box svg { width: 100%; height: auto; display: block; }
+  .chart-caption {
+    font-family: 'Inter', Arial, sans-serif; font-size: 10px;
+    color: var(--ink-mute); margin-top: 8px; line-height: 1.5; letter-spacing: 0.02em;
+  }
+
+  /* ── SECTOR TABLE ── */
+  .sector-table-wrap { overflow-x: auto; margin: 2.4em 0; border: 1px solid var(--rule); }
+  .sector-table { width: 100%; border-collapse: collapse; min-width: 480px; }
+  .sector-table th {
+    font-family: 'Inter', Arial, sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute);
+    padding: 10px 16px; text-align: left; border-bottom: 1px solid var(--rule);
+    background: var(--paper-2); white-space: nowrap;
+  }
+  .sector-table th.right { text-align: right; }
+  .sector-table td {
+    padding: 12px 16px; font-size: 14px; color: var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+  .sector-table tr:last-child td { border-bottom: none; }
+  .sector-table tr:hover td { background: var(--paper-2); }
+  .sector-table td.sector-name { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500; }
+  .sector-table td.mono {
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; text-align: right; white-space: nowrap;
+  }
+  .net-pos { color: #16a34a; font-weight: 500; }
+  .net-neg { color: #dc2626; font-weight: 500; }
+
+  /* ── CONTEXT BOX ── */
+  .context-box { border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 24px 0; margin: 2.8em 0; }
+  .context-box-title {
+    font-family: 'Inter', Arial, sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); margin-bottom: 14px;
+  }
+  .context-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .context-box li { font-size: 15px; line-height: 1.55; color: var(--ink-mute); padding-left: 18px; position: relative; }
+  .context-box li::before { content: '—'; position: absolute; left: 0; color: var(--ember); font-family: 'Inter', Arial, sans-serif; }
+
+  /* ── SECTION RULE ── */
+  .section-rule { height: 1px; background: var(--rule); margin: 2.8em 0; }
+
+  /* ── TAGS ── */
+  .article-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 3em; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .tag {
+    font-family: 'Inter', Arial, sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 5px 10px; border: 1px solid var(--rule-dark); color: var(--ink-mute);
+    transition: color 0.15s, border-color 0.15s; cursor: pointer;
+  }
+  .tag:hover { color: var(--ember); border-color: var(--ember); }
+
+  /* ── RELATED ── */
+  .related-section { max-width: 1200px; margin: 0 auto; padding: 48px 24px 64px; border-top: 2px solid var(--ink); margin-top: 52px; }
+  .related-title { font-family: 'Inter', Arial, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); margin-bottom: 28px; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); border-top: 1px solid var(--rule); }
+  .related-card { padding: 24px 24px 24px 0; border-right: 1px solid var(--rule); cursor: pointer; }
+  .related-card:last-child { border-right: none; padding-right: 0; }
+  @media (max-width: 600px) { .related-card { border-right: none; border-bottom: 1px solid var(--rule); padding: 20px 0; } }
+  .related-kicker { font-family: 'Inter', Arial, sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ember); margin-bottom: 8px; }
+  .related-headline { font-family: 'DM Serif Display', Georgia, serif; font-size: 16px; font-weight: 400; line-height: 1.3; color: var(--ink); transition: color 0.15s; }
+  .related-card:hover .related-headline { color: var(--ember); }
+
+  /* ── FOOTER ── */
+  #footer { background: var(--paper); border-top: 3px double var(--rule-dark); padding: 36px 24px 28px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .footer-copy { font-family: 'Inter', Arial, sans-serif; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute); }
+
+  /* ── PROGRESS BAR ── */
+  #read-progress { position: fixed; top: 0; left: 0; height: 2px; background: var(--ember); width: 0%; z-index: 200; transition: width 0.05s linear; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  .fade { animation: fadeUp 0.6s ease both; }
+  .fade-1 { animation-delay: 0.06s; }
+  .fade-2 { animation-delay: 0.12s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade, .ticker-track { animation: none; }
+  }
+
+  @media (max-width: 600px) {
+    .article-body p:first-child::first-letter { font-size: 48px; }
+    .data-strip { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+<!-- UTILITY BAR -->
+<div id="utility-bar">
+  <div class="util-left">
+    <span id="util-date"></span>
+    <span>Indianapolis</span>
+  </div>
+  <div class="util-right">
+    <a href="deal-flow.html">Deals</a>
+    <a href="index.html#markets">Markets</a>
+    <a href="index.html#newsletter">Newsletter</a>
+    <a href="about.html">About</a>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div id="ticker-bar" aria-label="Live market data">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="The 317 homepage">
+      <div style="flex-shrink:0;width:30px;height:30px;border-radius:4px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:11px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
+    </a>
+    <div class="nav-links">
+      <a href="deal-flow.html">Deals</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="index.html">Pharma</a>
+      <a href="index.html">Banking</a>
+      <a href="index.html">Industrials</a>
+      <a href="index.html#newsletter">Newsletter</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ARTICLE -->
+<main>
+<div class="article-wrap">
+
+  <header class="article-header fade">
+    <p class="kicker">
+      <span>Indiana Economy</span>
+      <span class="kicker-dot">·</span>
+      <span>Labor Markets</span>
+    </p>
+    <h1 class="article-headline">Indiana's Labor Market Nearly Treads Water in Q3 2025 — But the Trend Is Improving</h1>
+    <p class="article-dek">
+      The state shed a net 664 private-sector jobs in the third quarter — a dramatic improvement over the prior quarter's 15,254-job loss, but a sign that Indiana's employment churn is running on razor-thin margins heading into year-end.
+    </p>
+    <div class="article-meta">
+      <span>By The 317 Staff</span>
+      <span class="meta-dot">·</span>
+      <span>May 18, 2026</span>
+      <span class="meta-dot">·</span>
+      <span>6 min read</span>
+      <span class="meta-dot">·</span>
+      <span>Source: U.S. Bureau of Labor Statistics</span>
+    </div>
+  </header>
+
+  <div class="article-body">
+
+    <p>Indiana's private sector generated 143,512 gross job gains in the third quarter of 2025 while shedding 144,176 — leaving the state with a net loss of just 664 jobs over the period, according to Business Employment Dynamics data released by the Bureau of Labor Statistics. The numbers tell a story of near-equilibrium: the state's job creation and destruction engines are running at almost identical speeds, and the margin between them has tightened considerably from the prior quarter's 15,254-job net loss.</p>
+
+    <p>The improvement is notable. Indiana entered Q3 with significant momentum in the wrong direction — second quarter losses had been running hot, driven by elevated closures and contracting establishments. The rebound suggests either that the worst of the mid-year adjustment is behind Indiana employers, or that the labor market has simply stopped bleeding without yet finding a new gear for growth.</p>
+
+    <!-- DATA STRIP -->
+    <div class="data-strip fade fade-1">
+      <div>
+        <p class="data-label">Gross Job Gains</p>
+        <p class="data-value pos">143,512</p>
+        <p class="data-sub">5.1% of pvt. employment</p>
+      </div>
+      <div>
+        <p class="data-label">Gross Job Losses</p>
+        <p class="data-value neg">144,176</p>
+        <p class="data-sub">5.1% of pvt. employment</p>
+      </div>
+      <div>
+        <p class="data-label">Net Change</p>
+        <p class="data-value neg">−664</p>
+        <p class="data-sub">vs. −15,254 prior quarter</p>
+      </div>
+      <div>
+        <p class="data-label">Indiana vs. US Loss Rate</p>
+        <p class="data-value">5.1%</p>
+        <p class="data-sub">National: 5.7% — Indiana outperforms</p>
+      </div>
+    </div>
+
+    <p>One of the more significant data points in the report is how Indiana compares to the national baseline. While the U.S. private sector recorded gross job losses equal to 5.7% of employment in Q3 2025, Indiana's figure came in at 5.1% — a 60-basis-point advantage that has been consistent across several quarters. Indiana employers are contracting and closing at a meaningfully lower rate than their national peers, even as gains remain similarly subdued.</p>
+
+    <!-- CHART 1 -->
+    <figure class="chart-figure fade">
+      <div class="chart-box">
+        <p class="chart-title">Indiana Private-Sector Job Flows — Q3 2025</p>
+        <svg viewBox="0 0 700 280" role="img" aria-label="Bar chart comparing Indiana gross job gains of 143,512 against gross job losses of 144,176 in Q3 2025, a net change of negative 664 jobs">
+          <line x1="60" y1="40" x2="640" y2="40" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <line x1="60" y1="115" x2="640" y2="115" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <line x1="60" y1="190" x2="640" y2="190" stroke="rgba(255,255,255,.14)" stroke-width="1"/>
+          <text x="50" y="44" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#8b9bbd">150K</text>
+          <text x="50" y="119" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#8b9bbd">75K</text>
+          <text x="50" y="194" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#8b9bbd">0</text>
+
+          <rect x="160" y="46.49" width="110" height="143.51" fill="#5b8def" rx="2"/>
+          <text x="215" y="34.49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#edf1fa">143,512</text>
+          <text x="215" y="212" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em" fill="#8b9bbd">GROSS GAINS</text>
+
+          <rect x="430" y="45.82" width="110" height="144.18" fill="#2c3c5e" rx="2"/>
+          <text x="485" y="33.82" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#edf1fa">144,176</text>
+          <text x="485" y="212" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em" fill="#8b9bbd">GROSS LOSSES</text>
+
+          <line x1="270" y1="16.49" x2="430" y2="15.82" stroke="#e24b4a" stroke-width="1" stroke-dasharray="2,3"/>
+          <text x="350" y="8.49" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#e24b4a">NET: −664</text>
+
+          <line x1="60" y1="190" x2="640" y2="190" stroke="#8b9bbd" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <p class="chart-caption">Chart 1. Private-sector gross job gains and losses in Indiana, Q3 2025 (June–September), seasonally adjusted. Gains and losses are running at nearly identical pace — the net change of −664 is the gap between two much larger, almost-equal flows. Source: U.S. Bureau of Labor Statistics.</p>
+    </figure>
+
+    <h2>Professional Services Carries the Quarter</h2>
+
+    <p>Of the eleven published industry sectors in Indiana, seven recorded net job losses in Q3. The standout performer was professional and business services, which posted a net gain of 4,473 jobs — the largest sectoral gain in the state. Gross job gains in the sector reached 29,571, or 8.3% of sector employment, the highest gain rate of any sector and a jump from the prior quarter's 7.1%. Construction also held up, adding a net 1,549 jobs as the sector continues to benefit from ongoing infrastructure and residential activity.</p>
+
+    <!-- SECTOR TABLE -->
+    <div class="sector-table-wrap fade">
+      <table class="sector-table">
+        <thead>
+          <tr>
+            <th>Sector</th>
+            <th class="right">Gross Gains</th>
+            <th class="right">Gross Losses</th>
+            <th class="right">Net Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="sector-name">Professional & Business Services</td>
+            <td class="mono">29,571</td>
+            <td class="mono">25,098</td>
+            <td class="mono net-pos">+4,473</td>
+          </tr>
+          <tr>
+            <td class="sector-name">Construction</td>
+            <td class="mono">13,552</td>
+            <td class="mono">12,003</td>
+            <td class="mono net-pos">+1,549</td>
+          </tr>
+          <tr>
+            <td class="sector-name">Education & Health Services</td>
+            <td class="mono">20,957</td>
+            <td class="mono">20,588</td>
+            <td class="mono net-pos">+369</td>
+          </tr>
+          <tr>
+            <td class="sector-name">Information</td>
+            <td class="mono">1,568</td>
+            <td class="mono">1,480</td>
+            <td class="mono net-pos">+88</td>
+          </tr>
+          <tr>
+            <td class="sector-name">Retail Trade</td>
+            <td class="mono">14,890</td>
+            <td class="mono">15,722</td>
+            <td class="mono net-neg">−832</td>
+          </tr>
+          <tr>
+            <td class="sector-name">Wholesale Trade</td>
+            <td class="mono">5,573</td>
+            <td class="mono">5,831</td>
+            <td class="mono net-neg">−258</td>
+          </tr>
+          <tr>
+            <td class="sector-name">Financial Activities</td>
+            <td class="mono">6,001</td>
+            <td class="mono">6,155</td>
+            <td class="mono net-neg">−154</td>
+          </tr>
+          <tr>
+            <td class="sector-name">Transportation & Warehousing</td>
+            <td class="mono">6,296</td>
+            <td class="mono">7,362</td>
+            <td class="mono net-neg">−1,066</td>
+          </tr>
+          <tr>
+            <td class="sector-name">Manufacturing</td>
+            <td class="mono">13,179</td>
+            <td class="mono">14,470</td>
+            <td class="mono net-neg">−1,291</td>
+          </tr>
+          <tr>
+            <td class="sector-name">Leisure & Hospitality</td>
+            <td class="mono">24,092</td>
+            <td class="mono">27,501</td>
+            <td class="mono net-neg">−3,409</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Manufacturing Continues Its Slow Bleed</h2>
+
+    <p>Indiana's manufacturing sector — the one most closely watched by dealmakers and regional economists — recorded a net loss of 1,291 jobs in Q3, extending a pattern of negative net employment that has defined the sector across most of the last two years. Contracting establishments lost 12,834 jobs while closing establishments shed another 1,636. The sector's gross job gain rate of 2.6% remains well below the statewide average of 5.1%, underscoring that expansion activity in Indiana manufacturing is running at roughly half the pace of the broader economy.</p>
+
+    <p>For M&A purposes, persistent manufacturing weakness has a dual effect. It puts downward pressure on valuations at distressed operators — potentially opening acquisition windows for strategic buyers — while also raising questions about growth assumptions in any leveraged deal where the industrial end-market is material to the thesis.</p>
+
+    <div class="pull-quote fade">
+      <blockquote>"Gross job losses in Indiana represented 5.1 percent of private-sector employment — compared to 5.7 percent nationally. Indiana employers are shedding jobs at a meaningfully lower rate than their peers."</blockquote>
+      <cite>— U.S. Bureau of Labor Statistics, Business Employment Dynamics, Q3 2025</cite>
+    </div>
+
+    <h2>Leisure & Hospitality: The Biggest Drag</h2>
+
+    <p>The sector posting the largest net job loss in Q3 was leisure and hospitality, which shed a net 3,409 jobs — the result of 24,092 gains against 27,501 losses. The loss rate of 8.8% for the sector was the highest of any industry in Indiana and notably above the prior quarter's 8.6%. For Indianapolis specifically, which has seen significant hotel and convention center investment over the past several years, a deteriorating hospitality employment picture warrants attention, particularly given the role event-driven demand plays in the city's economic calendar.</p>
+
+    <!-- CHART 2 -->
+    <figure class="chart-figure fade">
+      <div class="chart-box">
+        <p class="chart-title">Job Loss Rate — United States vs. Indiana, Q3 2025</p>
+        <svg viewBox="0 0 700 280" role="img" aria-label="Bar chart comparing the gross job loss rate as a percent of employment: 5.7 percent nationally versus 5.1 percent in Indiana, Q3 2025">
+          <line x1="60" y1="40" x2="640" y2="40" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <line x1="60" y1="115" x2="640" y2="115" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <line x1="60" y1="190" x2="640" y2="190" stroke="rgba(255,255,255,.14)" stroke-width="1"/>
+          <text x="50" y="44" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#8b9bbd">8%</text>
+          <text x="50" y="119" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#8b9bbd">4%</text>
+          <text x="50" y="194" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#8b9bbd">0%</text>
+
+          <rect x="160" y="83.12" width="110" height="106.88" fill="#2c3c5e" rx="2"/>
+          <text x="215" y="71.12" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" font-weight="500" fill="#edf1fa">5.7%</text>
+          <text x="215" y="212" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em" fill="#8b9bbd">UNITED STATES</text>
+
+          <rect x="430" y="94.38" width="110" height="95.62" fill="#5b8def" rx="2"/>
+          <text x="485" y="82.38" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" font-weight="500" fill="#edf1fa">5.1%</text>
+          <text x="485" y="212" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em" fill="#8b9bbd">INDIANA</text>
+
+          <line x1="60" y1="190" x2="640" y2="190" stroke="#8b9bbd" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <p class="chart-caption">Chart 2. Gross job losses as a percent of private-sector employment, Q3 2025. Indiana's 5.1% loss rate runs 60 basis points below the national rate of 5.7% — employers in the state are contracting and closing at a meaningfully lower pace than their national peers. Source: U.S. Bureau of Labor Statistics.</p>
+    </figure>
+
+    <h2>Transportation & Warehousing Reverses Its Gains</h2>
+
+    <p>One of the more volatile sectors over the trailing year has been transportation and warehousing, which swung from a net gain of 4,775 jobs in Q4 2024 to a loss of 4,500 in Q1 2025, and has now settled at a net loss of 1,066 in Q3. The sector's choppiness reflects the broader recalibration of supply chain infrastructure that built up rapidly post-pandemic. For Indiana — which houses several major logistics corridors and distribution hubs — the moderation in warehousing employment is worth watching as a leading indicator of how national freight demand is translating to the regional labor market.</p>
+
+    <div class="section-rule"></div>
+
+    <div class="context-box fade">
+      <p class="context-box-title">What This Means for Indiana Dealmakers</p>
+      <ul>
+        <li>Professional and business services — Indiana's Q3 standout — is the same sector that anchors most of Indianapolis's M&A advisory, consulting, and financial services ecosystem. Strong employment momentum there supports deal activity and fee revenue at regional advisory firms.</li>
+        <li>Manufacturing's persistent net losses compress exit multiples for industrial operators and may push more family-owned businesses toward sale processes as owners lose confidence in organic recovery.</li>
+        <li>Indiana's job loss rate of 5.1% — meaningfully below the national 5.7% — is a genuine competitive advantage when pitching the state to PE-backed portfolio companies considering consolidation acquisitions.</li>
+        <li>The sharp improvement from Q2's −15,254 to Q3's −664 suggests the mid-year adjustment cycle has largely run its course. If that holds in Q4 data (due July 29, 2026), it would indicate a stabilized baseline heading into 2026 deal activity.</li>
+        <li>Leisure and hospitality weakness bears watching for any deals tied to Indianapolis's convention and event infrastructure — a sector that has seen notable capital deployment over the past three years.</li>
+      </ul>
+    </div>
+
+    <p>The next Business Employment Dynamics release — covering Q4 2025 — is scheduled for July 29, 2026. Given the trajectory from Q2 to Q3, the key question is whether professional services can sustain its outsized gains and whether manufacturing finds a floor. Both answers will shape how Indiana's labor market story reads heading into the back half of the year.</p>
+
+    <div class="article-tags">
+      <span class="tag">Indiana Economy</span>
+      <span class="tag">Labor Markets</span>
+      <span class="tag">BLS Data</span>
+      <span class="tag">Manufacturing</span>
+      <span class="tag">Indianapolis</span>
+      <span class="tag">Employment</span>
+      <span class="tag">Midwest</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- RELATED -->
+<div class="related-section">
+  <p class="related-title">Related Coverage</p>
+  <div class="related-grid">
+    <article class="related-card" onclick="window.location='fed-warsh-rate-hold-june-2026.html'">
+      <p class="related-kicker">Markets</p>
+      <h3 class="related-headline">Warsh Holds Rates, Signals the Next Move Is Up</h3>
+    </article>
+    <article class="related-card">
+      <p class="related-kicker">Industrials</p>
+      <h3 class="related-headline">Cummins Spinoff Targets $1.2B Valuation as Standalone Engine Parts Maker</h3>
+    </article>
+    <article class="related-card">
+      <p class="related-kicker">M&amp;A</p>
+      <h3 class="related-headline">Private Equity Eyes Indiana's Fragmented Home Health Market</h3>
+    </article>
+  </div>
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <a href="index.html" aria-label="The 317 homepage">
+      <div style="flex-shrink:0;width:26px;height:26px;border-radius:3px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:10px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
+    </a>
+    <p class="footer-copy">© 2026 The 317 · Indianapolis, Indiana · <a href="index.html" style="color:var(--ink-mute)">Return to homepage</a></p>
+  </div>
+</footer>
+
+<script src="ticker.js"></script>
+<script>
+  const dateEl = document.getElementById('util-date');
+  if (dateEl) dateEl.textContent = new Date().toLocaleDateString('en-US', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  }).toUpperCase();
+
+  /* TICKER (shared across all pages — see ticker.js) */
+  initTicker();
+
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 80);
+  }, { passive: true });
+
+  const bar = document.getElementById('read-progress');
+  window.addEventListener('scroll', () => {
+    if (!bar) return;
+    const d = document.documentElement;
+    bar.style.width = Math.min((d.scrollTop / (d.scrollHeight - d.clientHeight)) * 100, 100) + '%';
+  }, { passive: true });
+</script>
+</body>
+</html>

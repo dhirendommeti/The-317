@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Deal Flow — The 317</title>
+<meta name="description" content="Every Midwest middle-market deal we're tracking — M&A, PE buyouts, growth equity, and IPOs, sortable and filterable by sector, type, and value.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Deal Flow — The 317">
+<meta property="og:description" content="Every Midwest middle-market deal we're tracking — M&A, PE buyouts, growth equity, and IPOs, sortable and filterable by sector, type, and value.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:url" content="https://the317.com/deal-flow.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Deal Flow — The 317">
+<meta name="twitter:description" content="Every Midwest middle-market deal we're tracking, sortable and filterable.">
+<meta name="twitter:image" content="og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #0f1623;
+    --paper-2: #1a2640;
+    --ink: #edf1fa;
+    --ink-mute: #8b9bbd;
+    --rule: #1f2c47;
+    --rule-dark: #2c3c5e;
+    --ember: #5b8def;
+    --ember-bright: #82aef2;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--ember); }
+
+  /* ── UTILITY BAR ── */
+  #utility-bar {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    padding: 6px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .util-right { display: flex; gap: 20px; }
+  .util-right a { color: var(--ink-mute); transition: color 0.15s; }
+  .util-right a:hover { color: var(--ember); }
+  @media (max-width: 600px) { .util-right { display: none; } }
+
+  /* ── TICKER ── */
+  #ticker-bar {
+    background: var(--ink);
+    overflow: hidden;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  #ticker-bar::before, #ticker-bar::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 32px; z-index: 2; pointer-events: none;
+  }
+  #ticker-bar::before { left: 0; background: linear-gradient(to right, var(--ink), transparent); }
+  #ticker-bar::after  { right: 0; background: linear-gradient(to left, var(--ink), transparent); }
+  .ticker-track { display: flex; white-space: nowrap; animation: ticker-scroll 38s linear infinite; }
+  #ticker-bar:hover .ticker-track { animation-play-state: paused; }
+  @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .ticker-item {
+    display: inline-flex; align-items: center; gap: 6px; padding: 0 22px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #1a2640;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .ticker-sym { font-weight: 500; }
+  .ticker-price { color: rgba(26,38,64,0.65); }
+  .ticker-up   { color: #4ade80; font-size: 10px; }
+  .ticker-down { color: #f87171; font-size: 10px; }
+
+  /* ── NAV ── */
+  #main-nav {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    position: sticky; top: 0; z-index: 80;
+    transition: box-shadow 0.2s;
+  }
+  #main-nav.scrolled { box-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+  .nav-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-logo { display: flex; align-items: center; gap: 3px; flex-shrink: 0; }
+  .nav-links { display: flex; }
+  .nav-links a {
+    font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute);
+    padding: 14px 16px; white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    border-bottom: 1px solid var(--rule);
+    padding: 60px 24px 48px;
+    text-align: center;
+  }
+  .page-kicker {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ember); margin-bottom: 16px;
+  }
+  .page-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 400; line-height: 1.05;
+    letter-spacing: -0.03em; color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .page-dek {
+    font-family: 'Inter', sans-serif;
+    font-size: 19px; font-style: italic;
+    color: var(--ink-mute); line-height: 1.55;
+    max-width: 600px; margin: 0 auto;
+  }
+
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── STATS ── */
+  #deal-stats { padding: 48px 0 0; }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  @media (min-width: 700px) {
+    .stats-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .stat-cell {
+    background: var(--paper-2);
+    padding: 24px 20px;
+  }
+  .stat-label {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-mute); margin-bottom: 8px;
+  }
+  .stat-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 26px; font-weight: 500;
+    color: var(--ink); line-height: 1;
+  }
+
+  /* ── CONTROLS ── */
+  #deal-controls { padding: 32px 0 0; }
+  .controls-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .control-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .control-label {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .control-input, .control-select {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--ink);
+    background: var(--paper-2);
+    border: 1px solid var(--rule-dark);
+    padding: 8px 12px;
+    border-radius: 3px;
+    outline: none;
+    min-width: 160px;
+  }
+  .control-input:focus, .control-select:focus { border-color: var(--ember); }
+  .control-input::placeholder { color: var(--ink-mute); }
+  .results-count {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-bottom: 16px;
+  }
+  .results-count strong { color: var(--ink); font-weight: 500; }
+  .reset-btn {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ember);
+    background: none; border: none;
+    cursor: pointer; padding: 8px 4px;
+    align-self: flex-end;
+  }
+  .reset-btn:hover { color: var(--ember-bright); }
+
+  /* ── TABLE (matches homepage Deal Flow module) ── */
+  #deal-flow-table-section { padding: 0 0 64px; }
+  .deal-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--rule-dark);
+  }
+  .deal-table { width: 100%; border-collapse: collapse; min-width: 720px; }
+  .deal-table th {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-mute);
+    padding: 12px 24px; text-align: left;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper-2);
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+  }
+  .deal-table th.right { text-align: right; }
+  .deal-table th:hover { color: var(--ink); }
+  .deal-table th .sort-arrow { opacity: 0.4; margin-left: 4px; font-size: 8px; }
+  .deal-table th.sorted .sort-arrow { opacity: 1; color: var(--ember); }
+  .deal-table td {
+    padding: 14px 24px; font-size: 14px; color: var(--ink);
+    border-bottom: 1px solid var(--rule); vertical-align: middle;
+  }
+  .deal-table td.company { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500; }
+  .deal-table td.value {
+    font-family: 'JetBrains Mono', monospace; font-size: 13px;
+    text-align: right; color: var(--ink); font-weight: 500; white-space: nowrap;
+  }
+  .deal-table td.sector { font-family: 'Inter', Arial, sans-serif; font-size: 11px; letter-spacing: 0.04em; color: var(--ink-mute); }
+  .deal-table td.date { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-mute); white-space: nowrap; }
+  .deal-table tr:last-child td { border-bottom: none; }
+  .deal-table tr:hover td { background: var(--paper-2); }
+  .empty-row td {
+    text-align: center; padding: 40px 24px;
+    color: var(--ink-mute); font-style: italic;
+  }
+
+  /* ── M&A ACTIVITY NEWS PANEL ── */
+  .deal-news-card { border: 1px solid var(--rule-dark); }
+  .deal-news-header {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    padding: 16px 20px; background: var(--paper-2); border-bottom: 1px solid var(--rule);
+  }
+  .deal-news-title {
+    font-family: 'Inter', Arial, sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink);
+  }
+  .deal-news-disclaimer {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-style: italic;
+    color: var(--ink-mute); line-height: 1.5; padding: 12px 20px 0;
+  }
+  .deal-news-list { padding: 8px 0 4px; }
+  .deal-news-item {
+    display: flex; align-items: baseline; gap: 12px;
+    padding: 10px 20px; border-bottom: 1px solid var(--rule);
+    transition: background 0.15s; text-decoration: none;
+  }
+  .deal-news-item:last-child { border-bottom: none; }
+  .deal-news-item:hover { background: var(--paper-2); }
+  .deal-news-sym {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500;
+    color: var(--ember); flex-shrink: 0; min-width: 36px;
+  }
+  .deal-news-headline { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--ink); flex: 1; }
+  .deal-news-meta {
+    font-family: 'Inter', Arial, sans-serif; font-size: 10px;
+    color: var(--ink-mute); white-space: nowrap; flex-shrink: 0;
+  }
+  .deal-news-empty {
+    font-family: 'Inter', sans-serif; font-size: 13px; font-style: italic;
+    color: var(--ink-mute); padding: 16px 20px;
+  }
+  @media (max-width: 600px) {
+    .deal-news-item { flex-wrap: wrap; }
+    .deal-news-meta { width: 100%; }
+  }
+
+  .deal-tag {
+    display: inline-block;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 3px 7px; border-radius: 2px; white-space: nowrap;
+  }
+  .tag-ma      { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+  .tag-pe      { background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; }
+  .tag-growth  { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+  .tag-ipo     { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+  .tag-private { background: #e0f2fe; color: #075985; border: 1px solid #7dd3fc; }
+  .tag-asset   { background: #fae8ff; color: #86198f; border: 1px solid #f0abfc; }
+  .tag-debt    { background: #e2e8f0; color: #334155; border: 1px solid #94a3b8; }
+
+  /* ── FOOTER ── */
+  #footer { background: var(--paper); border-top: 1px solid var(--rule); padding: 32px 24px; }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-copy { font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: var(--ink-mute); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  .fade { animation: fadeUp 0.5s ease both; }
+  @media (prefers-reduced-motion: reduce) { .fade, .ticker-track { animation: none; } }
+</style>
+</head>
+<body>
+
+<!-- UTILITY BAR -->
+<div id="utility-bar">
+  <div class="util-left">
+    <span id="util-date"></span>
+    <span>Indianapolis</span>
+  </div>
+  <div class="util-right">
+    <a href="deal-flow.html">Deals</a>
+    <a href="index.html#markets">Markets</a>
+    <a href="index.html#newsletter">Newsletter</a>
+    <a href="about.html">About</a>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div id="ticker-bar" aria-label="Live market data">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="The 317 homepage">
+      <div style="flex-shrink:0;width:30px;height:30px;border-radius:4px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:11px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
+    </a>
+    <div class="nav-links">
+      <a href="deal-flow.html" class="active">Deals</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="index.html">Pharma</a>
+      <a href="index.html">Banking</a>
+      <a href="index.html">Industrials</a>
+      <a href="index.html#newsletter">Newsletter</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header fade">
+  <p class="page-kicker">Updated Continuously</p>
+  <h1 class="page-title">The Deal Flow</h1>
+  <p class="page-dek">Every Midwest middle-market transaction we're tracking — sourced from public filings, press releases, and direct confirmation.</p>
+</header>
+
+<main>
+
+  <!-- STATS -->
+  <section id="deal-stats">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat-cell">
+          <p class="stat-label">Deals Tracked</p>
+          <p class="stat-value" id="stat-total">—</p>
+        </div>
+        <div class="stat-cell">
+          <p class="stat-label">Disclosed Value</p>
+          <p class="stat-value" id="stat-value">—</p>
+        </div>
+        <div class="stat-cell">
+          <p class="stat-label">Avg. Disclosed Deal</p>
+          <p class="stat-value" id="stat-avg">—</p>
+        </div>
+        <div class="stat-cell">
+          <p class="stat-label">Most Active Sector</p>
+          <p class="stat-value" id="stat-sector" style="font-size:18px;">—</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <section id="deal-controls">
+    <div class="wrap">
+      <div class="controls-row">
+        <div class="control-field">
+          <label class="control-label" for="filter-search">Search</label>
+          <input class="control-input" id="filter-search" type="text" placeholder="Company name…">
+        </div>
+        <div class="control-field">
+          <label class="control-label" for="filter-sector">Sector</label>
+          <select class="control-select" id="filter-sector">
+            <option value="">All Sectors</option>
+          </select>
+        </div>
+        <div class="control-field">
+          <label class="control-label" for="filter-type">Deal Type</label>
+          <select class="control-select" id="filter-type">
+            <option value="">All Types</option>
+          </select>
+        </div>
+        <button class="reset-btn" id="reset-filters">Reset filters</button>
+      </div>
+      <p class="results-count" id="results-count"></p>
+    </div>
+  </section>
+
+  <!-- TABLE -->
+  <section id="deal-flow-table-section">
+    <div class="wrap">
+      <div class="deal-table-wrap">
+        <table class="deal-table" id="deal-table">
+          <thead>
+            <tr>
+              <th data-sort="target">Company<span class="sort-arrow">▾</span></th>
+              <th data-sort="counterparty">Counterparty<span class="sort-arrow">▾</span></th>
+              <th data-sort="sector">Sector<span class="sort-arrow">▾</span></th>
+              <th data-sort="dealType">Type<span class="sort-arrow">▾</span></th>
+              <th class="right" data-sort="value">Value<span class="sort-arrow">▾</span></th>
+              <th class="right sorted" data-sort="dateAnnounced">Announced<span class="sort-arrow">▾</span></th>
+            </tr>
+          </thead>
+          <tbody id="deal-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- M&A ACTIVITY NEWS -->
+  <section id="deal-news-section" style="padding: 0 0 64px;">
+    <div class="wrap">
+      <div class="deal-news-card">
+        <div class="deal-news-header">
+          <span class="deal-news-title">M&amp;A Activity — Companies We Track</span>
+        </div>
+        <p class="deal-news-disclaimer">Live news mentioning the 19 public companies on our ticker bar — not comprehensive Midwest deal coverage. The table above is our actual, manually sourced deal tracker; this panel is a real-time supplement.</p>
+        <div id="deal-news" class="deal-news-list">
+          <p class="deal-news-empty">Loading recent M&amp;A activity…</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <a href="index.html" aria-label="The 317 homepage">
+      <div style="flex-shrink:0;width:26px;height:26px;border-radius:3px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:10px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
+    </a>
+    <p class="footer-copy">© 2026 The 317 · Indianapolis, Indiana · <a href="index.html" style="color:var(--ink-mute)">Return to homepage</a></p>
+  </div>
+</footer>
+
+<script src="ticker.js"></script>
+<script>
+  /* DATE */
+  const dateEl = document.getElementById('util-date');
+  if (dateEl) dateEl.textContent = new Date().toLocaleDateString('en-US', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  }).toUpperCase();
+
+  /* TICKER (shared across all pages — see ticker.js) */
+  initTicker();
+
+  /* M&A ACTIVITY NEWS (see ticker.js) */
+  initDealNews();
+
+  /* STICKY NAV */
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 80);
+  }, { passive: true });
+
+  /* ── DEAL DATA ──
+     Every entry below is a real, publicly reported transaction. The `source` field
+     links to the press release or news coverage we sourced it from — click any
+     company name in the table to verify. Dates marked (approx.) come from a deal
+     tracker that only reported month-level granularity at time of sourcing. */
+  const deals = [
+    { target: 'Hillenbrand, Inc.',                          counterparty: 'Lone Star Funds',                 sector: 'Industrials',          dealType: 'PE Buyout',     value: 3800000000, valueDisplay: '$3.8B',       dateAnnounced: '2026-02-10', source: 'https://hillenbrand.com/corporate-news/lone-star-completes-acquisition-of-hillenbrand/' },
+    { target: 'Duna Services',                               counterparty: 'Aecon Utilities Group (Oaktree)', sector: 'Energy',               dealType: 'M&A',           value: 60000000,    valueDisplay: '$60M',        dateAnnounced: '2026-03-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
+    { target: 'OneStream, Inc.',                             counterparty: 'Hg',                              sector: 'Technology',           dealType: 'PE Buyout',     value: 6400000000, valueDisplay: '$6.4B',       dateAnnounced: '2026-04-01', source: 'https://www.crainsdetroit.com/technology/cdb-onestream-acquisition-closed-hg-20260401/' },
+    { target: 'Maitland Engineering',                        counterparty: 'BTX Precision (L Squared Capital)', sector: 'Industrials',        dealType: 'PE Buyout',     value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-04-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
+    { target: 'Midwest Interventional Spine Specialists',    counterparty: 'CPIhealth (Iron Path Capital)',   sector: 'Healthcare',           dealType: 'PE Buyout',     value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-04-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
+    { target: 'A. Hattersley & Sons',                        counterparty: 'Foundral (McNally Capital)',      sector: 'Industrials',          dealType: 'PE Buyout',     value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-05-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
+    { target: 'CAI',                                         counterparty: 'JLL Partners',                    sector: 'Healthcare',           dealType: 'Growth Equity', value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-05-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
+    { target: 'Crowe LLP',                                   counterparty: 'KKR',                             sector: 'Professional Services', dealType: 'PE Buyout',    value: 3000000000, valueDisplay: '$3B',         dateAnnounced: '2026-06-12', source: 'https://www.chicagobusiness.com/banking-finance/ccb-crowe-kkr-stake-20260612/' },
+    { target: 'Material Handling Exchange, LLC',             counterparty: 'Architect Equity',                sector: 'Industrials',          dealType: 'PE Buyout',     value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-06-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
+    { target: 'Tallman Equipment Company',                   counterparty: 'Platte River Equity',             sector: 'Energy',               dealType: 'Growth Equity', value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-06-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
+  ];
+
+  const tagClasses = {
+    'M&A': 'tag-ma',
+    'PE Buyout': 'tag-pe',
+    'Growth Equity': 'tag-growth',
+    'IPO': 'tag-ipo',
+    'Private Placement': 'tag-private',
+    'Asset Sale': 'tag-asset',
+    'Debt Financing': 'tag-debt',
+  };
+
+  /* ── STATE ── */
+  let activeSearch = '';
+  let activeSector = '';
+  let activeType = '';
+  let sortKey = 'dateAnnounced';
+  let sortDir = 'desc';
+
+  /* ── POPULATE FILTER DROPDOWNS FROM DATA (so they never go stale as deals are added) ── */
+  function populateFilters() {
+    const sectors = Array.from(new Set(deals.map(d => d.sector))).sort();
+    const types = Array.from(new Set(deals.map(d => d.dealType))).sort();
+    const sectorSelect = document.getElementById('filter-sector');
+    const typeSelect = document.getElementById('filter-type');
+    sectors.forEach(s => {
+      const opt = document.createElement('option');
+      opt.value = s; opt.textContent = s;
+      sectorSelect.appendChild(opt);
+    });
+    types.forEach(t => {
+      const opt = document.createElement('option');
+      opt.value = t; opt.textContent = t;
+      typeSelect.appendChild(opt);
+    });
+  }
+
+  function getFilteredSorted() {
+    let rows = deals.filter(d => {
+      if (activeSector && d.sector !== activeSector) return false;
+      if (activeType && d.dealType !== activeType) return false;
+      if (activeSearch && !d.target.toLowerCase().includes(activeSearch.toLowerCase())
+          && !d.counterparty.toLowerCase().includes(activeSearch.toLowerCase())) return false;
+      return true;
+    });
+
+    rows.sort((a, b) => {
+      let av = a[sortKey];
+      let bv = b[sortKey];
+      if (sortKey === 'value') {
+        av = av === null ? -1 : av;
+        bv = bv === null ? -1 : bv;
+      } else if (sortKey === 'dateAnnounced') {
+        av = new Date(av).getTime();
+        bv = new Date(bv).getTime();
+      } else {
+        av = String(av).toLowerCase();
+        bv = String(bv).toLowerCase();
+      }
+      if (av < bv) return sortDir === 'asc' ? -1 : 1;
+      if (av > bv) return sortDir === 'asc' ? 1 : -1;
+      return 0;
+    });
+
+    return rows;
+  }
+
+  function renderStats() {
+    const disclosed = deals.filter(d => d.value !== null);
+    const totalValue = disclosed.reduce((sum, d) => sum + d.value, 0);
+    const avgValue = disclosed.length ? totalValue / disclosed.length : 0;
+
+    const sectorCounts = {};
+    deals.forEach(d => { sectorCounts[d.sector] = (sectorCounts[d.sector] || 0) + 1; });
+    const topSector = Object.keys(sectorCounts).sort((a, b) => sectorCounts[b] - sectorCounts[a])[0];
+
+    function formatMoney(n) {
+      if (n >= 1e9) return '$' + (n / 1e9).toFixed(2) + 'B';
+      if (n >= 1e6) return '$' + (n / 1e6).toFixed(1) + 'M';
+      return '$' + n.toLocaleString();
+    }
+
+    document.getElementById('stat-total').textContent = deals.length;
+    document.getElementById('stat-value').textContent = formatMoney(totalValue);
+    document.getElementById('stat-avg').textContent = formatMoney(avgValue);
+    document.getElementById('stat-sector').textContent = topSector + ' (' + sectorCounts[topSector] + ')';
+  }
+
+  function renderTable() {
+    const rows = getFilteredSorted();
+    const tbody = document.getElementById('deal-tbody');
+    const countEl = document.getElementById('results-count');
+
+    countEl.innerHTML = 'Showing <strong>' + rows.length + '</strong> of <strong>' + deals.length + '</strong> deals';
+
+    if (!rows.length) {
+      tbody.innerHTML = '<tr class="empty-row"><td colspan="6">No deals match those filters.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = rows.map(d => `
+      <tr>
+        <td class="company">${d.source ? `<a href="${d.source}" target="_blank" rel="noopener" title="View source">${d.target} <span style="font-size:11px;opacity:0.5;">↗</span></a>` : d.target}</td>
+        <td>${d.counterparty}</td>
+        <td class="sector">${d.sector}</td>
+        <td><span class="deal-tag ${tagClasses[d.dealType] || ''}">${d.dealType}</span></td>
+        <td class="value">${d.valueDisplay}</td>
+        <td class="date">${d.dateAnnounced}</td>
+      </tr>
+    `).join('');
+  }
+
+  function updateSortHeaders() {
+    document.querySelectorAll('.deal-table th').forEach(th => {
+      th.classList.toggle('sorted', th.dataset.sort === sortKey);
+      const arrow = th.querySelector('.sort-arrow');
+      if (th.dataset.sort === sortKey) arrow.textContent = sortDir === 'asc' ? '▴' : '▾';
+      else arrow.textContent = '▾';
+    });
+  }
+
+  function rerender() {
+    renderTable();
+    updateSortHeaders();
+  }
+
+  /* ── WIRE UP CONTROLS ── */
+  populateFilters();
+  renderStats();
+  rerender();
+
+  document.getElementById('filter-search').addEventListener('input', (e) => {
+    activeSearch = e.target.value;
+    rerender();
+  });
+  document.getElementById('filter-sector').addEventListener('change', (e) => {
+    activeSector = e.target.value;
+    rerender();
+  });
+  document.getElementById('filter-type').addEventListener('change', (e) => {
+    activeType = e.target.value;
+    rerender();
+  });
+  document.getElementById('reset-filters').addEventListener('click', () => {
+    activeSearch = ''; activeSector = ''; activeType = '';
+    document.getElementById('filter-search').value = '';
+    document.getElementById('filter-sector').value = '';
+    document.getElementById('filter-type').value = '';
+    rerender();
+  });
+  document.querySelectorAll('.deal-table th').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.sort;
+      if (sortKey === key) {
+        sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortKey = key;
+        sortDir = key === 'dateAnnounced' || key === 'value' ? 'desc' : 'asc';
+      }
+      rerender();
+    });
+  });
+</script>
+</body>
+</html>

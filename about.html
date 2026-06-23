@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — The 317</title>
+<meta name="description" content="The 317 is a student-founded financial publication covering Midwest middle-market M&A and regional markets, anchored in Indianapolis.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About — The 317">
+<meta property="og:description" content="The 317 is a student-founded financial publication covering Midwest middle-market M&A and regional markets, anchored in Indianapolis.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:url" content="https://the317.com/about.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About — The 317">
+<meta name="twitter:description" content="The 317 is a student-founded financial publication covering Midwest middle-market M&A and regional markets, anchored in Indianapolis.">
+<meta name="twitter:image" content="og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #0f1623;
+    --paper-2: #1a2640;
+    --ink: #edf1fa;
+    --ink-mute: #8b9bbd;
+    --rule: #1f2c47;
+    --rule-dark: #2c3c5e;
+    --ember: #5b8def;
+    --ember-bright: #82aef2;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--ember); }
+
+  /* ── UTILITY BAR ── */
+  #utility-bar {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    padding: 6px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .util-right { display: flex; gap: 20px; }
+  .util-right a { color: var(--ink-mute); transition: color 0.15s; }
+  .util-right a:hover { color: var(--ember); }
+  @media (max-width: 600px) { .util-right { display: none; } }
+
+  /* ── TICKER ── */
+  #ticker-bar {
+    background: var(--ink);
+    overflow: hidden;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  #ticker-bar::before, #ticker-bar::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 32px; z-index: 2; pointer-events: none;
+  }
+  #ticker-bar::before { left: 0; background: linear-gradient(to right, var(--ink), transparent); }
+  #ticker-bar::after  { right: 0; background: linear-gradient(to left, var(--ink), transparent); }
+  .ticker-track { display: flex; white-space: nowrap; animation: ticker-scroll 38s linear infinite; }
+  #ticker-bar:hover .ticker-track { animation-play-state: paused; }
+  @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .ticker-item {
+    display: inline-flex; align-items: center; gap: 6px; padding: 0 22px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #1a2640;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .ticker-sym { font-weight: 500; }
+  .ticker-price { color: rgba(26,38,64,0.65); }
+  .ticker-up   { color: #4ade80; font-size: 10px; }
+  .ticker-down { color: #f87171; font-size: 10px; }
+
+  /* ── NAV ── */
+  #main-nav {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    position: sticky; top: 0; z-index: 80;
+    transition: box-shadow 0.2s;
+  }
+  #main-nav.scrolled { box-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+  .nav-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-logo { display: flex; align-items: center; gap: 3px; flex-shrink: 0; }
+  .nav-links { display: flex; }
+  .nav-links a {
+    font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute);
+    padding: 14px 16px; white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    border-bottom: 1px solid var(--rule);
+    padding: 60px 24px 48px;
+    text-align: center;
+  }
+
+  .page-kicker {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ember); margin-bottom: 16px;
+  }
+
+  .page-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 900; line-height: 1.05;
+    letter-spacing: -0.03em; color: var(--ink);
+    margin-bottom: 20px;
+  }
+
+  .page-dek {
+    font-family: 'Inter', sans-serif;
+    font-size: 19px; font-style: italic;
+    color: var(--ink-mute); line-height: 1.55;
+    max-width: 600px; margin: 0 auto;
+  }
+
+  /* ── SHARED WRAP ── */
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .wrap-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink);
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 36px;
+  }
+
+  /* ── MISSION ── */
+  #mission {
+    padding: 72px 0 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  @media (min-width: 768px) {
+    .mission-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+  }
+
+  .mission-headline {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 700; line-height: 1.15;
+    letter-spacing: -0.02em; color: var(--ink);
+    margin-bottom: 24px;
+  }
+
+  .mission-body p {
+    font-size: 17px; line-height: 1.75;
+    color: var(--ink-mute); margin-bottom: 1.2em;
+  }
+
+  .mission-body p:last-child { margin-bottom: 0; }
+
+  .mission-body p strong {
+    font-weight: 500; color: var(--ink);
+  }
+
+  /* ── WHAT WE COVER ── */
+  .coverage-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0;
+    border: 1px solid var(--rule);
+    margin-top: 0;
+  }
+
+  .pillar {
+    padding: 28px 24px;
+    border-right: 1px solid var(--rule);
+  }
+
+  .pillar:last-child { border-right: none; }
+
+  @media (max-width: 600px) {
+    .pillar { border-right: none; border-bottom: 1px solid var(--rule); }
+    .pillar:last-child { border-bottom: none; }
+  }
+
+  .pillar-icon {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px; font-weight: 500;
+    color: var(--ember); margin-bottom: 12px;
+    display: block;
+  }
+
+  .pillar-title {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink); margin-bottom: 8px;
+  }
+
+  .pillar-desc {
+    font-size: 14px; line-height: 1.55;
+    color: var(--ink-mute);
+  }
+
+  /* ── TEAM ── */
+  #team {
+    padding: 72px 0 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  @media (min-width: 640px) {
+    .team-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 48px 64px;
+    }
+  }
+
+  .team-card {}
+
+  .team-photo-wrap {
+    width: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .team-photo {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(15%);
+    transition: filter 0.3s;
+  }
+
+  .team-card:hover .team-photo { filter: grayscale(0%); }
+
+  .team-photo-fallback {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--rule-dark);
+  }
+
+  .team-name {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 22px; font-weight: 700;
+    color: var(--ink); margin-bottom: 4px;
+  }
+
+  .team-title {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ember); margin-bottom: 6px;
+  }
+
+  .team-school {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px; letter-spacing: 0.06em;
+    color: var(--ink-mute); margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .team-bio {
+    font-size: 15px; line-height: 1.65;
+    color: var(--ink-mute);
+    border-top: 1px solid var(--rule);
+    padding-top: 16px;
+  }
+
+  .team-links {
+    display: flex; gap: 16px; margin-top: 14px;
+  }
+
+  .team-link {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink-mute);
+    display: flex; align-items: center; gap: 5px;
+    transition: color 0.15s;
+  }
+  .team-link:hover { color: var(--ember); }
+
+  /* ── VALUES ── */
+  #values {
+    padding: 72px 0 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (min-width: 640px) {
+    .values-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .value-item {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  @media (min-width: 640px) {
+    .value-item {
+      padding: 32px 32px 32px 0;
+      border-right: 1px solid var(--rule);
+    }
+    .value-item:nth-child(2n) { padding-left: 32px; padding-right: 0; border-right: none; }
+  }
+
+  .value-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ember);
+    margin-bottom: 10px; display: block;
+    font-weight: 500;
+  }
+
+  .value-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--ink); margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .value-desc {
+    font-size: 15px; line-height: 1.6;
+    color: var(--ink-mute);
+  }
+
+  /* ── CONTACT CTA ── */
+  #contact {
+    background: var(--ink);
+    padding: 72px 24px;
+  }
+
+  .contact-inner {
+    max-width: 800px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr;
+    gap: 40px; align-items: center;
+  }
+
+  @media (min-width: 640px) {
+    .contact-inner { grid-template-columns: 1fr auto; gap: 64px; }
+  }
+
+  .contact-label {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ember-bright); margin-bottom: 14px;
+  }
+
+  .contact-headline {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 700; line-height: 1.2;
+    color: var(--paper);
+  }
+
+  .contact-links {
+    display: flex; flex-direction: column; gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 13px 24px;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .contact-btn-primary {
+    background: var(--ember);
+    color: var(--paper);
+    border: 1px solid var(--ember);
+  }
+  .contact-btn-primary:hover {
+    background: var(--ember-bright);
+    border-color: var(--ember-bright);
+    color: var(--paper);
+  }
+
+  .contact-btn-secondary {
+    background: transparent;
+    color: rgba(15,22,35,0.6);
+    border: 1px solid rgba(15,22,35,0.2);
+  }
+  .contact-btn-secondary:hover {
+    color: var(--paper);
+    border-color: rgba(15,22,35,0.5);
+  }
+
+  /* ── FOOTER ── */
+  #footer {
+    background: var(--paper);
+    border-top: 3px double var(--rule-dark);
+    padding: 36px 24px 28px;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 20px;
+  }
+  .footer-copy {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--ink-mute);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .fade { animation: fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) both; }
+  .fade-1 { animation-delay: 0.05s; }
+  .fade-2 { animation-delay: 0.12s; }
+  .fade-3 { animation-delay: 0.19s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade, .ticker-track { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- UTILITY BAR -->
+<div id="utility-bar">
+  <div class="util-left">
+    <span id="util-date"></span>
+    <span>Indianapolis</span>
+  </div>
+  <div class="util-right">
+    <a href="deal-flow.html">Deals</a>
+    <a href="index.html#markets">Markets</a>
+    <a href="index.html#newsletter">Newsletter</a>
+    <a href="about.html">About</a>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div id="ticker-bar" aria-label="Live market data">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="The 317 homepage">
+      <div style="flex-shrink:0;width:30px;height:30px;border-radius:4px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:11px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
+    </a>
+    <div class="nav-links">
+      <a href="deal-flow.html">Deals</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="index.html">Pharma</a>
+      <a href="index.html">Banking</a>
+      <a href="index.html">Industrials</a>
+      <a href="index.html#newsletter">Newsletter</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header fade">
+  <p class="page-kicker">The Publication</p>
+  <h1 class="page-title">About The 317</h1>
+  <p class="page-dek">Built in Indianapolis. Focused on the deals, markets, and companies the national press doesn't cover.</p>
+</header>
+
+<main>
+
+  <!-- MISSION -->
+  <section id="mission">
+    <div class="wrap">
+      <div class="mission-grid">
+        <div>
+          <p class="section-label">Why We Built This</p>
+          <h2 class="mission-headline">The Midwest closes billions in deals every year. Almost none of it gets covered well.</h2>
+        </div>
+        <div class="mission-body fade fade-1">
+          <p>The national financial press covers markets from New York and San Francisco. That lens misses most of the country — and a disproportionate share of what it misses is the Midwest. Indiana alone is home to <strong>Eli Lilly, Cummins, Steel Dynamics, Simon Property Group</strong>, and dozens of middle-market companies that move quietly and grow significantly, largely without scrutiny.</p>
+          <p>We built The 317 because we kept reading deal announcements with no context, market moves with no Midwest lens, and quarterly earnings with no local stakes attached. The region deserves coverage that treats it as the economic engine it actually is — not a footnote in a national roundup.</p>
+          <p>We're two finance students at the Kelley School of Business at Indiana University. We're not impartial observers — we're invested in this market and in the city. That's not a conflict. That's the point.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap" style="margin-top: 52px;">
+      <p class="section-label">What We Cover</p>
+      <div class="coverage-pillars">
+        <div class="pillar">
+          <span class="pillar-icon">M&A</span>
+          <p class="pillar-title">Deals</p>
+          <p class="pillar-desc">Middle-market M&A, PE buyouts, growth equity rounds, and IPOs across Indiana and the broader Midwest.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">~$</span>
+          <p class="pillar-title">Markets</p>
+          <p class="pillar-desc">Regional market moves, macro policy shifts, and how Fed decisions land on Indiana companies and dealmakers.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">Rx</span>
+          <p class="pillar-title">Pharma</p>
+          <p class="pillar-desc">Lilly's pipeline, licensing deals, and the growing Indianapolis life sciences corridor.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">///</span>
+          <p class="pillar-title">Industrials</p>
+          <p class="pillar-desc">Manufacturing, logistics, and energy companies that form the backbone of the Midwest economy.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">%</span>
+          <p class="pillar-title">Banking</p>
+          <p class="pillar-desc">Regional bank consolidation, credit conditions, and how capital flows through Midwest lending markets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <div class="wrap">
+      <p class="section-label">The Team</p>
+      <div class="team-grid">
+
+        <!-- Dhiren -->
+        <div class="team-card fade fade-1">
+          <div class="team-photo-wrap">
+            <img
+              src="dhiren-dommeti.jpg"
+              alt="Dhiren Dommeti, Co-Founder of The 317"
+              class="team-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="team-photo-fallback" style="display:none;">Photo placeholder</div>
+          </div>
+          <p class="team-title">Co-Founder</p>
+          <h2 class="team-name">Dhiren Dommeti</h2>
+          <p class="team-school">Finance & Business Analytics · Kelley School of Business, IU · '28</p>
+          <div class="team-bio">
+            Dhiren built and runs The 317 — from the site architecture and design to the deal sourcing and editorial workflow. He studies finance and business analytics at Kelley, with a focus on how data shapes how markets price Midwest companies. When he isn't building this publication, he's tracking deal flow across Indiana's middle-market and looking for the story behind the numbers.
+          </div>
+          <div class="team-links">
+            <a href="https://www.linkedin.com/in/dhiren-dommeti/" target="_blank" rel="noopener" class="team-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Ashrith -->
+        <div class="team-card fade fade-2">
+          <div class="team-photo-wrap">
+            <img
+              src="ashrith-desu.jpg"
+              alt="Ashrith Desu, Co-Founder of The 317"
+              class="team-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="team-photo-fallback" style="display:none;">Photo placeholder</div>
+          </div>
+          <p class="team-title">Co-Founder</p>
+          <h2 class="team-name">Ashrith Desu</h2>
+          <p class="team-school">Finance · Kelley School of Business, IU · '28</p>
+          <div class="team-bio">
+            Ashrith leads markets coverage and deal evaluation at The 317. He brings a finance-first lens to every story — digging into the deal structures, capital stacks, and strategic logic behind Midwest transactions. Alongside Dhiren, he sources and vets the deals that make it into The Deal Flow, with a focus on finding the transactions that matter to regional investors and operators but rarely reach a national audience.
+          </div>
+          <div class="team-links">
+            <a href="https://www.linkedin.com/in/ashrith-desu/" target="_blank" rel="noopener" class="team-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES / EDITORIAL STANDARDS -->
+  <section id="values">
+    <div class="wrap">
+      <p class="section-label">Editorial Standards</p>
+      <div class="values-grid">
+        <div class="value-item">
+          <span class="value-num">01</span>
+          <p class="value-title">We verify before we publish</p>
+          <p class="value-desc">Every deal in The Deal Flow is sourced from public filings, press releases, or direct confirmation. We don't run rumors. If a valuation is unconfirmed, we say so.</p>
+        </div>
+        <div class="value-item">
+          <span class="value-num">02</span>
+          <p class="value-title">We write for practitioners, not tourists</p>
+          <p class="value-desc">Our readers work in finance, operate businesses, or are building careers in the Midwest. We write at that level — no hand-holding, no padding, no explaining what an LBO is.</p>
+        </div>
+        <div class="value-item">
+          <span class="value-num">03</span>
+          <p class="value-title">Regional focus is a feature, not a limitation</p>
+          <p class="value-desc">We cover Indiana and the Midwest because that's where the underreported stories are, not because we can't see outside it. When national policy hits local companies, we connect the dots.</p>
+        </div>
+        <div class="value-item">
+          <span class="value-num">04</span>
+          <p class="value-title">We're transparent about what we are</p>
+          <p class="value-desc">We're students, not seasoned journalists. We bring analytical rigor and genuine curiosity to every piece. We'll tell you when we're uncertain and update when we're wrong.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div>
+        <p class="contact-label">Get In Touch</p>
+        <h2 class="contact-headline">Have a deal tip, a story pitch, or want to work with us?</h2>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:hello@the317.com" class="contact-btn contact-btn-primary">Pitch a Story</a>
+        <a href="index.html#newsletter" class="contact-btn contact-btn-secondary">Subscribe →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <a href="index.html" aria-label="The 317 homepage">
+      <div style="flex-shrink:0;width:26px;height:26px;border-radius:3px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:10px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
+    </a>
+    <p class="footer-copy">© 2026 The 317 · Indianapolis, Indiana · <a href="index.html" style="color:var(--ink-mute)">Return to homepage</a></p>
+  </div>
+</footer>
+
+<script src="ticker.js"></script>
+<script>
+  /* DATE */
+  const dateEl = document.getElementById('util-date');
+  if (dateEl) dateEl.textContent = new Date().toLocaleDateString('en-US', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  }).toUpperCase();
+
+  /* TICKER (shared across all pages — see ticker.js) */
+  initTicker();
+
+  /* STICKY NAV */
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 80);
+  }, { passive: true });
+</script>
+</body>
+</html>
