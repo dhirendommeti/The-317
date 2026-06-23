@@ -25,7 +25,7 @@ const STOCK_TICKERS = [
   { sym: 'USB',  name: 'U.S. Bancorp',          price: '58.68',    pct: '+0.93%', up: true,  sector: 'Banking',     state: 'Minnesota' },
 ];
 
-const FINNHUB_KEY = 'd6o505hr01qu09ci4c5gd6o505hr01qu09ci4c60';
+/* FINNHUB_KEY comes from config.js, loaded via <script> before this file. */
 
 function buildTickerItem(t) {
   return '<span class="ticker-item">'
