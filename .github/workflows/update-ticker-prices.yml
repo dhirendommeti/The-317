@@ -22,11 +22,13 @@ jobs:
         run: node scripts/update-ticker-prices.js
 
       - name: Commit and push if prices changed
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git diff --quiet ticker.js || (
             git add ticker.js &&
             git commit -m "chore: refresh ticker fallback prices [skip ci]" &&
-            git push
+            git push https://x-access-token:${GH_TOKEN}@github.com/dhirendommeti/The-317.git
           )
