@@ -30,9 +30,9 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/dhirendommeti/The-317.git
-          git diff --quiet ticker.js || (
-            git add ticker.js &&
-            git commit -m "chore: refresh ticker fallback prices [skip ci]" &&
+          if ! git diff --quiet ticker.js; then
+            git add ticker.js
+            git commit -m "chore: refresh ticker fallback prices [skip ci]"
+            gh auth setup-git
             git push origin main
-          )
+          fi
