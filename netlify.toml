@@ -1,0 +1,3 @@
+[build]
+  command = "echo \"const FINNHUB_KEY = '$FINNHUB_KEY';\" > config.js"
+  publish = "."
