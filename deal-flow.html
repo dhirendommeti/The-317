@@ -345,7 +345,7 @@
   </div>
   <div class="util-right">
     <a href="deal-flow.html">Deals</a>
-    <a href="index.html#markets">Markets</a>
+    <a href="markets.html">Markets</a>
     <a href="index.html#newsletter">Newsletter</a>
     <a href="about.html">About</a>
   </div>
@@ -364,10 +364,10 @@
     </a>
     <div class="nav-links">
       <a href="deal-flow.html" class="active">Deals</a>
-      <a href="index.html#markets">Markets</a>
-      <a href="index.html">Pharma</a>
-      <a href="index.html">Banking</a>
-      <a href="index.html">Industrials</a>
+      <a href="markets.html">Markets</a>
+      <a href="pharma.html">Pharma</a>
+      <a href="banking.html">Banking</a>
+      <a href="industrials.html">Industrials</a>
       <a href="index.html#newsletter">Newsletter</a>
     </div>
   </div>
@@ -460,7 +460,7 @@
         <div class="deal-news-header">
           <span class="deal-news-title">M&amp;A Activity — Companies We Track</span>
         </div>
-        <p class="deal-news-disclaimer">Live news mentioning the 19 public companies on our ticker bar — not comprehensive Midwest deal coverage. The table above is our actual, manually sourced deal tracker; this panel is a real-time supplement.</p>
+        <p class="deal-news-disclaimer">Live news mentioning the <span id="deal-news-count">63</span> public companies on our ticker bar — not comprehensive Midwest deal coverage. The table above is our actual, manually sourced deal tracker; this panel is a real-time supplement.</p>
         <div id="deal-news" class="deal-news-list">
           <p class="deal-news-empty">Loading recent M&amp;A activity…</p>
         </div>
@@ -481,7 +481,8 @@
 </footer>
 
 <script src="config.js"></script>
-<script src="ticker.js"></script>
+<script src="ticker.js?v=20260708b"></script>
+<script src="deals.js"></script>
 <script>
   /* DATE */
   const dateEl = document.getElementById('util-date');
@@ -501,34 +502,6 @@
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 80);
   }, { passive: true });
 
-  /* ── DEAL DATA ──
-     Every entry below is a real, publicly reported transaction. The `source` field
-     links to the press release or news coverage we sourced it from — click any
-     company name in the table to verify. Dates marked (approx.) come from a deal
-     tracker that only reported month-level granularity at time of sourcing. */
-  const deals = [
-    { target: 'Hillenbrand, Inc.',                          counterparty: 'Lone Star Funds',                 sector: 'Industrials',          dealType: 'PE Buyout',     value: 3800000000, valueDisplay: '$3.8B',       dateAnnounced: '2026-02-10', source: 'https://hillenbrand.com/corporate-news/lone-star-completes-acquisition-of-hillenbrand/' },
-    { target: 'Duna Services',                               counterparty: 'Aecon Utilities Group (Oaktree)', sector: 'Energy',               dealType: 'M&A',           value: 60000000,    valueDisplay: '$60M',        dateAnnounced: '2026-03-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
-    { target: 'OneStream, Inc.',                             counterparty: 'Hg',                              sector: 'Technology',           dealType: 'PE Buyout',     value: 6400000000, valueDisplay: '$6.4B',       dateAnnounced: '2026-04-01', source: 'https://www.crainsdetroit.com/technology/cdb-onestream-acquisition-closed-hg-20260401/' },
-    { target: 'Maitland Engineering',                        counterparty: 'BTX Precision (L Squared Capital)', sector: 'Industrials',        dealType: 'PE Buyout',     value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-04-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
-    { target: 'Midwest Interventional Spine Specialists',    counterparty: 'CPIhealth (Iron Path Capital)',   sector: 'Healthcare',           dealType: 'PE Buyout',     value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-04-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
-    { target: 'A. Hattersley & Sons',                        counterparty: 'Foundral (McNally Capital)',      sector: 'Industrials',          dealType: 'PE Buyout',     value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-05-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
-    { target: 'CAI',                                         counterparty: 'JLL Partners',                    sector: 'Healthcare',           dealType: 'Growth Equity', value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-05-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
-    { target: 'Crowe LLP',                                   counterparty: 'KKR',                             sector: 'Professional Services', dealType: 'PE Buyout',    value: 3000000000, valueDisplay: '$3B',         dateAnnounced: '2026-06-12', source: 'https://www.chicagobusiness.com/banking-finance/ccb-crowe-kkr-stake-20260612/' },
-    { target: 'Material Handling Exchange, LLC',             counterparty: 'Architect Equity',                sector: 'Industrials',          dealType: 'PE Buyout',     value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-06-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
-    { target: 'Tallman Equipment Company',                   counterparty: 'Platte River Equity',             sector: 'Energy',               dealType: 'Growth Equity', value: null,        valueDisplay: 'Undisclosed', dateAnnounced: '2026-06-15', source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana' },
-  ];
-
-  const tagClasses = {
-    'M&A': 'tag-ma',
-    'PE Buyout': 'tag-pe',
-    'Growth Equity': 'tag-growth',
-    'IPO': 'tag-ipo',
-    'Private Placement': 'tag-private',
-    'Asset Sale': 'tag-asset',
-    'Debt Financing': 'tag-debt',
-  };
-
   /* ── STATE ── */
   let activeSearch = '';
   let activeSector = '';
@@ -538,8 +511,8 @@
 
   /* ── POPULATE FILTER DROPDOWNS FROM DATA (so they never go stale as deals are added) ── */
   function populateFilters() {
-    const sectors = Array.from(new Set(deals.map(d => d.sector))).sort();
-    const types = Array.from(new Set(deals.map(d => d.dealType))).sort();
+    const sectors = Array.from(new Set(DEALS.map(d => d.sector))).sort();
+    const types = Array.from(new Set(DEALS.map(d => d.dealType))).sort();
     const sectorSelect = document.getElementById('filter-sector');
     const typeSelect = document.getElementById('filter-type');
     sectors.forEach(s => {
@@ -555,7 +528,7 @@
   }
 
   function getFilteredSorted() {
-    let rows = deals.filter(d => {
+    let rows = DEALS.filter(d => {
       if (activeSector && d.sector !== activeSector) return false;
       if (activeType && d.dealType !== activeType) return false;
       if (activeSearch && !d.target.toLowerCase().includes(activeSearch.toLowerCase())
@@ -585,12 +558,12 @@
   }
 
   function renderStats() {
-    const disclosed = deals.filter(d => d.value !== null);
+    const disclosed = DEALS.filter(d => d.value !== null);
     const totalValue = disclosed.reduce((sum, d) => sum + d.value, 0);
     const avgValue = disclosed.length ? totalValue / disclosed.length : 0;
 
     const sectorCounts = {};
-    deals.forEach(d => { sectorCounts[d.sector] = (sectorCounts[d.sector] || 0) + 1; });
+    DEALS.forEach(d => { sectorCounts[d.sector] = (sectorCounts[d.sector] || 0) + 1; });
     const topSector = Object.keys(sectorCounts).sort((a, b) => sectorCounts[b] - sectorCounts[a])[0];
 
     function formatMoney(n) {
@@ -599,7 +572,7 @@
       return '$' + n.toLocaleString();
     }
 
-    document.getElementById('stat-total').textContent = deals.length;
+    document.getElementById('stat-total').textContent = DEALS.length;
     document.getElementById('stat-value').textContent = formatMoney(totalValue);
     document.getElementById('stat-avg').textContent = formatMoney(avgValue);
     document.getElementById('stat-sector').textContent = topSector + ' (' + sectorCounts[topSector] + ')';
@@ -610,7 +583,7 @@
     const tbody = document.getElementById('deal-tbody');
     const countEl = document.getElementById('results-count');
 
-    countEl.innerHTML = 'Showing <strong>' + rows.length + '</strong> of <strong>' + deals.length + '</strong> deals';
+    countEl.innerHTML = 'Showing <strong>' + rows.length + '</strong> of <strong>' + DEALS.length + '</strong> deals';
 
     if (!rows.length) {
       tbody.innerHTML = '<tr class="empty-row"><td colspan="6">No deals match those filters.</td></tr>';
@@ -622,7 +595,7 @@
         <td class="company">${d.source ? `<a href="${d.source}" target="_blank" rel="noopener" title="View source">${d.target} <span style="font-size:11px;opacity:0.5;">↗</span></a>` : d.target}</td>
         <td>${d.counterparty}</td>
         <td class="sector">${d.sector}</td>
-        <td><span class="deal-tag ${tagClasses[d.dealType] || ''}">${d.dealType}</span></td>
+        <td><span class="deal-tag ${DEAL_TAG_CLASSES[d.dealType] || ''}">${d.dealType}</span></td>
         <td class="value">${d.valueDisplay}</td>
         <td class="date">${d.dateAnnounced}</td>
       </tr>

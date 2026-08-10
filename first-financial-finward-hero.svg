@@ -1,0 +1,42 @@
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#c8cdd6" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="#f4f5f7"/>
+  <rect width="800" height="200" fill="url(#dots)"/>
+
+  <!-- LEFT: First Financial Bank logo wireframe -->
+  <!-- Dark green-black accent bar -->
+  <rect x="72" y="74" width="5" height="52" fill="#1d2d1d"/>
+
+  <!-- "fIRST" wordmark -->
+  <text x="85" y="108" font-family="Arial Black,Arial,sans-serif" font-size="38" font-weight="900" fill="#1d2d1d" letter-spacing="-1">fIRST</text>
+
+  <!-- "first financial bank" tagline in blue -->
+  <text x="85" y="128" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#1a6fb5" letter-spacing="0.3">first financial bank</text>
+
+  <!-- Sub label -->
+  <text x="85" y="143" font-family="Inter,Arial,sans-serif" font-size="8" font-weight="600" fill="#888" letter-spacing="1.5">CINCINNATI, OH · NYSE: FFBC</text>
+
+  <!-- CENTER: Plus sign -->
+  <text x="390" y="112" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="300" fill="#999" text-anchor="middle">+</text>
+
+  <!-- RIGHT: Finward Bancorp -->
+  <!-- Navy accent bar -->
+  <rect x="487" y="74" width="5" height="52" fill="#1c3a6e"/>
+
+  <!-- "Finward" wordmark -->
+  <text x="500" y="103" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#1a2640" letter-spacing="0.5">Finward</text>
+  <text x="500" y="122" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#1a2640" letter-spacing="2">BANCORP</text>
+
+  <!-- Sub label -->
+  <text x="500" y="143" font-family="Inter,Arial,sans-serif" font-size="8" font-weight="600" fill="#888" letter-spacing="1.5">PEOPLES BANK · NW INDIANA</text>
+
+  <!-- Bottom strip -->
+  <rect x="0" y="180" width="800" height="20" fill="#e2e4e9"/>
+  <text x="400" y="193" font-family="JetBrains Mono,monospace" font-size="9" fill="#666" text-anchor="middle" letter-spacing="2">FIRST FINANCIAL BANCORP · FINWARD BANCORP · ALL-STOCK · $208M · 2026</text>
+</svg>

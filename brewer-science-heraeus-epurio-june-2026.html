@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Warsh Holds Rates, Signals a Hike Is Coming — The 317</title>
-<meta name="description" content="The new Fed chairman kept rates steady for a fourth consecutive meeting but made clear the next move may be up — with nine FOMC members projecting a hike before year-end.">
+<title>Brewer Science Makes Vertical Integration Bet — The 317</title>
+<meta name="description" content="Brewer Science acquires Heraeus Epurio's semiconductor chemicals business to gain control over critical materials, strengthening its position in the increasingly strategic supply chain.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Warsh Holds Rates, Signals a Hike Is Coming — The 317">
-<meta property="og:description" content="The new Fed chairman kept rates steady for a fourth consecutive meeting but made clear the next move may be up — with nine FOMC members projecting a hike before year-end.">
-<meta property="og:image" content="warsh-fed-press-conference.jpg">
-<meta property="og:url" content="https://the317.com/fed-warsh-rate-hold-june-2026.html">
+<meta property="og:title" content="Brewer Science Makes Vertical Integration Bet — The 317">
+<meta property="og:description" content="Brewer Science acquires Heraeus Epurio's semiconductor chemicals business to gain control over critical materials in the advanced semiconductor supply chain.">
+<meta property="og:image" content="brewer-science-hero.jpg">
+<meta property="og:url" content="https://the317.com/brewer-science-heraeus-epurio-june-2026.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Warsh Holds Rates, Signals a Hike Is Coming — The 317">
-<meta name="twitter:description" content="The new Fed chairman kept rates steady for a fourth consecutive meeting but made clear the next move may be up.">
-<meta name="twitter:image" content="warsh-fed-press-conference.jpg">
+<meta name="twitter:title" content="Brewer Science Makes Vertical Integration Bet — The 317">
+<meta name="twitter:description" content="Brewer Science acquires Heraeus Epurio's semiconductor chemicals business to gain control over critical materials in the advanced semiconductor supply chain.">
+<meta name="twitter:image" content="brewer-science-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -205,7 +205,25 @@
 
   .meta-dot { color: var(--rule-dark); }
 
-  /* ── HERO PLACEHOLDER ── */
+  /* ── HERO IMAGE ── */
+  .hero-figure { margin-bottom: 0; }
+  .hero-logo-card {
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    padding: 48px;
+  }
+  .hero-photo {
+    display: block;
+    max-width: 60%;
+    max-height: 70%;
+    object-fit: contain;
+  }
   .hero-img {
     width: 100%;
     aspect-ratio: 16 / 8;
@@ -220,6 +238,9 @@
     position: relative;
     overflow: hidden;
   }
+  .hero-fallback { display: none; }
+  .hero-figure.img-missing .hero-logo-card { display: none; }
+  .hero-figure.img-missing .hero-fallback { display: flex; }
 
   .hero-img .grid-lines {
     position: absolute;
@@ -311,7 +332,7 @@
     font-style: normal;
   }
 
-  /* ── DATA CALLOUT ── */
+  /* ── DATA STRIP ── */
   .data-strip {
     background: var(--paper-2);
     border: 1px solid var(--rule);
@@ -322,8 +343,6 @@
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 20px 32px;
   }
-
-  .data-item {}
 
   .data-label {
     font-family: 'Inter', Arial, sans-serif;
@@ -343,7 +362,6 @@
     line-height: 1.1;
   }
 
-  .data-value.negative { color: #dc2626; }
   .data-value.positive { color: #16a34a; }
 
   .data-sub {
@@ -361,56 +379,7 @@
     margin: 2.8em 0;
   }
 
-  /* ── EXPERT BOX ── */
-  .expert-box {
-    background: var(--paper-2);
-    border: 1px solid var(--rule);
-    padding: 24px 28px;
-    margin: 2.4em 0;
-  }
-
-  .expert-box-title {
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-mute);
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .expert-item {
-    margin-bottom: 18px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid var(--rule);
-  }
-  .expert-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-
-  .expert-name {
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-
-  .expert-org {
-    color: var(--ink-mute);
-    font-weight: 400;
-  }
-
-  .expert-quote {
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--ink-mute);
-    font-style: italic;
-  }
-
-  /* ── WHAT THIS MEANS BOX ── */
+  /* ── CONTEXT BOX ── */
   .context-box {
     border-top: 2px solid var(--ink);
     border-bottom: 1px solid var(--rule);
@@ -534,7 +503,7 @@
 
   .related-card:hover .related-headline { color: var(--ember); }
 
-  /* ── FOOTER MINI ── */
+  /* ── FOOTER ── */
   #footer {
     background: var(--paper);
     border-top: 3px double var(--rule-dark);
@@ -570,18 +539,6 @@
     z-index: 200;
     transition: width 0.05s linear;
   }
-
-  /* ── HERO PHOTO ── */
-  .hero-figure { margin-bottom: 0; }
-  .hero-photo {
-    width: 100%;
-    display: block;
-    border: 1px solid var(--rule);
-    margin-bottom: 12px;
-  }
-  .hero-fallback { display: none; }
-  .hero-figure.img-missing .hero-photo { display: none; }
-  .hero-figure.img-missing .hero-fallback { display: flex; }
 
   /* ── FADE IN ── */
   .fade-in {
@@ -637,7 +594,7 @@
       <a href="pharma.html">Pharma</a>
       <a href="banking.html">Banking</a>
       <a href="industrials.html">Industrials</a>
-      <a href="#">Newsletter</a>
+      <a href="index.html#newsletter">Newsletter</a>
     </div>
   </div>
 </nav>
@@ -649,152 +606,120 @@
     <!-- HEADER -->
     <header class="article-header fade-in">
       <p class="kicker">
-        <span>Markets</span>
+        <span>Industrials</span>
         <span class="kicker-dot">·</span>
-        <span>Federal Reserve</span>
+        <span>M&amp;A</span>
       </p>
       <h1 class="article-headline">
-        Warsh Holds Rates, Signals the Next Move Is Up
+        Brewer Science Makes Vertical Integration Bet
       </h1>
       <p class="article-dek">
-        The new Fed chairman kept borrowing costs unchanged for a fourth straight meeting — but nine FOMC members now project a hike before year-end, rattling markets and resetting the outlook for Midwest dealmaking through 2026.
+        Brewer Science is acquiring Heraeus Epurio's semiconductor chemicals business to gain control over critical materials, strengthening its position in an increasingly strategic supply chain — and highlighting what manufacturers are starting to prioritize.
       </p>
       <div class="article-meta">
-        <span>By The 317 Staff</span>
+        <span>By Ashrith Desu</span>
         <span class="meta-dot">·</span>
         <span>June 18, 2026</span>
         <span class="meta-dot">·</span>
-        <span>8 min read</span>
+        <span>5 min read</span>
         <span class="meta-dot">·</span>
-        <span>Markets · Federal Reserve</span>
+        <span>Industrials · M&amp;A</span>
       </div>
     </header>
 
-    <!-- HERO IMAGE -->
+    <!-- HERO IMAGE PLACEHOLDER -->
     <figure class="hero-figure fade-in">
-      <img
-        src="warsh-fed-press-conference.jpg"
-        alt="Federal Reserve Chairman Kevin Warsh speaks during his first policy meeting press conference, June 18, 2026."
-        class="hero-photo"
-        onerror="this.parentElement.classList.add('img-missing')"
-      >
+      <div class="hero-logo-card">
+        <img
+          src="brewer-science-hero.jpg"
+          alt="Brewer Science logo"
+          class="hero-photo"
+          onerror="this.parentElement.parentElement.classList.add('img-missing')"
+        >
+      </div>
       <div class="hero-img hero-fallback" role="img" aria-hidden="true">
         <div class="grid-lines"></div>
-        <p class="hero-img-label">Photo · Kevin Warsh, Federal Reserve Chairman<br>Save warsh-fed-press-conference.jpg to this folder to display</p>
+        <p class="hero-img-label">Add hero image · save as brewer-science-hero.jpg in this folder</p>
       </div>
-      <figcaption class="hero-caption">Federal Reserve Chairman Kevin Warsh speaks at his first policy meeting press conference, June 18, 2026. Nine FOMC members signaled a rate hike is warranted before year-end.</figcaption>
+      <figcaption class="hero-caption">Brewer Science, a privately held, employee-owned specialty materials maker based in Rolla, Missouri, announced on June 18, 2026 it would acquire the semiconductor chemicals business of Heraeus Epurio, including a manufacturing facility in Dayton, Ohio and sales operations across Asia.</figcaption>
     </figure>
 
     <!-- BODY -->
     <div class="article-body">
 
-      <p>Kevin Warsh came to Washington promising a new chapter for the Federal Reserve. On Wednesday, in his first policy meeting as chairman, he began writing it — and the opening pages were hawkish. The Fed held its benchmark interest rate steady in the 4.25%–4.50% range for a fourth consecutive meeting, but the accompanying economic projections made clear that the status quo has a shelf life: nine of the committee's nineteen members now anticipate a rate increase before the end of 2026.</p>
+      <p>Most acquisitions move a company sideways or upward in its market. This one moves Brewer Science down — deeper into the supply chain it depends on.</p>
 
-      <p>Markets did not take the signal kindly. The Dow Jones Industrial Average shed 507 points, or 0.98%. The S&amp;P 500 fell 1.21% and the Nasdaq dropped 1.34%. Two-year Treasury yields — the maturity most sensitive to near-term Fed policy — surged 16 basis points to 4.21%, their highest level in more than a year. The dollar index climbed roughly 1%, on pace for its best single session in nearly twelve months. Gold, a classic hedge against rate uncertainty, fell more than 2%.</p>
+      <p>Brewer Science, the Rolla, Missouri-based maker of specialty materials for semiconductor manufacturing, announced June 18 it will acquire the semiconductor chemicals business of Heraeus Epurio. The deal includes a manufacturing facility in Dayton, Ohio, along with sales and support operations across Asia. Financial terms were not disclosed.</p>
 
-      <!-- DATA STRIP -->
+      <p>What Brewer is buying isn't a new product line bolted onto its existing business. It's direct ownership of the ultrapure specialty chemicals that go into the materials it already sells.</p>
+
       <div class="data-strip fade-in">
         <div class="data-item">
-          <p class="data-label">Fed Funds Rate</p>
-          <p class="data-value">4.25–4.50%</p>
-          <p class="data-sub">Unchanged · 4th straight hold</p>
+          <p class="data-label">Deal Value</p>
+          <p class="data-value">Undisclosed</p>
+          <p class="data-sub">Privately held buyer and asset</p>
         </div>
         <div class="data-item">
-          <p class="data-label">Dow Jones</p>
-          <p class="data-value negative">−507 pts</p>
-          <p class="data-sub">−0.98% on the session</p>
+          <p class="data-label">Facility Acquired</p>
+          <p class="data-value">Dayton, OH</p>
+          <p class="data-sub">Manufacturing site</p>
         </div>
         <div class="data-item">
-          <p class="data-label">2-Yr Treasury Yield</p>
-          <p class="data-value">4.21%</p>
-          <p class="data-sub">+16 bps · 1-year high</p>
+          <p class="data-label">Buyer HQ</p>
+          <p class="data-value">Rolla, MO</p>
+          <p class="data-sub">Employee-owned since 2020</p>
         </div>
         <div class="data-item">
-          <p class="data-label">Sep Hike Probability</p>
-          <p class="data-value">49%</p>
-          <p class="data-sub">Up from 27% prior day</p>
+          <p class="data-label">Announced</p>
+          <p class="data-value">Jun 18, 2026</p>
+          <p class="data-sub">Closing terms not yet disclosed</p>
         </div>
       </div>
 
-      <p>Traders moved swiftly to reprice expectations. CME FedWatch now shows a 49% chance of a rate hike at the September meeting, up sharply from 27% the prior day. The pivot in odds reflects a committee that, under Warsh, appears willing to reverse course if inflation remains sticky — a disposition Warsh made explicit when he said the Fed "missed for five years" on price stability and promised to "fix that."</p>
+      <h2>Deal Overview</h2>
 
-      <h2>A Shorter Statement, a Bigger Message</h2>
+      <p>Brewer Science has spent decades building products that semiconductor manufacturers rely on for advanced chip production. Until now, the specialty chemicals underlying those products — the raw materials — have come largely from outside suppliers. This acquisition changes that. By taking over Heraeus Epurio's semiconductor chemicals business, Brewer gains direct ownership of the manufacturing capability for the materials that go into its own products, rather than depending on a third party for them.</p>
 
-      <p>Warsh made his reformist intentions tangible from the opening moments of the meeting. The policy statement itself was overhauled into what he called a "curt" document, stripped of the interpretive language that had characterized prior Fed communications. The word "elevated" reappeared to describe inflation, with energy "supply shocks" cited as a partial cause — a framing that carries distinct implications for Midwest manufacturers who depend on stable input costs.</p>
+      <h2>What Brewer Actually Bought</h2>
 
-      <p>In a break with long-standing practice, Warsh declined to submit a personal "dot" to the committee's famous dot plot — the chart that aggregates Fed officials' individual rate forecasts. The move was deliberate, he indicated, and consistent with a broader decision to abandon forward guidance entirely. When pressed repeatedly on the rate outlook, he deflected back to the written statement. "I've got nothing more to say than the statement itself," he told reporters.</p>
+      <p>Semiconductor manufacturing runs on extraordinarily tight purity requirements. A trace contaminant invisible to the naked eye can ruin a chip. Heraeus Epurio's business produces exactly the kind of ultrapure specialty chemicals that meet those standards: monomers, crosslinkers, photo-initiators, and photoacid generators — inputs used in the photoresist and materials chemistry that pattern modern chips.</p>
+
+      <p>That's a different layer of the supply chain than the one Brewer has historically occupied. The acquisition moves the company upstream, from formulating finished materials to owning the specialty chemicals manufacturing that feeds them.</p>
 
       <div class="pull-quote fade-in">
-        <blockquote>"The Fed will deliver price stability. The commitment to deliver is strong, unanimous, and unambiguous. And that's an important message we've missed for five years. And we're going to fix that."</blockquote>
-        <cite>— Kevin Warsh, Federal Reserve Chairman, June 18, 2026</cite>
+        <blockquote>"As materials are becoming increasingly critical to the advanced semiconductor value chain worldwide, this vertical integration further strengthens our ability to deliver superior quality and a reliable, timely global supply of materials solutions, enabling us to consistently exceed our customers' expectations."</blockquote>
+        <cite>— Dr. Sri Kommu, Co-CEO, Brewer Science</cite>
       </div>
 
-      <p>His press conference was notably shorter than those of his predecessor, Jerome Powell, wrapping around 3:10 p.m. ET — roughly twenty minutes earlier than the Powell norm. Warsh hinted the cadence of future briefings may also change, noting that press conferences should occur "when you have something important to say."</p>
+      <h2>Why This Deal Matters</h2>
 
-      <h2>Five Task Forces and a Promise of Reform</h2>
+      <p>The semiconductor industry has spent the last several years relearning a lesson about supply chains: control over critical materials is not a back-office concern, it's a competitive one. Chipmakers that depend on a thin set of suppliers for specialty chemicals have been exposed to shortages, lead-time spikes, and qualification bottlenecks whenever that supply gets disrupted.</p>
 
-      <p>Beyond the rate decision, Warsh announced the creation of five task forces focused on areas he described as "central to the broad conduct of monetary policy." He referenced the groups more than thirty times across his prepared remarks and Q&amp;A. The specifics of each task force's mandate were not disclosed, though Warsh framed them as part of a sweeping modernization effort — what some observers compared in spirit to the DOGE efficiency drive that reshaped other federal agencies last year.</p>
-
-      <p>The reforms extend to the Fed's physical operations as well. An ongoing renovation project at the Federal Reserve Board building remains under review by the institution's inspector general. Former Chairman Powell, who remains on the board, has said he will stay until the project is cleared of any concerns.</p>
-
-      <h2>What It Means for Midwest Dealmaking</h2>
-
-      <p>For the Midwest's middle-market M&amp;A community, the session produced a sobering recalibration. The financing assumptions underpinning many deals struck in 2025 — built on widespread expectations of two to three Fed cuts this year — now look materially optimistic. If September brings a hike, leveraged buyout economics tighten further, and sellers who held out for higher multiples may find buyer appetite correspondingly colder.</p>
-
-      <p>Indiana's commercial real estate market, already navigating elevated cap rates, faces additional pressure if long-duration Treasury yields continue their climb. The 10-year, which tracks mortgage and commercial loan pricing more closely than the policy rate, will be the number to watch.</p>
-
-      <!-- EXPERT BOX -->
-      <div class="expert-box fade-in">
-        <p class="expert-box-title">What Housing &amp; Markets Experts Are Saying</p>
-        <div class="expert-item">
-          <p class="expert-name">Chen Zhao <span class="expert-org">— Head of Economics Research, Redfin</span></p>
-          <p class="expert-quote">"It's clear that we're in a new era and it's going to take a while for markets to figure out how to react to today's Fed meeting. But one thing is certain: the committee as a whole is taking inflation very seriously, which means mortgage rates are unlikely to retreat much in the near future."</p>
-        </div>
-        <div class="expert-item">
-          <p class="expert-name">Bill Banfield <span class="expert-org">— Chief Business Officer, Rocket Mortgage</span></p>
-          <p class="expert-quote">"Home sales are responding more right now to labor market strength than rate moves. If the labor market remains healthy, buyers will continue to enter the market regardless of whether the next move from the Fed is a cut, pause, or even a hike."</p>
-        </div>
-        <div class="expert-item">
-          <p class="expert-name">Kristina Hooper <span class="expert-org">— Chief Market Strategist, Man Group</span></p>
-          <p class="expert-quote">"Markets were holding out hope that Chair Warsh would throw them some kernels of real dovishness that they obviously felt they didn't get."</p>
-        </div>
-        <div class="expert-item">
-          <p class="expert-name">Vishal Garg <span class="expert-org">— CEO, Better</span></p>
-          <p class="expert-quote">"Right now this is about what the Fed says, not just what it does. The Fed doesn't set mortgage rates — but these mortgage rates track long-term Treasury yields, which move based on investor expectations for inflation, growth, and the Fed's next step."</p>
-        </div>
-      </div>
-
-      <h2>The Political Dimension</h2>
-
-      <p>President Trump, who appointed Warsh in January with an explicit mandate to lower borrowing costs, offered a notably restrained response from Paris, where he was attending the G7 summit. "We have a very good guy over there now," Trump told reporters before departing for a dinner in Versailles. "So I'm guided by what he wants." The tone was a marked departure from the president's repeated public attacks on Powell when the former chairman declined to cut rates.</p>
-
-      <p>The détente may be temporary. If Warsh's committee follows through on a September hike, Trump's earlier remarks — he once joked he would "sue" a Fed chairman who refused to lower rates — could resurface as a political pressure point heading into the midterm season.</p>
+      <p>By acquiring Heraeus Epurio's business outright, Brewer reduces its own dependence on third parties for materials it considers essential to its product line. It also buys something that's much harder to replicate quickly: an established, qualified manufacturing operation. Building ultrapure specialty chemicals capability from scratch, and getting it qualified by semiconductor customers, takes months or years. Acquiring a business that already clears that bar compresses that timeline to the moment the deal closes.</p>
 
       <div class="section-rule"></div>
 
-      <!-- CONTEXT BOX -->
       <div class="context-box fade-in">
-        <p class="context-box-title">What This Means for the Midwest · Key Takeaways</p>
+        <p class="context-box-title">What to Watch · Key Takeaways</p>
         <ul>
-          <li>Leveraged buyout financing costs remain elevated. Deals with floating-rate debt structures built on cut assumptions will need to be reunderwritten if a September hike materializes.</li>
-          <li>Regional bank margins, already compressed, face a paradox: a hike improves net interest income but may cool loan demand from small-business borrowers in Indiana and Ohio.</li>
-          <li>Indiana's residential construction pipeline — already constrained by lot supply — faces further affordability pressure if 30-year mortgage rates climb above 7.25%.</li>
-          <li>Pharma M&amp;A, including deals tied to Lilly's Indianapolis campus, tends to be less rate-sensitive given cash-heavy strategic balance sheets. That sector remains the relative bright spot for deal activity in the region.</li>
-          <li>The absence of forward guidance is itself a variable. Without reliable Fed signals, deal timelines may lengthen as buyers and sellers wait for clarity — a particular concern for Q3 closings.</li>
+          <li>Financial terms have not been disclosed. Brewer Science is privately held and employee-owned, so there is no public filing requirement that would force that information into view.</li>
+          <li>The Dayton, Ohio facility and Asia-based sales and support operations transfer as part of the deal — giving Brewer a direct manufacturing and customer-support footprint it did not previously operate.</li>
+          <li>This is a vertical integration play, not a horizontal one: Brewer isn't expanding into a new market, it's taking ownership of a layer of its own supply chain.</li>
+          <li>Expect more deals like this across the semiconductor materials space as manufacturers continue prioritizing supply chain control over reliance on third-party chemical suppliers.</li>
         </ul>
       </div>
 
-      <p>The bigger question for regional dealmakers is not whether the Fed hikes in September, but whether the Warsh era represents a durable regime shift or a tactical correction. His insistence on "regime change" — a phrase he has used in congressional testimony, at his swearing-in, and again Wednesday — suggests the former. Markets, at least for now, are beginning to believe him.</p>
+      <p>None of this shows up on a quarterly earnings call, since Brewer doesn't have one. But the logic behind the deal is the same logic showing up across the semiconductor industry: when a material is critical enough, the safest place to make it is inside your own walls.</p>
 
       <!-- TAGS -->
       <div class="article-tags">
-        <span class="tag">Federal Reserve</span>
-        <span class="tag">Interest Rates</span>
-        <span class="tag">Kevin Warsh</span>
-        <span class="tag">Markets</span>
-        <span class="tag">M&amp;A Outlook</span>
-        <span class="tag">Indiana Economy</span>
-        <span class="tag">Midwest</span>
+        <span class="tag">Industrials</span>
+        <span class="tag">M&amp;A</span>
+        <span class="tag">Brewer Science</span>
+        <span class="tag">Heraeus Epurio</span>
+        <span class="tag">Semiconductors</span>
+        <span class="tag">Supply Chain</span>
+        <span class="tag">Vertical Integration</span>
       </div>
 
     </div>
@@ -804,17 +729,17 @@
   <div class="related-section">
     <p class="related-title">Related Coverage</p>
     <div class="related-grid">
-      <article class="related-card">
-        <p class="related-kicker">Banking</p>
-        <h3 class="related-headline">Old National's Midwest Expansion Puts Three Ohio Community Banks in Play</h3>
+      <article class="related-card" onclick="window.location='booz-allen-ultra-mission-solutions-june-2026.html'">
+        <p class="related-kicker">Defense · M&amp;A</p>
+        <h3 class="related-headline">Booz Allen's $720 Million Shortcut</h3>
       </article>
-      <article class="related-card">
-        <p class="related-kicker">M&amp;A</p>
-        <h3 class="related-headline">Carmel MedTech Deal Signals Consolidation Wave in Indiana Health-Tech</h3>
+      <article class="related-card" onclick="window.location='industrials.html'">
+        <p class="related-kicker">Industrials</p>
+        <h3 class="related-headline">Tracking Every Midwest Industrials Deal — Sourced and Verified</h3>
       </article>
-      <article class="related-card">
-        <p class="related-kicker">Pharma</p>
-        <h3 class="related-headline">Lilly's Oncology Pipeline Draws Three Strategic Bidders for Midwest Distribution Rights</h3>
+      <article class="related-card" onclick="window.location='deal-flow.html'">
+        <p class="related-kicker">Deal Flow</p>
+        <h3 class="related-headline">Every Midwest Deal We're Tracking — Sourced and Verified</h3>
       </article>
     </div>
   </div>
@@ -841,14 +766,8 @@
     }).toUpperCase();
   })();
 
-  /* TICKER (shared across all pages — see ticker.js).
-     DJI/SPX/2YR are indices and a bond yield, not individual equities,
-     so they stay static (Finnhub's free quote endpoint only covers stocks). */
-  initTicker([
-    { sym: 'DJI',  price: '41,830', pct: '-0.98%', up: false },
-    { sym: 'SPX',  price: '5,641',  pct: '-1.21%', up: false },
-    { sym: '2YR',  price: '4.21%',  pct: '+16bps', up: false },
-  ]);
+  /* TICKER (shared across all pages — see ticker.js) */
+  initTicker();
 
   /* STICKY NAV */
   const nav = document.getElementById('main-nav');

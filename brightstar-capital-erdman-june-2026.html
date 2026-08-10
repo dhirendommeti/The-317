@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Warsh Holds Rates, Signals a Hike Is Coming — The 317</title>
-<meta name="description" content="The new Fed chairman kept rates steady for a fourth consecutive meeting but made clear the next move may be up — with nine FOMC members projecting a hike before year-end.">
+<title>Brightstar Capital Expands Architecture Platform — The 317</title>
+<meta name="description" content="PE-backed architecture platform adds healthcare and senior living specialist as demand for aging-related infrastructure accelerates.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Warsh Holds Rates, Signals a Hike Is Coming — The 317">
-<meta property="og:description" content="The new Fed chairman kept rates steady for a fourth consecutive meeting but made clear the next move may be up — with nine FOMC members projecting a hike before year-end.">
-<meta property="og:image" content="warsh-fed-press-conference.jpg">
-<meta property="og:url" content="https://the317.com/fed-warsh-rate-hold-june-2026.html">
+<meta property="og:title" content="Brightstar Capital Expands Architecture Platform — The 317">
+<meta property="og:description" content="PE-backed architecture platform adds healthcare and senior living specialist as demand for aging-related infrastructure accelerates.">
+<meta property="og:image" content="brightstar-erdman-hero.jpg">
+<meta property="og:url" content="https://the317.com/brightstar-capital-erdman-june-2026.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Warsh Holds Rates, Signals a Hike Is Coming — The 317">
-<meta name="twitter:description" content="The new Fed chairman kept rates steady for a fourth consecutive meeting but made clear the next move may be up.">
-<meta name="twitter:image" content="warsh-fed-press-conference.jpg">
+<meta name="twitter:title" content="Brightstar Capital Expands Architecture Platform — The 317">
+<meta name="twitter:description" content="PE-backed architecture platform adds healthcare and senior living specialist as demand for aging-related infrastructure accelerates.">
+<meta name="twitter:image" content="brightstar-erdman-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -45,7 +45,6 @@
   a { color: inherit; text-decoration: none; }
   a:hover { color: var(--ember); }
 
-  /* ── UTILITY BAR ── */
   #utility-bar {
     background: var(--paper);
     border-bottom: 1px solid var(--rule);
@@ -65,7 +64,6 @@
   #utility-bar .util-right a { color: var(--ink-mute); transition: color 0.15s; }
   #utility-bar .util-right a:hover { color: var(--ember); }
 
-  /* ── TICKER ── */
   #ticker-bar {
     background: var(--ink);
     overflow: hidden;
@@ -103,7 +101,6 @@
   .ticker-up   { color: #4ade80; font-size: 10px; }
   .ticker-down { color: #f87171; font-size: 10px; }
 
-  /* ── NAV ── */
   #main-nav {
     background: var(--paper);
     border-bottom: 1px solid var(--rule);
@@ -140,14 +137,12 @@
   }
   .nav-links a:hover { color: var(--ink); border-bottom-color: var(--ink); }
 
-  /* ── ARTICLE LAYOUT ── */
   .article-wrap {
     max-width: 740px;
     margin: 0 auto;
     padding: 0 24px;
   }
 
-  /* ── ARTICLE HEADER ── */
   .article-header {
     padding: 52px 0 36px;
     border-bottom: 1px solid var(--rule);
@@ -205,7 +200,24 @@
 
   .meta-dot { color: var(--rule-dark); }
 
-  /* ── HERO PLACEHOLDER ── */
+  .hero-figure { margin-bottom: 0; }
+  .hero-logo-card {
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    padding: 48px;
+  }
+  .hero-photo {
+    display: block;
+    max-width: 60%;
+    max-height: 70%;
+    object-fit: contain;
+  }
   .hero-img {
     width: 100%;
     aspect-ratio: 16 / 8;
@@ -220,6 +232,9 @@
     position: relative;
     overflow: hidden;
   }
+  .hero-fallback { display: none; }
+  .hero-figure.img-missing .hero-logo-card { display: none; }
+  .hero-figure.img-missing .hero-fallback { display: flex; }
 
   .hero-img .grid-lines {
     position: absolute;
@@ -252,7 +267,6 @@
     line-height: 1.5;
   }
 
-  /* ── BODY TEXT ── */
   .article-body {
     font-size: 18px;
     line-height: 1.75;
@@ -284,7 +298,6 @@
     letter-spacing: -0.01em;
   }
 
-  /* ── PULL QUOTE ── */
   .pull-quote {
     border-left: 3px solid var(--ember);
     padding: 4px 0 4px 28px;
@@ -311,7 +324,6 @@
     font-style: normal;
   }
 
-  /* ── DATA CALLOUT ── */
   .data-strip {
     background: var(--paper-2);
     border: 1px solid var(--rule);
@@ -322,8 +334,6 @@
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 20px 32px;
   }
-
-  .data-item {}
 
   .data-label {
     font-family: 'Inter', Arial, sans-serif;
@@ -343,7 +353,6 @@
     line-height: 1.1;
   }
 
-  .data-value.negative { color: #dc2626; }
   .data-value.positive { color: #16a34a; }
 
   .data-sub {
@@ -354,63 +363,12 @@
     letter-spacing: 0.04em;
   }
 
-  /* ── SECTION RULE ── */
   .section-rule {
     height: 1px;
     background: var(--rule);
     margin: 2.8em 0;
   }
 
-  /* ── EXPERT BOX ── */
-  .expert-box {
-    background: var(--paper-2);
-    border: 1px solid var(--rule);
-    padding: 24px 28px;
-    margin: 2.4em 0;
-  }
-
-  .expert-box-title {
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-mute);
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .expert-item {
-    margin-bottom: 18px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid var(--rule);
-  }
-  .expert-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-
-  .expert-name {
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-
-  .expert-org {
-    color: var(--ink-mute);
-    font-weight: 400;
-  }
-
-  .expert-quote {
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--ink-mute);
-    font-style: italic;
-  }
-
-  /* ── WHAT THIS MEANS BOX ── */
   .context-box {
     border-top: 2px solid var(--ink);
     border-bottom: 1px solid var(--rule);
@@ -451,7 +409,6 @@
     font-family: 'Inter', Arial, sans-serif;
   }
 
-  /* ── TAGS ── */
   .article-tags {
     display: flex;
     flex-wrap: wrap;
@@ -475,7 +432,6 @@
   }
   .tag:hover { color: var(--ember); border-color: var(--ember); }
 
-  /* ── RELATED ── */
   .related-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -534,7 +490,6 @@
 
   .related-card:hover .related-headline { color: var(--ember); }
 
-  /* ── FOOTER MINI ── */
   #footer {
     background: var(--paper);
     border-top: 3px double var(--rule-dark);
@@ -559,7 +514,6 @@
     color: var(--ink-mute);
   }
 
-  /* ── PROGRESS BAR ── */
   #read-progress {
     position: fixed;
     top: 0;
@@ -571,19 +525,6 @@
     transition: width 0.05s linear;
   }
 
-  /* ── HERO PHOTO ── */
-  .hero-figure { margin-bottom: 0; }
-  .hero-photo {
-    width: 100%;
-    display: block;
-    border: 1px solid var(--rule);
-    margin-bottom: 12px;
-  }
-  .hero-fallback { display: none; }
-  .hero-figure.img-missing .hero-photo { display: none; }
-  .hero-figure.img-missing .hero-fallback { display: flex; }
-
-  /* ── FADE IN ── */
   .fade-in {
     opacity: 0;
     transform: translateY(18px);
@@ -606,7 +547,6 @@
 
 <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
 
-<!-- UTILITY BAR -->
 <div id="utility-bar">
   <div class="util-left">
     <span id="util-date"></span>
@@ -620,12 +560,10 @@
   </div>
 </div>
 
-<!-- TICKER -->
 <div id="ticker-bar" aria-label="Live market data">
   <div class="ticker-track" id="ticker-track"></div>
 </div>
 
-<!-- NAV -->
 <nav id="main-nav" aria-label="Primary navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="The 317 homepage">
@@ -637,190 +575,151 @@
       <a href="pharma.html">Pharma</a>
       <a href="banking.html">Banking</a>
       <a href="industrials.html">Industrials</a>
-      <a href="#">Newsletter</a>
+      <a href="index.html#newsletter">Newsletter</a>
     </div>
   </div>
 </nav>
 
-<!-- ARTICLE -->
 <main>
   <div class="article-wrap">
 
-    <!-- HEADER -->
     <header class="article-header fade-in">
       <p class="kicker">
-        <span>Markets</span>
+        <span>Professional Services</span>
         <span class="kicker-dot">·</span>
-        <span>Federal Reserve</span>
+        <span>PE Buyout</span>
       </p>
       <h1 class="article-headline">
-        Warsh Holds Rates, Signals the Next Move Is Up
+        Brightstar Capital Expands Architecture Platform
       </h1>
       <p class="article-dek">
-        The new Fed chairman kept borrowing costs unchanged for a fourth straight meeting — but nine FOMC members now project a hike before year-end, rattling markets and resetting the outlook for Midwest dealmaking through 2026.
+        A PE-backed architecture platform adds a healthcare and senior living specialist, as demand for aging-related infrastructure accelerates.
       </p>
       <div class="article-meta">
-        <span>By The 317 Staff</span>
+        <span>By Ashrith Desu</span>
         <span class="meta-dot">·</span>
-        <span>June 18, 2026</span>
+        <span>June 24, 2026</span>
         <span class="meta-dot">·</span>
-        <span>8 min read</span>
+        <span>5 min read</span>
         <span class="meta-dot">·</span>
-        <span>Markets · Federal Reserve</span>
+        <span>Professional Services · PE Buyout</span>
       </div>
     </header>
 
-    <!-- HERO IMAGE -->
     <figure class="hero-figure fade-in">
-      <img
-        src="warsh-fed-press-conference.jpg"
-        alt="Federal Reserve Chairman Kevin Warsh speaks during his first policy meeting press conference, June 18, 2026."
-        class="hero-photo"
-        onerror="this.parentElement.classList.add('img-missing')"
-      >
+      <div class="hero-logo-card">
+        <img
+          src="brightstar-erdman-hero.jpg"
+          alt="Erdman and Brightstar Capital Partners logos"
+          class="hero-photo"
+          onerror="this.parentElement.parentElement.classList.add('img-missing')"
+        >
+      </div>
       <div class="hero-img hero-fallback" role="img" aria-hidden="true">
         <div class="grid-lines"></div>
-        <p class="hero-img-label">Photo · Kevin Warsh, Federal Reserve Chairman<br>Save warsh-fed-press-conference.jpg to this folder to display</p>
+        <p class="hero-img-label">Add hero image · save as brightstar-erdman-hero.jpg in this folder</p>
       </div>
-      <figcaption class="hero-caption">Federal Reserve Chairman Kevin Warsh speaks at his first policy meeting press conference, June 18, 2026. Nine FOMC members signaled a rate hike is warranted before year-end.</figcaption>
+      <figcaption class="hero-caption">Brightstar Capital Partners announced its acquisition of Erdman, a Madison, Wisconsin-based architecture and engineering firm specializing in healthcare and senior living, expanding the platform it began building with the 2025 acquisition of KZF Design.</figcaption>
     </figure>
 
-    <!-- BODY -->
     <div class="article-body">
 
-      <p>Kevin Warsh came to Washington promising a new chapter for the Federal Reserve. On Wednesday, in his first policy meeting as chairman, he began writing it — and the opening pages were hawkish. The Fed held its benchmark interest rate steady in the 4.25%–4.50% range for a fourth consecutive meeting, but the accompanying economic projections made clear that the status quo has a shelf life: nine of the committee's nineteen members now anticipate a rate increase before the end of 2026.</p>
+      <p>On the surface, it looks like another architecture industry roll-up. Underneath, it's a bet on demographics — and on who controls the data behind where the next generation of healthcare buildings gets built.</p>
 
-      <p>Markets did not take the signal kindly. The Dow Jones Industrial Average shed 507 points, or 0.98%. The S&amp;P 500 fell 1.21% and the Nasdaq dropped 1.34%. Two-year Treasury yields — the maturity most sensitive to near-term Fed policy — surged 16 basis points to 4.21%, their highest level in more than a year. The dollar index climbed roughly 1%, on pace for its best single session in nearly twelve months. Gold, a classic hedge against rate uncertainty, fell more than 2%.</p>
+      <p>Brightstar Capital Partners announced its acquisition of Erdman, a Wisconsin-based architecture and engineering firm with a specialization in healthcare and senior living. The deal gives Brightstar a nationally recognized healthcare design specialist to add to the architecture and design platform it began assembling after acquiring KZF Design in 2025. Financial terms were not disclosed.</p>
 
-      <!-- DATA STRIP -->
       <div class="data-strip fade-in">
         <div class="data-item">
-          <p class="data-label">Fed Funds Rate</p>
-          <p class="data-value">4.25–4.50%</p>
-          <p class="data-sub">Unchanged · 4th straight hold</p>
+          <p class="data-label">Deal Value</p>
+          <p class="data-value">Undisclosed</p>
+          <p class="data-sub">Privately held buyer and target</p>
         </div>
         <div class="data-item">
-          <p class="data-label">Dow Jones</p>
-          <p class="data-value negative">−507 pts</p>
-          <p class="data-sub">−0.98% on the session</p>
+          <p class="data-label">Target HQ</p>
+          <p class="data-value">Madison, WI</p>
+          <p class="data-sub">Founded 1951</p>
         </div>
         <div class="data-item">
-          <p class="data-label">2-Yr Treasury Yield</p>
-          <p class="data-value">4.21%</p>
-          <p class="data-sub">+16 bps · 1-year high</p>
+          <p class="data-label">Platform Anchor</p>
+          <p class="data-value">KZF Design</p>
+          <p class="data-sub">Acquired June 2025</p>
         </div>
         <div class="data-item">
-          <p class="data-label">Sep Hike Probability</p>
-          <p class="data-value">49%</p>
-          <p class="data-sub">Up from 27% prior day</p>
+          <p class="data-label">Announced</p>
+          <p class="data-value">Jun 22, 2026</p>
+          <p class="data-sub">Closing terms not yet disclosed</p>
         </div>
       </div>
 
-      <p>Traders moved swiftly to reprice expectations. CME FedWatch now shows a 49% chance of a rate hike at the September meeting, up sharply from 27% the prior day. The pivot in odds reflects a committee that, under Warsh, appears willing to reverse course if inflation remains sticky — a disposition Warsh made explicit when he said the Fed "missed for five years" on price stability and promised to "fix that."</p>
+      <h2>What Brightstar Actually Bought</h2>
 
-      <h2>A Shorter Statement, a Bigger Message</h2>
+      <p>Erdman focuses almost exclusively on healthcare and senior living, designing architecture ranging from hospitals and medical office buildings to independent living communities, assisted living facilities, and ambulatory care facilities.</p>
 
-      <p>Warsh made his reformist intentions tangible from the opening moments of the meeting. The policy statement itself was overhauled into what he called a "curt" document, stripped of the interpretive language that had characterized prior Fed communications. The word "elevated" reappeared to describe inflation, with energy "supply shocks" cited as a partial cause — a framing that carries distinct implications for Midwest manufacturers who depend on stable input costs.</p>
-
-      <p>In a break with long-standing practice, Warsh declined to submit a personal "dot" to the committee's famous dot plot — the chart that aggregates Fed officials' individual rate forecasts. The move was deliberate, he indicated, and consistent with a broader decision to abandon forward guidance entirely. When pressed repeatedly on the rate outlook, he deflected back to the written statement. "I've got nothing more to say than the statement itself," he told reporters.</p>
+      <p>Erdman also brings the technology that many architecture firms lack. The firm developed ZeroIn, a proprietary healthcare analytics platform that helps providers evaluate markets, forecast demand, and plan facility investments. That combination of design expertise, national reach, and data capability makes Erdman far more significant to the platform than a traditional design firm would be on its own.</p>
 
       <div class="pull-quote fade-in">
-        <blockquote>"The Fed will deliver price stability. The commitment to deliver is strong, unanimous, and unambiguous. And that's an important message we've missed for five years. And we're going to fix that."</blockquote>
-        <cite>— Kevin Warsh, Federal Reserve Chairman, June 18, 2026</cite>
+        <blockquote>"Erdman brings sector depth, a national footprint, and a proprietary analytics capability that we believe strengthens the platform."</blockquote>
+        <cite>— Michael Burke, Board Chair, Brightstar's Architecture &amp; Design Platform</cite>
       </div>
 
-      <p>His press conference was notably shorter than those of his predecessor, Jerome Powell, wrapping around 3:10 p.m. ET — roughly twenty minutes earlier than the Powell norm. Warsh hinted the cadence of future briefings may also change, noting that press conferences should occur "when you have something important to say."</p>
+      <h2>Why This Deal Matters</h2>
 
-      <h2>Five Task Forces and a Promise of Reform</h2>
+      <p>Architecture firms are increasingly valued less for drafting capability and more for industry-specific expertise. A hospital expansion project requires fluency in patient flows, clinical operations, reimbursement trends, regulatory requirements, and demographic demand — knowledge that takes decades to build. Brightstar gets immediate access to the healthcare-focused relationships, talent, and project history that Erdman has built over more than 70 years.</p>
 
-      <p>Beyond the rate decision, Warsh announced the creation of five task forces focused on areas he described as "central to the broad conduct of monetary policy." He referenced the groups more than thirty times across his prepared remarks and Q&amp;A. The specifics of each task force's mandate were not disclosed, though Warsh framed them as part of a sweeping modernization effort — what some observers compared in spirit to the DOGE efficiency drive that reshaped other federal agencies last year.</p>
+      <p>The deal also gives Brightstar exposure to one of the most reliable demand drivers in the economy: an aging population. The U.S. population over 80 is expected to grow substantially over the next two decades, driving demand for senior housing, assisted living facilities, and healthcare infrastructure. Erdman sits squarely inside that trend.</p>
 
-      <p>The reforms extend to the Fed's physical operations as well. An ongoing renovation project at the Federal Reserve Board building remains under review by the institution's inspector general. Former Chairman Powell, who remains on the board, has said he will stay until the project is cleared of any concerns.</p>
+      <h2>The Platform Strategy</h2>
 
-      <h2>What It Means for Midwest Dealmaking</h2>
+      <p>The acquisition is less about Erdman as a standalone business and more about where Brightstar is taking its broader strategy. Private equity firms have spent years consolidating accounting firms, insurance brokers, and IT providers. Architecture and engineering are becoming the next frontier — an industry that remains fragmented, where hundreds of firms have the expertise but lack the scale to compete for the largest, most complex projects.</p>
 
-      <p>For the Midwest's middle-market M&amp;A community, the session produced a sobering recalibration. The financing assumptions underpinning many deals struck in 2025 — built on widespread expectations of two to three Fed cuts this year — now look materially optimistic. If September brings a hike, leveraged buyout economics tighten further, and sellers who held out for higher multiples may find buyer appetite correspondingly colder.</p>
-
-      <p>Indiana's commercial real estate market, already navigating elevated cap rates, faces additional pressure if long-duration Treasury yields continue their climb. The 10-year, which tracks mortgage and commercial loan pricing more closely than the policy rate, will be the number to watch.</p>
-
-      <!-- EXPERT BOX -->
-      <div class="expert-box fade-in">
-        <p class="expert-box-title">What Housing &amp; Markets Experts Are Saying</p>
-        <div class="expert-item">
-          <p class="expert-name">Chen Zhao <span class="expert-org">— Head of Economics Research, Redfin</span></p>
-          <p class="expert-quote">"It's clear that we're in a new era and it's going to take a while for markets to figure out how to react to today's Fed meeting. But one thing is certain: the committee as a whole is taking inflation very seriously, which means mortgage rates are unlikely to retreat much in the near future."</p>
-        </div>
-        <div class="expert-item">
-          <p class="expert-name">Bill Banfield <span class="expert-org">— Chief Business Officer, Rocket Mortgage</span></p>
-          <p class="expert-quote">"Home sales are responding more right now to labor market strength than rate moves. If the labor market remains healthy, buyers will continue to enter the market regardless of whether the next move from the Fed is a cut, pause, or even a hike."</p>
-        </div>
-        <div class="expert-item">
-          <p class="expert-name">Kristina Hooper <span class="expert-org">— Chief Market Strategist, Man Group</span></p>
-          <p class="expert-quote">"Markets were holding out hope that Chair Warsh would throw them some kernels of real dovishness that they obviously felt they didn't get."</p>
-        </div>
-        <div class="expert-item">
-          <p class="expert-name">Vishal Garg <span class="expert-org">— CEO, Better</span></p>
-          <p class="expert-quote">"Right now this is about what the Fed says, not just what it does. The Fed doesn't set mortgage rates — but these mortgage rates track long-term Treasury yields, which move based on investor expectations for inflation, growth, and the Fed's next step."</p>
-        </div>
-      </div>
-
-      <h2>The Political Dimension</h2>
-
-      <p>President Trump, who appointed Warsh in January with an explicit mandate to lower borrowing costs, offered a notably restrained response from Paris, where he was attending the G7 summit. "We have a very good guy over there now," Trump told reporters before departing for a dinner in Versailles. "So I'm guided by what he wants." The tone was a marked departure from the president's repeated public attacks on Powell when the former chairman declined to cut rates.</p>
-
-      <p>The détente may be temporary. If Warsh's committee follows through on a September hike, Trump's earlier remarks — he once joked he would "sue" a Fed chairman who refused to lower rates — could resurface as a political pressure point heading into the midterm season.</p>
+      <p>Brightstar's approach is straightforward: acquire high-quality regional firms, preserve their local relationships, share resources across the platform, and build something large enough to win bigger work. KZF Design provided the foundation; Erdman adds healthcare specialization and an immediate national footprint.</p>
 
       <div class="section-rule"></div>
 
-      <!-- CONTEXT BOX -->
       <div class="context-box fade-in">
-        <p class="context-box-title">What This Means for the Midwest · Key Takeaways</p>
+        <p class="context-box-title">What to Watch · Key Takeaways</p>
         <ul>
-          <li>Leveraged buyout financing costs remain elevated. Deals with floating-rate debt structures built on cut assumptions will need to be reunderwritten if a September hike materializes.</li>
-          <li>Regional bank margins, already compressed, face a paradox: a hike improves net interest income but may cool loan demand from small-business borrowers in Indiana and Ohio.</li>
-          <li>Indiana's residential construction pipeline — already constrained by lot supply — faces further affordability pressure if 30-year mortgage rates climb above 7.25%.</li>
-          <li>Pharma M&amp;A, including deals tied to Lilly's Indianapolis campus, tends to be less rate-sensitive given cash-heavy strategic balance sheets. That sector remains the relative bright spot for deal activity in the region.</li>
-          <li>The absence of forward guidance is itself a variable. Without reliable Fed signals, deal timelines may lengthen as buyers and sellers wait for clarity — a particular concern for Q3 closings.</li>
+          <li>Financial terms have not been disclosed. Both Brightstar and Erdman are privately held, so there is no public filing requirement that would surface the price.</li>
+          <li>ZeroIn, Erdman's healthcare analytics platform, is arguably the more durable asset in the deal — it creates a recurring, data-driven relationship with providers that extends well beyond a single design project.</li>
+          <li>This is the second leg of Brightstar's architecture platform, following the 2025 acquisition of KZF Design — expect the roll-up to keep adding regional specialists rather than stopping here.</li>
+          <li>The strategic logic mirrors what private equity has already done in accounting, insurance brokerage, and IT services: consolidate a fragmented industry around shared infrastructure and data.</li>
         </ul>
       </div>
 
-      <p>The bigger question for regional dealmakers is not whether the Fed hikes in September, but whether the Warsh era represents a durable regime shift or a tactical correction. His insistence on "regime change" — a phrase he has used in congressional testimony, at his swearing-in, and again Wednesday — suggests the former. Markets, at least for now, are beginning to believe him.</p>
+      <p>One key asset in the deal is ZeroIn. As providers make increasingly data-driven decisions about forecasts, investments, and expansion, that platform gives Brightstar a recurring capability that extends beyond traditional design services. It moves the firm up the value chain — from designing buildings to influencing the decisions that determine whether those buildings get built in the first place.</p>
 
-      <!-- TAGS -->
       <div class="article-tags">
-        <span class="tag">Federal Reserve</span>
-        <span class="tag">Interest Rates</span>
-        <span class="tag">Kevin Warsh</span>
-        <span class="tag">Markets</span>
-        <span class="tag">M&amp;A Outlook</span>
-        <span class="tag">Indiana Economy</span>
-        <span class="tag">Midwest</span>
+        <span class="tag">Professional Services</span>
+        <span class="tag">PE Buyout</span>
+        <span class="tag">Brightstar Capital</span>
+        <span class="tag">Erdman</span>
+        <span class="tag">Healthcare Real Estate</span>
+        <span class="tag">Architecture</span>
+        <span class="tag">Roll-Up</span>
       </div>
 
     </div>
   </div>
 
-  <!-- RELATED STORIES -->
   <div class="related-section">
     <p class="related-title">Related Coverage</p>
     <div class="related-grid">
-      <article class="related-card">
-        <p class="related-kicker">Banking</p>
-        <h3 class="related-headline">Old National's Midwest Expansion Puts Three Ohio Community Banks in Play</h3>
+      <article class="related-card" onclick="window.location='brewer-science-heraeus-epurio-june-2026.html'">
+        <p class="related-kicker">Industrials · M&amp;A</p>
+        <h3 class="related-headline">Brewer Science Makes Vertical Integration Bet</h3>
       </article>
-      <article class="related-card">
-        <p class="related-kicker">M&amp;A</p>
-        <h3 class="related-headline">Carmel MedTech Deal Signals Consolidation Wave in Indiana Health-Tech</h3>
+      <article class="related-card" onclick="window.location='booz-allen-ultra-mission-solutions-june-2026.html'">
+        <p class="related-kicker">Defense · M&amp;A</p>
+        <h3 class="related-headline">Booz Allen's $720 Million Shortcut</h3>
       </article>
-      <article class="related-card">
-        <p class="related-kicker">Pharma</p>
-        <h3 class="related-headline">Lilly's Oncology Pipeline Draws Three Strategic Bidders for Midwest Distribution Rights</h3>
+      <article class="related-card" onclick="window.location='deal-flow.html'">
+        <p class="related-kicker">Deal Flow</p>
+        <h3 class="related-headline">Every Midwest Deal We're Tracking — Sourced and Verified</h3>
       </article>
     </div>
   </div>
 </main>
 
-<!-- FOOTER -->
 <footer id="footer">
   <div class="footer-inner">
     <a href="index.html" aria-label="The 317 homepage">
@@ -833,7 +732,6 @@
 <script src="config.js"></script>
 <script src="ticker.js?v=20260708b"></script>
 <script>
-  /* DATE */
   (function() {
     const el = document.getElementById('util-date');
     if (el) el.textContent = new Date().toLocaleDateString('en-US', {
@@ -841,22 +739,13 @@
     }).toUpperCase();
   })();
 
-  /* TICKER (shared across all pages — see ticker.js).
-     DJI/SPX/2YR are indices and a bond yield, not individual equities,
-     so they stay static (Finnhub's free quote endpoint only covers stocks). */
-  initTicker([
-    { sym: 'DJI',  price: '41,830', pct: '-0.98%', up: false },
-    { sym: 'SPX',  price: '5,641',  pct: '-1.21%', up: false },
-    { sym: '2YR',  price: '4.21%',  pct: '+16bps', up: false },
-  ]);
+  initTicker();
 
-  /* STICKY NAV */
   const nav = document.getElementById('main-nav');
   window.addEventListener('scroll', () => {
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 80);
   }, { passive: true });
 
-  /* READ PROGRESS BAR */
   const bar = document.getElementById('read-progress');
   window.addEventListener('scroll', () => {
     if (!bar) return;
@@ -865,7 +754,6 @@
     bar.style.width = Math.min(pct, 100) + '%';
   }, { passive: true });
 
-  /* FADE IN */
   requestAnimationFrame(() => requestAnimationFrame(() => {
     const items = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {

@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 200" width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.9" fill="#8b9bbd" opacity="0.28"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="200" fill="#f4f5f7"/>
+  <rect width="800" height="200" fill="url(#dots)"/>
+
+  <!-- ── LEFT: Church's ── -->
+  <rect x="52" y="72" width="52" height="52" fill="#e8421a" rx="3"/>
+  <text x="78" y="107" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="#ffffff" text-anchor="middle">C</text>
+
+  <text x="116" y="93"  font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" letter-spacing="-0.5" fill="#1a1a1a">Church's</text>
+  <text x="116" y="109" font-family="Arial,sans-serif" font-size="10" font-weight="400" letter-spacing="3" fill="#777777">TEXAS CHICKEN</text>
+
+  <line x1="116" y1="118" x2="315" y2="118" stroke="#d8dce6" stroke-width="1"/>
+  <text x="116" y="131" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing="2" fill="#aab0be">HIGH BLUFF CAPITAL PARTNERS</text>
+
+  <!-- ── PLUS ── -->
+  <text x="390" y="107" font-family="Arial,sans-serif" font-size="30" font-weight="200" fill="#c0c8d6" text-anchor="middle">+</text>
+
+  <!-- ── RIGHT: Golub Capital ── -->
+  <rect x="430" y="72" width="4" height="52" fill="#1c3a6e" rx="1"/>
+
+  <text x="446" y="93"  font-family="Arial Black,Arial,sans-serif" font-size="22" font-weight="900" letter-spacing="-0.5" fill="#1c3a6e">Golub Capital</text>
+  <text x="446" y="109" font-family="Arial,sans-serif" font-size="10" font-weight="400" letter-spacing="3" fill="#4a6a9e">DIRECT LENDING</text>
+
+  <line x1="446" y1="118" x2="748" y2="118" stroke="#d8dce6" stroke-width="1"/>
+  <text x="446" y="131" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing="2" fill="#aab0be">GROWTH EQUITY INVESTMENT</text>
+
+  <!-- ── BOTTOM STRIP ── -->
+  <rect x="0" y="168" width="800" height="32" fill="rgba(0,0,0,0.04)"/>
+  <line x1="0" y1="168" x2="800" y2="168" stroke="#d8dce6" stroke-width="1"/>
+  <text x="400" y="188" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing="3" fill="#aab0be" text-anchor="middle">CHURCH'S TEXAS  ·  GOLUB CAPITAL  ·  2026</text>
+</svg>

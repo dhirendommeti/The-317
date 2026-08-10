@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Warsh Holds Rates, Signals a Hike Is Coming — The 317</title>
-<meta name="description" content="The new Fed chairman kept rates steady for a fourth consecutive meeting but made clear the next move may be up — with nine FOMC members projecting a hike before year-end.">
+<title>Supersizing M&A for today's AI-driven landscape — The 317</title>
+<meta name="description" content="Fewer but larger deals set the M&A trend as AI destroys the previously successful playbook and disrupts dealmakers.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Warsh Holds Rates, Signals a Hike Is Coming — The 317">
-<meta property="og:description" content="The new Fed chairman kept rates steady for a fourth consecutive meeting but made clear the next move may be up — with nine FOMC members projecting a hike before year-end.">
-<meta property="og:image" content="warsh-fed-press-conference.jpg">
-<meta property="og:url" content="https://the317.com/fed-warsh-rate-hold-june-2026.html">
+<meta property="og:title" content="Supersizing M&A for today's AI-driven landscape — The 317">
+<meta property="og:description" content="Fewer but larger deals set the M&A trend as AI destroys the previously successful playbook and disrupts dealmakers.">
+<meta property="og:image" content="supersizing-ma-ai-hero.jpg">
+<meta property="og:url" content="https://the317.com/supersizing-ma-ai-2026.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Warsh Holds Rates, Signals a Hike Is Coming — The 317">
-<meta name="twitter:description" content="The new Fed chairman kept rates steady for a fourth consecutive meeting but made clear the next move may be up.">
-<meta name="twitter:image" content="warsh-fed-press-conference.jpg">
+<meta name="twitter:title" content="Supersizing M&A for today's AI-driven landscape — The 317">
+<meta name="twitter:description" content="Fewer but larger deals set the M&A trend as AI destroys the previously successful playbook and disrupts dealmakers.">
+<meta name="twitter:image" content="supersizing-ma-ai-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -205,7 +205,25 @@
 
   .meta-dot { color: var(--rule-dark); }
 
-  /* ── HERO PLACEHOLDER ── */
+  /* ── HERO IMAGE ── */
+  .hero-figure { margin-bottom: 0; }
+  .hero-logo-card {
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    padding: 48px;
+  }
+  .hero-photo {
+    display: block;
+    max-width: 60%;
+    max-height: 70%;
+    object-fit: contain;
+  }
   .hero-img {
     width: 100%;
     aspect-ratio: 16 / 8;
@@ -220,6 +238,9 @@
     position: relative;
     overflow: hidden;
   }
+  .hero-fallback { display: none; }
+  .hero-figure.img-missing .hero-logo-card { display: none; }
+  .hero-figure.img-missing .hero-fallback { display: flex; }
 
   .hero-img .grid-lines {
     position: absolute;
@@ -284,6 +305,19 @@
     letter-spacing: -0.01em;
   }
 
+  .article-body ol {
+    margin: 0 0 1.4em 1.6em;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .article-body ol li {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink);
+  }
+
   /* ── PULL QUOTE ── */
   .pull-quote {
     border-left: 3px solid var(--ember);
@@ -311,7 +345,7 @@
     font-style: normal;
   }
 
-  /* ── DATA CALLOUT ── */
+  /* ── DATA STRIP ── */
   .data-strip {
     background: var(--paper-2);
     border: 1px solid var(--rule);
@@ -322,8 +356,6 @@
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 20px 32px;
   }
-
-  .data-item {}
 
   .data-label {
     font-family: 'Inter', Arial, sans-serif;
@@ -343,9 +375,6 @@
     line-height: 1.1;
   }
 
-  .data-value.negative { color: #dc2626; }
-  .data-value.positive { color: #16a34a; }
-
   .data-sub {
     font-family: 'Inter', Arial, sans-serif;
     font-size: 10px;
@@ -359,96 +388,6 @@
     height: 1px;
     background: var(--rule);
     margin: 2.8em 0;
-  }
-
-  /* ── EXPERT BOX ── */
-  .expert-box {
-    background: var(--paper-2);
-    border: 1px solid var(--rule);
-    padding: 24px 28px;
-    margin: 2.4em 0;
-  }
-
-  .expert-box-title {
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-mute);
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .expert-item {
-    margin-bottom: 18px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid var(--rule);
-  }
-  .expert-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-
-  .expert-name {
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-
-  .expert-org {
-    color: var(--ink-mute);
-    font-weight: 400;
-  }
-
-  .expert-quote {
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--ink-mute);
-    font-style: italic;
-  }
-
-  /* ── WHAT THIS MEANS BOX ── */
-  .context-box {
-    border-top: 2px solid var(--ink);
-    border-bottom: 1px solid var(--rule);
-    padding: 24px 0;
-    margin: 2.8em 0;
-  }
-
-  .context-box-title {
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink);
-    margin-bottom: 14px;
-  }
-
-  .context-box ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .context-box li {
-    font-size: 15px;
-    line-height: 1.55;
-    color: var(--ink-mute);
-    padding-left: 18px;
-    position: relative;
-  }
-
-  .context-box li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--ember);
-    font-family: 'Inter', Arial, sans-serif;
   }
 
   /* ── TAGS ── */
@@ -534,7 +473,7 @@
 
   .related-card:hover .related-headline { color: var(--ember); }
 
-  /* ── FOOTER MINI ── */
+  /* ── FOOTER ── */
   #footer {
     background: var(--paper);
     border-top: 3px double var(--rule-dark);
@@ -570,18 +509,6 @@
     z-index: 200;
     transition: width 0.05s linear;
   }
-
-  /* ── HERO PHOTO ── */
-  .hero-figure { margin-bottom: 0; }
-  .hero-photo {
-    width: 100%;
-    display: block;
-    border: 1px solid var(--rule);
-    margin-bottom: 12px;
-  }
-  .hero-fallback { display: none; }
-  .hero-figure.img-missing .hero-photo { display: none; }
-  .hero-figure.img-missing .hero-fallback { display: flex; }
 
   /* ── FADE IN ── */
   .fade-in {
@@ -637,7 +564,7 @@
       <a href="pharma.html">Pharma</a>
       <a href="banking.html">Banking</a>
       <a href="industrials.html">Industrials</a>
-      <a href="#">Newsletter</a>
+      <a href="index.html#newsletter">Newsletter</a>
     </div>
   </div>
 </nav>
@@ -649,152 +576,193 @@
     <!-- HEADER -->
     <header class="article-header fade-in">
       <p class="kicker">
-        <span>Markets</span>
+        <span>M&amp;A</span>
         <span class="kicker-dot">·</span>
-        <span>Federal Reserve</span>
+        <span>Markets</span>
       </p>
       <h1 class="article-headline">
-        Warsh Holds Rates, Signals the Next Move Is Up
+        Supersizing M&amp;A for today's AI-driven landscape
       </h1>
       <p class="article-dek">
-        The new Fed chairman kept borrowing costs unchanged for a fourth straight meeting — but nine FOMC members now project a hike before year-end, rattling markets and resetting the outlook for Midwest dealmaking through 2026.
+        Fewer but larger deals set the M&amp;A trend as AI destroys the previously successful playbook and disrupts dealmakers
       </p>
       <div class="article-meta">
-        <span>By The 317 Staff</span>
+        <span>By Dhiren Dommeti &amp; Ashrith Desu</span>
         <span class="meta-dot">·</span>
-        <span>June 18, 2026</span>
+        <span>July 8, 2026</span>
         <span class="meta-dot">·</span>
-        <span>8 min read</span>
+        <span>5 min read</span>
         <span class="meta-dot">·</span>
-        <span>Markets · Federal Reserve</span>
+        <span>M&amp;A · Markets</span>
       </div>
     </header>
 
     <!-- HERO IMAGE -->
-    <figure class="hero-figure fade-in">
-      <img
-        src="warsh-fed-press-conference.jpg"
-        alt="Federal Reserve Chairman Kevin Warsh speaks during his first policy meeting press conference, June 18, 2026."
-        class="hero-photo"
-        onerror="this.parentElement.classList.add('img-missing')"
-      >
-      <div class="hero-img hero-fallback" role="img" aria-hidden="true">
-        <div class="grid-lines"></div>
-        <p class="hero-img-label">Photo · Kevin Warsh, Federal Reserve Chairman<br>Save warsh-fed-press-conference.jpg to this folder to display</p>
+    <figure class="hero-figure fade-in" style="margin-bottom:40px;">
+      <div style="background:#1a2640;border:1px solid #1f2c47;padding:28px 24px 20px;">
+
+        <p style="font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8b9bbd;margin:0 0 4px;">Global M&amp;A · 2024 vs 2026</p>
+        <p style="font-family:'DM Serif Display',Georgia,serif;font-size:20px;color:#edf1fa;margin:0 0 20px;line-height:1.3;">Fewer deals, bigger dollars — megadeal concentration at record highs</p>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px;">
+          <div style="background:#0f1623;border:1px solid #1f2c47;padding:12px 14px;">
+            <p style="font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8b9bbd;margin:0 0 4px;">Deal value</p>
+            <p style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:#4ade80;margin:0;">+13%</p>
+            <p style="font-family:'Inter',sans-serif;font-size:11px;color:#8b9bbd;margin:4px 0 0;">~$4T projected 2026</p>
+          </div>
+          <div style="background:#0f1623;border:1px solid #1f2c47;padding:12px 14px;">
+            <p style="font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8b9bbd;margin:0 0 4px;">Transaction volume</p>
+            <p style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:#f87171;margin:0;">−13%</p>
+            <p style="font-family:'Inter',sans-serif;font-size:11px;color:#8b9bbd;margin:4px 0 0;">42,000 deals in 2026</p>
+          </div>
+          <div style="background:#0f1623;border:1px solid #1f2c47;padding:12px 14px;">
+            <p style="font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8b9bbd;margin:0 0 4px;">Megadeal share (&gt;$5B)</p>
+            <p style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:#f59e0b;margin:0;">~50%</p>
+            <p style="font-family:'Inter',sans-serif;font-size:11px;color:#8b9bbd;margin:4px 0 0;">vs. 26% in 2024</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:16px;margin-bottom:10px;font-family:'Inter',sans-serif;font-size:11px;color:#8b9bbd;">
+          <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;border-radius:2px;background:#5b8def;display:inline-block;"></span>2024</span>
+          <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;border-radius:2px;background:#4ade80;display:inline-block;"></span>2026</span>
+        </div>
+
+        <div style="position:relative;width:100%;height:220px;margin-bottom:24px;">
+          <canvas id="dealValueChart" role="img" aria-label="Grouped bar chart: global M&A deal value up 13%, transaction volume down 13% in 2026 vs 2024">Deal value up 13% YoY; transaction volume down 13% YoY.</canvas>
+        </div>
+
+        <p style="font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8b9bbd;margin:0 0 8px;">Share of global M&amp;A value — deals over $5B</p>
+        <div style="position:relative;width:100%;height:100px;margin-bottom:16px;">
+          <canvas id="megadealChart" role="img" aria-label="Horizontal bar chart: megadeal share 26% in 2024, ~50% in 2026">Megadeal share nearly doubled from 26% in 2024 to approximately 50% in 2026.</canvas>
+        </div>
+
+        <p style="font-family:'Inter',sans-serif;font-size:10px;color:#8b9bbd;margin:0;">Source: PwC Global M&amp;A Trends 2026 — <a href="https://www.pwc.com/gx/en/services/deals/trends.html" style="color:#5b8def;">pwc.com/gx/en/services/deals/trends.html</a></p>
       </div>
-      <figcaption class="hero-caption">Federal Reserve Chairman Kevin Warsh speaks at his first policy meeting press conference, June 18, 2026. Nine FOMC members signaled a rate hike is warranted before year-end.</figcaption>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+      <script>
+        (function() {
+          var gridColor = 'rgba(255,255,255,0.06)';
+          var tickColor = '#8b9bbd';
+          var labelColor = '#edf1fa';
+
+          new Chart(document.getElementById('dealValueChart'), {
+            type: 'bar',
+            data: {
+              labels: ['Global deal value (indexed)', 'Transaction volume (indexed)'],
+              datasets: [
+                { label: '2024', data: [100, 100], backgroundColor: '#5b8def', borderRadius: 4, borderSkipped: 'bottom' },
+                { label: '2026', data: [113, 87],  backgroundColor: '#4ade80', borderRadius: 4, borderSkipped: 'bottom' }
+              ]
+            },
+            options: {
+              responsive: true, maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false },
+                tooltip: { callbacks: { label: function(ctx) { return ctx.dataset.label + ': ' + ctx.raw + ' (index)'; } } }
+              },
+              scales: {
+                x: { ticks: { color: labelColor, font: { size: 12 }, autoSkip: false }, grid: { display: false }, border: { color: gridColor } },
+                y: { min: 0, max: 130, ticks: { color: tickColor, font: { size: 11 }, callback: function(v) { return v === 100 ? 'baseline' : v; } }, grid: { color: gridColor }, border: { display: false } }
+              }
+            }
+          });
+
+          new Chart(document.getElementById('megadealChart'), {
+            type: 'bar',
+            data: {
+              labels: ['2024', '2026'],
+              datasets: [{ label: 'Megadeal share', data: [26, 50], backgroundColor: ['#5b8def', '#f59e0b'], borderRadius: 4, borderSkipped: 'left' }]
+            },
+            options: {
+              indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false },
+                tooltip: { callbacks: { label: function(ctx) { return 'Share of global M&A value: ' + ctx.raw + '%'; } } }
+              },
+              scales: {
+                x: { min: 0, max: 60, ticks: { color: tickColor, font: { size: 11 }, callback: function(v) { return v + '%'; } }, grid: { color: gridColor }, border: { display: false } },
+                y: { ticks: { color: labelColor, font: { size: 12 } }, grid: { display: false }, border: { color: gridColor } }
+              }
+            }
+          });
+        })();
+      </script>
     </figure>
 
     <!-- BODY -->
     <div class="article-body">
 
-      <p>Kevin Warsh came to Washington promising a new chapter for the Federal Reserve. On Wednesday, in his first policy meeting as chairman, he began writing it — and the opening pages were hawkish. The Fed held its benchmark interest rate steady in the 4.25%–4.50% range for a fourth consecutive meeting, but the accompanying economic projections made clear that the status quo has a shelf life: nine of the committee's nineteen members now anticipate a rate increase before the end of 2026.</p>
+      <div class="pull-quote fade-in">
+        <blockquote>"The deal of the future will be faster, more transparent, and use far more data with far less friction. Ai will transform the M&amp;A process just as surely as it is transforming the companies doing the transactions. For dealmakers, it's a whole new world."</blockquote>
+        <cite>— Lucy Stapleton, Global Deals Leader, PwC UK</cite>
+      </div>
 
-      <p>Markets did not take the signal kindly. The Dow Jones Industrial Average shed 507 points, or 0.98%. The S&amp;P 500 fell 1.21% and the Nasdaq dropped 1.34%. Two-year Treasury yields — the maturity most sensitive to near-term Fed policy — surged 16 basis points to 4.21%, their highest level in more than a year. The dollar index climbed roughly 1%, on pace for its best single session in nearly twelve months. Gold, a classic hedge against rate uncertainty, fell more than 2%.</p>
+      <p>Global M&amp;A is on track to reach around $4 trillion in deal value this year, making this year the strongest for M&amp;A since the post-pandemic surge. At first glance, it might look hopeful for the years to come, but the real story is that only a small number of megadeals are masking the broader weakness.</p>
 
-      <!-- DATA STRIP -->
+      <p>The headline is definitely impressive. Global deal value is expected to increase roughly 13% YoY, but PwC only projects 42,000 transactions on the year, representing a 13% <strong>decline</strong> YoY. Moreover, deals over $5 billion in value account for nearly half of global M&amp;A value, as opposed to 26% just in 2024. This headline statistic of $4 trillion is largely made up of these megadeals, while the real volume has significantly decreased.</p>
+
       <div class="data-strip fade-in">
         <div class="data-item">
-          <p class="data-label">Fed Funds Rate</p>
-          <p class="data-value">4.25–4.50%</p>
-          <p class="data-sub">Unchanged · 4th straight hold</p>
+          <p class="data-label">Global Deal Value</p>
+          <p class="data-value">~$4T</p>
+          <p class="data-sub">Strongest since post-pandemic surge</p>
         </div>
         <div class="data-item">
-          <p class="data-label">Dow Jones</p>
-          <p class="data-value negative">−507 pts</p>
-          <p class="data-sub">−0.98% on the session</p>
+          <p class="data-label">Deal Value Growth</p>
+          <p class="data-value">+13%</p>
+          <p class="data-sub">YoY increase in value</p>
         </div>
         <div class="data-item">
-          <p class="data-label">2-Yr Treasury Yield</p>
-          <p class="data-value">4.21%</p>
-          <p class="data-sub">+16 bps · 1-year high</p>
+          <p class="data-label">Transaction Volume</p>
+          <p class="data-value">42,000</p>
+          <p class="data-sub">13% decline YoY</p>
         </div>
         <div class="data-item">
-          <p class="data-label">Sep Hike Probability</p>
-          <p class="data-value">49%</p>
-          <p class="data-sub">Up from 27% prior day</p>
+          <p class="data-label">Megadeal Share</p>
+          <p class="data-value">~50%</p>
+          <p class="data-sub">Deals &gt;$5B vs. 26% in 2024</p>
         </div>
       </div>
 
-      <p>Traders moved swiftly to reprice expectations. CME FedWatch now shows a 49% chance of a rate hike at the September meeting, up sharply from 27% the prior day. The pivot in odds reflects a committee that, under Warsh, appears willing to reverse course if inflation remains sticky — a disposition Warsh made explicit when he said the Fed "missed for five years" on price stability and promised to "fix that."</p>
+      <h2>Why Bigger Deals keep Winning</h2>
 
-      <h2>A Shorter Statement, a Bigger Message</h2>
+      <p>Large corporations have many advantages that smaller buyers don't, from bigger balance sheets, to more accessible financing, and overall ease of scale. These megadeals are occurring due to these massive corporations purchasing assets that vertically integrate into their current operations. They strengthen supply chains, expand AI capabilities, and establish leadership in specific industries before competitors can.</p>
 
-      <p>Warsh made his reformist intentions tangible from the opening moments of the meeting. The policy statement itself was overhauled into what he called a "curt" document, stripped of the interpretive language that had characterized prior Fed communications. The word "elevated" reappeared to describe inflation, with energy "supply shocks" cited as a partial cause — a framing that carries distinct implications for Midwest manufacturers who depend on stable input costs.</p>
+      <p>The separation has started between companies that are capable of these massive transformations, and everyone else.</p>
 
-      <p>In a break with long-standing practice, Warsh declined to submit a personal "dot" to the committee's famous dot plot — the chart that aggregates Fed officials' individual rate forecasts. The move was deliberate, he indicated, and consistent with a broader decision to abandon forward guidance entirely. When pressed repeatedly on the rate outlook, he deflected back to the written statement. "I've got nothing more to say than the statement itself," he told reporters.</p>
+      <h2>The Impact of AI and Capital Allocation</h2>
 
-      <div class="pull-quote fade-in">
-        <blockquote>"The Fed will deliver price stability. The commitment to deliver is strong, unanimous, and unambiguous. And that's an important message we've missed for five years. And we're going to fix that."</blockquote>
-        <cite>— Kevin Warsh, Federal Reserve Chairman, June 18, 2026</cite>
-      </div>
+      <p>Capital is increasingly flowing towards the infrastructure powering the AI economy: data centers, power generation, electrical grids, cooling systems, and the infrastructure that support them. Sectors like software, facing uncertainty around AI disruption, have seen buyers become more selective in approaching those investments.</p>
 
-      <p>His press conference was notably shorter than those of his predecessor, Jerome Powell, wrapping around 3:10 p.m. ET — roughly twenty minutes earlier than the Powell norm. Warsh hinted the cadence of future briefings may also change, noting that press conferences should occur "when you have something important to say."</p>
+      <h2>Headwinds Moving Forward</h2>
 
-      <h2>Five Task Forces and a Promise of Reform</h2>
+      <p>Despite the resurgence in headline value, challenges continue to weigh on the broader M&amp;A market. PE firms still hold a record number of aging PortCo's waiting to exit. In addition to this, higher interest rates have continued to pressure financing costs, which builds off the current struggle of governments/corporations competing for capital as sectors including AI infrastructure, energy, and defense are accelerating.</p>
 
-      <p>Beyond the rate decision, Warsh announced the creation of five task forces focused on areas he described as "central to the broad conduct of monetary policy." He referenced the groups more than thirty times across his prepared remarks and Q&amp;A. The specifics of each task force's mandate were not disclosed, though Warsh framed them as part of a sweeping modernization effort — what some observers compared in spirit to the DOGE efficiency drive that reshaped other federal agencies last year.</p>
+      <h2>What to Watch Going Forward</h2>
 
-      <p>The reforms extend to the Fed's physical operations as well. An ongoing renovation project at the Federal Reserve Board building remains under review by the institution's inspector general. Former Chairman Powell, who remains on the board, has said he will stay until the project is cleared of any concerns.</p>
+      <ol>
+        <li>Deal volumes continue to decline, although deal values have increased</li>
+        <li>AI is transforming transaction execution by accelerating diligence processes, valuations, and investment analyses.</li>
+        <li>Large strategic buyers continue driving activity in the market, while middle-market buyers have stayed constrained by struggles of financing costs, valuation gas, and economic uncertainty</li>
+        <li>Market concentration is a concern, with transactions above $5 billion accounting for nearly half of total global deal value</li>
+      </ol>
 
-      <h2>What It Means for Midwest Dealmaking</h2>
+      <h2>The Bigger Picture</h2>
 
-      <p>For the Midwest's middle-market M&amp;A community, the session produced a sobering recalibration. The financing assumptions underpinning many deals struck in 2025 — built on widespread expectations of two to three Fed cuts this year — now look materially optimistic. If September brings a hike, leveraged buyout economics tighten further, and sellers who held out for higher multiples may find buyer appetite correspondingly colder.</p>
+      <p>The M&amp;A market isn't recovering, but becoming more and more concentrated due to the separation between massive corporations and middle-market buyers. That scale has become one of the industry's greatest competitive advantages, and the key driver for large corporations to continue expanding vertically within supply chains and their current operations.</p>
 
-      <p>Indiana's commercial real estate market, already navigating elevated cap rates, faces additional pressure if long-duration Treasury yields continue their climb. The 10-year, which tracks mortgage and commercial loan pricing more closely than the policy rate, will be the number to watch.</p>
-
-      <!-- EXPERT BOX -->
-      <div class="expert-box fade-in">
-        <p class="expert-box-title">What Housing &amp; Markets Experts Are Saying</p>
-        <div class="expert-item">
-          <p class="expert-name">Chen Zhao <span class="expert-org">— Head of Economics Research, Redfin</span></p>
-          <p class="expert-quote">"It's clear that we're in a new era and it's going to take a while for markets to figure out how to react to today's Fed meeting. But one thing is certain: the committee as a whole is taking inflation very seriously, which means mortgage rates are unlikely to retreat much in the near future."</p>
-        </div>
-        <div class="expert-item">
-          <p class="expert-name">Bill Banfield <span class="expert-org">— Chief Business Officer, Rocket Mortgage</span></p>
-          <p class="expert-quote">"Home sales are responding more right now to labor market strength than rate moves. If the labor market remains healthy, buyers will continue to enter the market regardless of whether the next move from the Fed is a cut, pause, or even a hike."</p>
-        </div>
-        <div class="expert-item">
-          <p class="expert-name">Kristina Hooper <span class="expert-org">— Chief Market Strategist, Man Group</span></p>
-          <p class="expert-quote">"Markets were holding out hope that Chair Warsh would throw them some kernels of real dovishness that they obviously felt they didn't get."</p>
-        </div>
-        <div class="expert-item">
-          <p class="expert-name">Vishal Garg <span class="expert-org">— CEO, Better</span></p>
-          <p class="expert-quote">"Right now this is about what the Fed says, not just what it does. The Fed doesn't set mortgage rates — but these mortgage rates track long-term Treasury yields, which move based on investor expectations for inflation, growth, and the Fed's next step."</p>
-        </div>
-      </div>
-
-      <h2>The Political Dimension</h2>
-
-      <p>President Trump, who appointed Warsh in January with an explicit mandate to lower borrowing costs, offered a notably restrained response from Paris, where he was attending the G7 summit. "We have a very good guy over there now," Trump told reporters before departing for a dinner in Versailles. "So I'm guided by what he wants." The tone was a marked departure from the president's repeated public attacks on Powell when the former chairman declined to cut rates.</p>
-
-      <p>The détente may be temporary. If Warsh's committee follows through on a September hike, Trump's earlier remarks — he once joked he would "sue" a Fed chairman who refused to lower rates — could resurface as a political pressure point heading into the midterm season.</p>
-
-      <div class="section-rule"></div>
-
-      <!-- CONTEXT BOX -->
-      <div class="context-box fade-in">
-        <p class="context-box-title">What This Means for the Midwest · Key Takeaways</p>
-        <ul>
-          <li>Leveraged buyout financing costs remain elevated. Deals with floating-rate debt structures built on cut assumptions will need to be reunderwritten if a September hike materializes.</li>
-          <li>Regional bank margins, already compressed, face a paradox: a hike improves net interest income but may cool loan demand from small-business borrowers in Indiana and Ohio.</li>
-          <li>Indiana's residential construction pipeline — already constrained by lot supply — faces further affordability pressure if 30-year mortgage rates climb above 7.25%.</li>
-          <li>Pharma M&amp;A, including deals tied to Lilly's Indianapolis campus, tends to be less rate-sensitive given cash-heavy strategic balance sheets. That sector remains the relative bright spot for deal activity in the region.</li>
-          <li>The absence of forward guidance is itself a variable. Without reliable Fed signals, deal timelines may lengthen as buyers and sellers wait for clarity — a particular concern for Q3 closings.</li>
-        </ul>
-      </div>
-
-      <p>The bigger question for regional dealmakers is not whether the Fed hikes in September, but whether the Warsh era represents a durable regime shift or a tactical correction. His insistence on "regime change" — a phrase he has used in congressional testimony, at his swearing-in, and again Wednesday — suggests the former. Markets, at least for now, are beginning to believe him.</p>
+      <p>The firms capable of utilizing their balance sheets the most continue setting records in deal values, while everyone else is waiting to be able to withstand the conditions of these transactions.</p>
 
       <!-- TAGS -->
       <div class="article-tags">
-        <span class="tag">Federal Reserve</span>
-        <span class="tag">Interest Rates</span>
-        <span class="tag">Kevin Warsh</span>
+        <span class="tag">M&amp;A</span>
         <span class="tag">Markets</span>
-        <span class="tag">M&amp;A Outlook</span>
-        <span class="tag">Indiana Economy</span>
-        <span class="tag">Midwest</span>
+        <span class="tag">AI</span>
+        <span class="tag">PwC</span>
+        <span class="tag">Private Equity</span>
+        <span class="tag">Megadeals</span>
+        <span class="tag">Capital Allocation</span>
       </div>
 
     </div>
@@ -804,17 +772,17 @@
   <div class="related-section">
     <p class="related-title">Related Coverage</p>
     <div class="related-grid">
-      <article class="related-card">
-        <p class="related-kicker">Banking</p>
-        <h3 class="related-headline">Old National's Midwest Expansion Puts Three Ohio Community Banks in Play</h3>
+      <article class="related-card" onclick="window.location='blue-owl-cavaliers-june-2026.html'">
+        <p class="related-kicker">Finance · Sports</p>
+        <h3 class="related-headline">Blue Owl Bets on NBA Valuations</h3>
       </article>
-      <article class="related-card">
-        <p class="related-kicker">M&amp;A</p>
-        <h3 class="related-headline">Carmel MedTech Deal Signals Consolidation Wave in Indiana Health-Tech</h3>
+      <article class="related-card" onclick="window.location='brewer-science-heraeus-epurio-june-2026.html'">
+        <p class="related-kicker">Industrials · M&amp;A</p>
+        <h3 class="related-headline">Brewer Science Makes Vertical Integration Bet</h3>
       </article>
-      <article class="related-card">
-        <p class="related-kicker">Pharma</p>
-        <h3 class="related-headline">Lilly's Oncology Pipeline Draws Three Strategic Bidders for Midwest Distribution Rights</h3>
+      <article class="related-card" onclick="window.location='deal-flow.html'">
+        <p class="related-kicker">Deal Flow</p>
+        <h3 class="related-headline">Every Midwest Deal We're Tracking — Sourced and Verified</h3>
       </article>
     </div>
   </div>
@@ -841,14 +809,8 @@
     }).toUpperCase();
   })();
 
-  /* TICKER (shared across all pages — see ticker.js).
-     DJI/SPX/2YR are indices and a bond yield, not individual equities,
-     so they stay static (Finnhub's free quote endpoint only covers stocks). */
-  initTicker([
-    { sym: 'DJI',  price: '41,830', pct: '-0.98%', up: false },
-    { sym: 'SPX',  price: '5,641',  pct: '-1.21%', up: false },
-    { sym: '2YR',  price: '4.21%',  pct: '+16bps', up: false },
-  ]);
+  /* TICKER (shared across all pages — see ticker.js) */
+  initTicker();
 
   /* STICKY NAV */
   const nav = document.getElementById('main-nav');

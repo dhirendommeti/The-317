@@ -1,3 +1,6 @@
 *.zip
+*.dmg
+*.pdf
 .DS_Store
 config.js
+.claude/

@@ -120,6 +120,9 @@
     100% { transform: translateX(-50%); }
   }
 
+  .carousel-wrap { position: relative; overflow: hidden; }
+  .carousel-ghost { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+
   .ticker-item {
     display: inline-flex;
     align-items: center;
@@ -1039,7 +1042,7 @@
   </div>
   <div class="util-right">
     <a href="deal-flow.html">Deals</a>
-    <a href="#markets">Markets</a>
+    <a href="markets.html">Markets</a>
     <a href="#newsletter">Newsletter</a>
     <a href="about.html">About</a>
   </div>
@@ -1070,10 +1073,10 @@
 <nav id="main-nav" aria-label="Primary navigation">
   <div class="nav-inner">
     <a href="deal-flow.html">Deals</a>
-    <a href="#markets">Markets</a>
-    <a href="#">Pharma</a>
-    <a href="#">Banking</a>
-    <a href="#">Industrials</a>
+    <a href="markets.html">Markets</a>
+    <a href="pharma.html">Pharma</a>
+    <a href="banking.html">Banking</a>
+    <a href="industrials.html">Industrials</a>
     <a href="#newsletter">Newsletter</a>
   </div>
 </nav>
@@ -1149,32 +1152,13 @@
           <span class="deal-news-title">M&amp;A Activity — Companies We Track</span>
           <a href="deal-flow.html" class="section-link" style="font-size:10px;">Full Deal Flow →</a>
         </div>
-        <p class="deal-news-disclaimer">Live news mentioning the 19 public companies on our ticker — not comprehensive Midwest deal coverage. For sourced, manually verified middle-market deals, see <a href="deal-flow.html">The Deal Flow</a>.</p>
+        <p class="deal-news-disclaimer">Live news mentioning the <span id="deal-news-count">63</span> public companies on our ticker — not comprehensive Midwest deal coverage. For sourced, manually verified middle-market deals, see <a href="deal-flow.html">The Deal Flow</a>.</p>
         <div id="deal-news" class="deal-news-list">
           <p class="deal-news-empty">Loading recent M&amp;A activity…</p>
         </div>
       </div>
 
-      <div class="markets-featured reveal reveal-delay-1">
-        <a href="fed-warsh-rate-hold-june-2026.html" class="markets-card">
-          <div class="markets-card-img">
-            <img src="warsh-fed-press-conference.jpg" alt="Fed Chairman Kevin Warsh" class="markets-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-            <div class="markets-photo-fallback" style="display:none"></div>
-          </div>
-          <div class="markets-card-body">
-            <p class="kicker">Federal Reserve · Breaking</p>
-            <h2 class="markets-headline">Warsh Holds Rates, Signals the Next Move Is Up</h2>
-            <p class="markets-dek">The new Fed chairman kept borrowing costs unchanged for a fourth straight meeting — but nine FOMC members now project a hike before year-end, rattling markets and resetting the outlook for Midwest dealmaking through 2026.</p>
-            <div class="byline-row">
-              <span>By The 317 Staff</span>
-              <span class="byline-dot">·</span>
-              <span>June 18, 2026</span>
-              <span class="byline-dot">·</span>
-              <span>8 min read</span>
-            </div>
-          </div>
-        </a>
-      </div>
+      <div class="markets-featured reveal reveal-delay-1" id="markets-featured"></div>
     </div>
   </section>
 
@@ -1236,10 +1220,10 @@
       <p class="footer-col-title">Sections</p>
       <ul class="footer-links">
         <li><a href="deal-flow.html">Deals</a></li>
-        <li><a href="#markets">Markets</a></li>
-        <li><a href="#">Pharma</a></li>
-        <li><a href="#">Banking</a></li>
-        <li><a href="#">Industrials</a></li>
+        <li><a href="markets.html">Markets</a></li>
+        <li><a href="pharma.html">Pharma</a></li>
+        <li><a href="banking.html">Banking</a></li>
+        <li><a href="industrials.html">Industrials</a></li>
       </ul>
     </div>
 
@@ -1286,7 +1270,8 @@
 </footer>
 
 <script src="config.js"></script>
-<script src="ticker.js"></script>
+<script src="ticker.js?v=20260708b"></script>
+<script src="deals.js"></script>
 <script>
   /* ── DATE ── */
   (function() {
@@ -1312,88 +1297,177 @@
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 120);
   }, { passive: true });
 
-  /* ── DEAL FLOW DATA ── */
-  /* Real, sourced deals — five most recent. Full list with source links at deal-flow.html */
-  const deals = [
-    {
-      target: 'Material Handling Exchange, LLC',
-      counterparty: 'Architect Equity',
-      sector: 'Industrials',
-      dealType: 'PE Buyout',
-      value: null,
-      valueDisplay: 'Undisclosed',
-      dateAnnounced: '2026-06-15',
-      source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana',
-    },
-    {
-      target: 'Tallman Equipment Company',
-      counterparty: 'Platte River Equity',
-      sector: 'Energy',
-      dealType: 'Growth Equity',
-      value: null,
-      valueDisplay: 'Undisclosed',
-      dateAnnounced: '2026-06-15',
-      source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana',
-    },
-    {
-      target: 'Crowe LLP',
-      counterparty: 'KKR',
-      sector: 'Professional Services',
-      dealType: 'PE Buyout',
-      value: 3000000000,
-      valueDisplay: '$3B',
-      dateAnnounced: '2026-06-12',
-      source: 'https://www.chicagobusiness.com/banking-finance/ccb-crowe-kkr-stake-20260612/',
-    },
-    {
-      target: 'A. Hattersley & Sons',
-      counterparty: 'Foundral (McNally Capital)',
-      sector: 'Industrials',
-      dealType: 'PE Buyout',
-      value: null,
-      valueDisplay: 'Undisclosed',
-      dateAnnounced: '2026-05-15',
-      source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana',
-    },
-    {
-      target: 'CAI',
-      counterparty: 'JLL Partners',
-      sector: 'Healthcare',
-      dealType: 'Growth Equity',
-      value: null,
-      valueDisplay: 'Undisclosed',
-      dateAnnounced: '2026-05-15',
-      source: 'https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/indiana',
-    },
-  ];
-
-  const tagClasses = {
-    'M&A': 'tag-ma',
-    'PE Buyout': 'tag-pe',
-    'Growth Equity': 'tag-growth',
-    'IPO': 'tag-ipo',
-    'Private Placement': 'tag-private',
-  };
-
-  function renderDeals(data) {
-    const tbody = document.getElementById('deal-tbody');
-    if (!tbody) return;
-    tbody.innerHTML = data.map(d => `
-      <tr>
-        <td class="company">${d.source ? `<a href="${d.source}" target="_blank" rel="noopener" title="View source">${d.target} <span style="font-size:11px;opacity:0.5;">↗</span></a>` : d.target}</td>
-        <td>${d.counterparty}</td>
-        <td class="sector">${d.sector}</td>
-        <td><span class="deal-tag ${tagClasses[d.dealType] || ''}">${d.dealType}</span></td>
-        <td class="value">${d.valueDisplay}</td>
-        <td class="date">${d.dateAnnounced}</td>
-      </tr>
-    `).join('');
-  }
-
-  renderDeals(deals);
+  /* ── DEAL FLOW DATA (shared — see deals.js) ── */
+  /* Five most recent real, sourced deals. Full list with source links at deal-flow.html */
+  renderDealRows(recentDeals(5), 'deal-tbody');
 
   /* ── ARTICLE DATA ── */
   const articles = [
+    {
+      title: 'TransDigm\'s New Specialization in Aerospace Power',
+      dek: 'The aerospace giant is acquiring Prince & Izant, adding a specialized supplier with proprietary components, serving applications across aerospace and defense.',
+      category: 'Industrials',
+      author: 'Ashrith Desu',
+      readTime: '4 min read',
+      slug: 'transdigm-prince-izant-2026',
+      thumbBg: '#ffffff',
+      thumbImg: 'transdigm_logo-1.jpg',
+      date: '2026-08-10',
+    },
+    {
+      title: 'First Financial Expands Chicago Footprint',
+      dek: 'The regional bank\'s acquisition of Finward Bancorp strengthens their scale in Chicago, highlighting the importance of reach in regional banking.',
+      category: 'Banking',
+      author: 'Ashrith Desu',
+      readTime: '4 min read',
+      slug: 'first-financial-finward-2026',
+      thumbBg: '#ffffff',
+      thumbImg: 'First_Financial_Bank_Logo.jpg',
+      date: '2026-08-09',
+    },
+    {
+      title: 'Church\'s Chicken\'s Next Chapter',
+      dek: 'Golub Capital\'s investment signals that Church\'s multi-year turnaround is complete, and they can now shift toward expansion.',
+      category: 'Private Equity',
+      author: 'Ashrith Desu',
+      readTime: '4 min read',
+      slug: 'churchs-chicken-golub-2026',
+      thumbBg: '#f4f5f7',
+      thumbImg: 'churchs-chicken-golub-hero.svg',
+      date: '2026-08-09',
+    },
+    {
+      title: 'Claros\' $55 Million Bet on Permanent Treatment',
+      dek: 'The Minnesota-based startup raised a $55 million Series B to scale PFAS destruction technologies, highlighting increasing investor interest in one of environmental remediation\'s growing markets.',
+      category: 'Environmental Tech',
+      author: 'Ashrith Desu',
+      readTime: '4 min read',
+      slug: 'claros-technologies-pfas-2026',
+      thumbBg: '#f4f5f7',
+      thumbImg: 'claros-technologies-hero.svg',
+      date: '2026-08-09',
+    },
+    {
+      title: 'Lafayette Instrument\'s Sixth Acquisition in Five Years',
+      dek: 'The Lafayette, Indiana-based scientific instrument maker has quietly built a global research platform from a company that started 75 years ago on Sagamore Parkway.',
+      category: 'Life Sciences',
+      author: 'Dhiren Dommeti & Ashrith Desu',
+      readTime: '4 min read',
+      slug: 'lafayette-instrument-avisoft-2026',
+      thumbBg: '#f4f5f7',
+      thumbImg: 'lafayette-instrument-avisoft-hero.svg',
+      date: '2026-07-28',
+    },
+    {
+      title: 'Booz Allen\'s $720 Million Shortcut',
+      dek: 'Booz Allen Hamilton agreed to buy Ultra I&C Mission Solutions for $720 million. The deal is less about capability and more about time — and what it says about where defense tech M&A is headed.',
+      category: 'Defense',
+      author: 'Dhiren Dommeti',
+      readTime: '6 min read',
+      slug: 'booz-allen-ultra-mission-solutions-june-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'booz-allen-hero.jpg',
+      date: '2026-06-23',
+    },
+    {
+      title: 'Unity Partners Invests in Meaden & Moore, Expanding Specialized Advisory',
+      dek: 'Backing a century-old advisory business, Unity Partners signals investor demand for specialized professional services.',
+      category: 'Finance',
+      author: 'Dhiren Dommeti & Ashrith Desu',
+      readTime: '4 min read',
+      slug: 'unity-partners-meaden-moore-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'unity-partners-meaden-moore-hero.jpg',
+      date: '2026-07-17',
+    },
+    {
+      title: 'Kanawha Scales Expands Midwest Service Platform',
+      dek: 'KSS is on a path to strengthen its Midwest footprint while diving into a broader consolidation trend across industrial services.',
+      category: 'Industrials',
+      author: 'Dhiren Dommeti & Ashrith Desu',
+      readTime: '3 min read',
+      slug: 'kanawha-scales-strack-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'kanawha-scales-strack-hero.jpg',
+      date: '2026-07-21',
+    },
+    {
+      title: 'Argosy\'s Bet on Mission-Critical Logistics',
+      dek: 'Argosy, the lower-MM PE firm positions itself in one of logistics\' most resilient and specialized segments.',
+      category: 'Industrials',
+      author: 'Dhiren Dommeti & Ashrith Desu',
+      readTime: '4 min read',
+      slug: 'argosy-kl-freight-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'argosy-kl-freight-hero.jpg',
+      date: '2026-07-11',
+    },
+    {
+      title: 'Kroger\'s $1.65 Billion Bet on Regional Density',
+      dek: 'The grocery giant acquires Giant Eagle to deepen its Midwest footprint, signaling the importance of regional scale and its value in food retail.',
+      category: 'M&A',
+      author: 'Dhiren Dommeti & Ashrith Desu',
+      readTime: '4 min read',
+      slug: 'kroger-giant-eagle-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'kroger-giant-eagle-hero.jpg',
+      date: '2026-07-14',
+    },
+    {
+      title: 'Gareth Bale\'s Next Avenue: Sports Ownership',
+      dek: 'The former Real Madrid star launches an investment fund alongside Juggernaut Capital, highlighting the growing role of athletes in PE-backed sports investments.',
+      category: 'Finance',
+      author: 'Ashrith Desu',
+      readTime: '4 min read',
+      slug: 'gareth-bale-juggernaut-capital-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'gareth-bale-juggernaut-hero.jpg',
+      date: '2026-07-08',
+    },
+    {
+      title: 'Supersizing M&A for today\'s AI-driven landscape',
+      dek: 'Fewer but larger deals set the M&A trend as AI destroys the previously successful playbook and disrupts dealmakers.',
+      category: 'M&A',
+      author: 'Dhiren Dommeti & Ashrith Desu',
+      readTime: '5 min read',
+      slug: 'supersizing-ma-ai-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'supersizing-ma-ai-hero.jpg',
+      date: '2026-07-08',
+    },
+    {
+      title: 'Blue Owl Bets on NBA Valuations',
+      dek: 'Alternative asset manager acquires minority stake in the Cavaliers at a $5.5 billion valuation, underscoring the financialization of professional sports franchises.',
+      category: 'Finance',
+      author: 'Ashrith Desu',
+      readTime: '5 min read',
+      slug: 'blue-owl-cavaliers-june-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'blue-owl-cavaliers-hero.jpg',
+      date: '2026-07-08',
+    },
+    {
+      title: 'Brewer Science Makes Vertical Integration Bet',
+      dek: 'Brewer Science acquires Heraeus Epurio\'s semiconductor chemicals business to gain control over critical materials, strengthening its position in an increasingly strategic supply chain — and highlighting what manufacturers are starting to prioritize.',
+      category: 'Industrials',
+      author: 'Ashrith Desu',
+      readTime: '5 min read',
+      slug: 'brewer-science-heraeus-epurio-june-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'brewer-science-hero.jpg',
+      date: '2026-06-25',
+    },
+    {
+      title: 'Brightstar Capital Expands Architecture Platform',
+      dek: 'A PE-backed architecture platform adds a healthcare and senior living specialist, as demand for aging-related infrastructure accelerates.',
+      category: 'Professional Services',
+      author: 'Ashrith Desu',
+      readTime: '5 min read',
+      slug: 'brightstar-capital-erdman-june-2026',
+      thumbBg: '#0a0f18',
+      thumbImg: 'brightstar-erdman-hero.jpg',
+      date: '2026-06-24',
+    },
     {
       title: 'The $13 Billion Fan Tax: Why the 2026 World Cup Is Pricing Out the World',
       dek: 'FIFA used dynamic pricing to turn the world\'s game into a revenue optimization exercise. Interactive data shows just how wide the affordability gap really is.',
@@ -1420,73 +1494,16 @@
       title: 'Indiana\'s Labor Market Nearly Treads Water in Q3 2025',
       dek: 'Indiana shed a net 664 private-sector jobs — a dramatic improvement over the prior quarter\'s 15,254-job loss, but a sign the state is running on thin margins.',
       category: 'Indiana Economy',
-      author: 'The 317 Staff',
+      author: 'Dhiren Dommeti',
       readTime: '6 min read',
       slug: 'indiana-employment-dynamics-q3-2025',
       thumbBg: '#dde8d6',
       date: '2026-05-18',
     },
-    {
-      title: 'Private Equity Eyes Indiana\'s Fragmented Home Health Market',
-      dek: 'Three national sponsors are reportedly in early conversations with mid-sized Indiana operators as aging demographics accelerate consolidation.',
-      category: 'Healthcare',
-      author: 'Alicia Monroe',
-      readTime: '5 min read',
-      slug: 'pe-indiana-home-health',
-      thumbBg: '#dde8d6',
-      date: '2026-05-02',
-    },
-    {
-      title: 'Carmel\'s Tech Corridor Draws Its First $100M Venture Round',
-      dek: 'A Fishers-based SaaS company raised Indiana\'s largest venture round this decade, signaling shifting attention from coastal LPs.',
-      category: 'Markets',
-      author: 'James Okafor',
-      readTime: '4 min read',
-      slug: 'carmel-tech-venture-round',
-      thumbBg: '#d6dff5',
-      date: '2026-04-21',
-    },
-    {
-      title: 'Steel Dynamics Eyes Acquisition of Two Ohio Micro-Mills',
-      dek: 'The Fort Wayne company is said to be in advanced due diligence on targets that would expand its flat-rolled capacity by 15%.',
-      category: 'Industrials',
-      author: 'Sarah Ellison',
-      readTime: '6 min read',
-      slug: 'stld-ohio-micro-mills',
-      thumbBg: '#f0e6d6',
-      date: '2026-04-09',
-    },
-    {
-      title: 'Indiana Community Banks See First Wave of Mergers Since 2020',
-      dek: 'Rising deposit costs and pressure on net interest margins are forcing smaller institutions to consider combinations once thought unlikely.',
-      category: 'Banking',
-      author: 'Marcus Webb',
-      readTime: '7 min read',
-      slug: 'indiana-community-bank-mergers',
-      thumbBg: '#f5e8e8',
-      date: '2026-03-27',
-    },
-    {
-      title: 'Lilly\'s Midsize Deals Strategy: Why the Pharma Giant Is Bypassing Blockbuster Acquisitions',
-      dek: 'Rather than megadeals, Eli Lilly is deploying capital in the $150M–$400M range, betting on pipeline optionality over proven assets.',
-      category: 'Pharma',
-      author: 'Priya Nair',
-      readTime: '8 min read',
-      slug: 'lilly-midsize-deal-strategy',
-      thumbBg: '#e8eff5',
-      date: '2026-03-12',
-    },
-    {
-      title: 'Columbus Warehousing Corridor Sparks Three Industrial REIT Bids',
-      dek: 'The logistics hub south of Indianapolis has drawn interest from Simon Property\'s industrial arm and two out-of-state REITs.',
-      category: 'Markets',
-      author: 'Tom Kavanaugh',
-      readTime: '5 min read',
-      slug: 'columbus-reit-bids',
-      thumbBg: '#ede8f5',
-      date: '2026-02-25',
-    },
   ];
+  /* Only real, published articles belong here — each entry above must have a
+     working slug.html page. Add new ones as they're written; don't pad with
+     placeholder teasers (we did once and it created dead links — see git log). */
 
   /* Newest first — re-sort whenever a new article is added, regardless of array order above */
   articles.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -1497,22 +1514,20 @@
   }
 
   /* ── LEAD STORY + SECONDARY STORIES ── */
-  /* Always pulls the newest article as the lead and the next three as secondary picks. */
   function renderLeadAndSecondary(data) {
-    const lead = data[0];
-    const secondary = data.slice(1, 4);
     const leadEl = document.getElementById('lead-main');
     const secEl = document.getElementById('lead-secondary');
-    if (!lead || !leadEl || !secEl) return;
+    if (!data.length || !leadEl || !secEl) return;
 
-    const leadHref = lead.slug + '.html';
+    const lead = data[0];
+    const href = lead.slug + '.html';
     leadEl.innerHTML = `
       <p class="kicker">${lead.category}</p>
-      <h1 class="lead-headline"><a href="${leadHref}">${lead.title}</a></h1>
-      <a href="${leadHref}" class="lead-img-link">
+      <h1 class="lead-headline"><a href="${href}">${lead.title}</a></h1>
+      <a href="${href}" class="lead-img-link">
         <div class="lead-img-placeholder">
           ${lead.thumbImg
-            ? `<img src="${lead.thumbImg}" alt="${lead.title}" class="lead-hero-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="img-grid" style="display:none"></div>`
+            ? `<img src="${lead.thumbImg}" alt="${lead.title}" class="lead-hero-photo" style="${(lead.thumbImg.endsWith('.svg') || lead.thumbBg === '#ffffff') ? 'object-fit:contain;background:' + lead.thumbBg + ';' : ''}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="img-grid" style="display:none"></div>`
             : `<div class="img-grid"></div>`
           }
         </div>
@@ -1525,11 +1540,11 @@
         <span class="byline-dot">·</span>
         <span>${formatArticleDate(lead.date)}</span>
         <span class="byline-dot">·</span>
-        <a href="${leadHref}" class="read-more">Read full story →</a>
+        <a href="${href}" class="read-more">Read full story →</a>
       </div>
     `;
 
-    secEl.innerHTML = secondary.map((a, i) => `
+    secEl.innerHTML = data.slice(1, 4).map((a, i) => `
       <article class="secondary-item reveal reveal-delay-${i + 1}" style="cursor:pointer" data-slug="${a.slug}">
         <p class="kicker">${a.category}</p>
         <h2 class="secondary-headline">${a.title}</h2>
@@ -1543,21 +1558,84 @@
     `).join('');
 
     secEl.querySelectorAll('.secondary-item').forEach(item => {
-      item.addEventListener('click', () => {
-        window.location.href = item.dataset.slug + '.html';
-      });
+      item.addEventListener('click', () => { window.location.href = item.dataset.slug + '.html'; });
     });
   }
 
   renderLeadAndSecondary(articles);
 
+  (function renderMarketsFeatured() {
+    const el = document.getElementById('markets-featured');
+    if (!el || !articles.length) return;
+    const POOL = Math.min(6, articles.length);
+    let cur = 0;
+
+    function cardHTML(a) {
+      const href = a.slug + '.html';
+      const imgHTML = a.thumbImg
+        ? `<img src="${a.thumbImg}" alt="${a.title}" class="markets-photo" style="${(a.thumbImg.endsWith('.svg') || a.thumbBg === '#ffffff') ? 'object-fit:contain;background:' + a.thumbBg + ';' : ''}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="markets-photo-fallback" style="display:none;background:${a.thumbBg};width:100%;height:100%;"></div>`
+        : `<div class="markets-photo-fallback" style="background:${a.thumbBg};width:100%;height:100%;"></div>`;
+      return `
+        <a href="${href}" class="markets-card">
+          <div class="markets-card-img">${imgHTML}</div>
+          <div class="markets-card-body">
+            <p class="kicker">${a.category}</p>
+            <h2 class="markets-headline">${a.title}</h2>
+            <p class="markets-dek">${a.dek}</p>
+            <div class="byline-row">
+              <span>By ${a.author}</span>
+              <span class="byline-dot">·</span>
+              <span>${formatArticleDate(a.date)}</span>
+              <span class="byline-dot">·</span>
+              <span>${a.readTime}</span>
+            </div>
+            <div style="display:flex;gap:6px;margin-top:14px;">
+              ${Array.from({length: POOL}, (_, i) => `<span style="display:inline-block;width:${i===cur?'18px':'5px'};height:5px;border-radius:3px;background:${i===cur?'var(--ember)':'var(--rule-dark)'};transition:width 0.3s,background 0.3s;"></span>`).join('')}
+            </div>
+          </div>
+        </a>
+      `;
+    }
+
+    function goTo(idx) {
+      cur = idx;
+      el.style.position = 'relative';
+
+      const ghost = document.createElement('div');
+      ghost.className = 'carousel-ghost';
+      ghost.innerHTML = el.innerHTML;
+      ghost.style.background = 'var(--paper)';
+      ghost.style.transition = 'opacity 0.5s ease';
+      ghost.style.opacity = '1';
+      el.appendChild(ghost);
+
+      el.innerHTML = cardHTML(articles[cur]);
+      el.appendChild(ghost);
+      el.style.opacity = '0';
+
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        el.style.transition = 'opacity 0.5s ease';
+        el.style.opacity = '1';
+        ghost.style.opacity = '0';
+        setTimeout(() => ghost.remove(), 520);
+      }));
+    }
+
+    goTo(0);
+    setInterval(() => goTo((cur + 1) % POOL), 7000);
+  })();
+
   function renderArticleCards(data) {
     const grid = document.getElementById('coverage-grid');
     if (!grid) return;
+    if (!data.length) {
+      grid.innerHTML = '<p style="font-family:\'Inter\',sans-serif;font-size:14px;font-style:italic;color:var(--ink-mute);padding:8px 0;">More coverage is on the way — check back soon, or see <a href="deal-flow.html" style="color:var(--ember);font-style:normal;">The Deal Flow</a> for what we\'re tracking right now.</p>';
+      return;
+    }
     grid.innerHTML = data.map((a, i) => `
       <article class="article-card reveal reveal-delay-${(i % 3) + 1}" tabindex="0" aria-label="${a.title}">
         <div class="card-thumb" style="background:${a.thumbBg}; overflow:hidden; position:relative;" role="img" aria-label="Article thumbnail">
-          ${a.thumbImg ? `<img src="${a.thumbImg}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;" onerror="this.style.display='none'">` : ''}
+          ${a.thumbImg ? `<img src="${a.thumbImg}" alt="" style="width:100%;height:100%;object-fit:${(a.thumbImg.endsWith('.svg') || a.thumbBg === '#ffffff') ? 'contain' : 'cover'};object-position:center 30%;display:block;" onerror="this.style.display='none'">` : ''}
         </div>
         <p class="kicker">${a.category}</p>
         <h3 class="card-headline">${a.title}</h3>
@@ -1580,7 +1658,7 @@
   }
 
   /* Skip the lead + 3 secondary picks already shown above so nothing repeats */
-  renderArticleCards(articles.slice(4));
+  renderArticleCards(articles.slice(1));
 
   /* ── NEWSLETTER FORM (no-op handler) ── */
   const form = document.getElementById('newsletter-form');
