@@ -174,53 +174,52 @@
     <figure class="hero-figure fade-in">
       <div class="hero-img" role="img" aria-hidden="true">
         <svg viewBox="0 0 740 370" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
-          <!-- Background -->
           <rect width="740" height="370" fill="#0f1623"/>
-          <!-- Subtle grid -->
           <defs>
-            <pattern id="g1" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M40 0L0 0 0 40" fill="none" stroke="#1f2c47" stroke-width="0.5"/>
+            <pattern id="g1" width="50" height="50" patternUnits="userSpaceOnUse">
+              <path d="M50 0L0 0 0 50" fill="none" stroke="#1a2640" stroke-width="1"/>
             </pattern>
-          </defs>
-          <rect width="740" height="370" fill="url(#g1)" opacity="0.6"/>
-          <!-- State divider: Indiana left / Illinois right, but acquirer is IN crossing to IL -->
-          <!-- Indiana block (right side) -->
-          <rect x="380" y="50" width="220" height="270" rx="6" fill="#1a2640" stroke="#2c3c5e" stroke-width="1"/>
-          <text x="490" y="100" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.12em" font-weight="600">INDIANA</text>
-          <!-- Terre Haute pin -->
-          <circle cx="420" cy="190" r="7" fill="#5b8def"/>
-          <circle cx="420" cy="190" r="13" fill="none" stroke="#5b8def" stroke-width="1" opacity="0.4"/>
-          <text x="420" y="218" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="11" font-weight="500">Terre Haute</text>
-          <text x="420" y="231" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">First Financial Corp.</text>
-          <!-- Illinois block (left side) -->
-          <rect x="140" y="50" width="220" height="270" rx="6" fill="#131e30" stroke="#2c3c5e" stroke-width="1"/>
-          <text x="250" y="100" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.12em" font-weight="600">ILLINOIS</text>
-          <!-- Decatur, Springfield, Champaign dots -->
-          <circle cx="230" cy="150" r="5" fill="#82aef2"/>
-          <text x="245" y="154" fill="#edf1fa" font-family="Inter,sans-serif" font-size="10">Decatur</text>
-          <circle cx="230" cy="190" r="5" fill="#82aef2"/>
-          <text x="245" y="194" fill="#edf1fa" font-family="Inter,sans-serif" font-size="10">Springfield</text>
-          <circle cx="230" cy="230" r="5" fill="#82aef2"/>
-          <text x="245" y="234" fill="#edf1fa" font-family="Inter,sans-serif" font-size="10">Champaign</text>
-          <text x="250" y="290" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">Hickory Point Bank &amp; Trust</text>
-          <!-- Arrow from IN to IL -->
-          <defs>
-            <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <marker id="arr1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
               <path d="M0,0 L8,3 L0,6 Z" fill="#5b8def"/>
             </marker>
           </defs>
-          <line x1="378" y1="190" x2="365" y2="190" stroke="#5b8def" stroke-width="2" marker-end="url(#arr1)"/>
-          <!-- Deal badge -->
-          <rect x="316" y="168" width="46" height="44" rx="4" fill="#1f2c47" stroke="#5b8def" stroke-width="1"/>
-          <text x="339" y="185" text-anchor="middle" fill="#5b8def" font-family="JetBrains Mono,monospace" font-size="9" font-weight="500">$111.3M</text>
-          <text x="339" y="197" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8">All-stock</text>
-          <text x="339" y="207" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8">+ cash</text>
-          <!-- Combined assets label -->
-          <rect x="580" y="100" width="130" height="50" rx="4" fill="#1a2640" stroke="#2c3c5e"/>
-          <text x="645" y="120" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.08em">COMBINED ASSETS</text>
-          <text x="645" y="140" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="18" font-weight="500">$6.9B</text>
-          <!-- Label bottom -->
-          <text x="370" y="348" text-anchor="middle" fill="#2c3c5e" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.1em">FIRST FINANCIAL CORP. ACQUIRES FIRST ILLINOIS CORP. · AUG 26, 2026</text>
+          <rect width="740" height="370" fill="url(#g1)"/>
+
+          <!-- INDIANA card (acquirer, left) -->
+          <rect x="60" y="60" width="240" height="250" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
+          <rect x="60" y="60" width="240" height="4" rx="2" fill="#5b8def"/>
+          <text x="180" y="98" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">ACQUIRER · INDIANA</text>
+          <text x="180" y="128" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="20">First Financial</text>
+          <text x="180" y="148" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="20">Corporation</text>
+          <text x="180" y="172" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="11">Terre Haute, IN</text>
+          <line x1="90" y1="188" x2="270" y2="188" stroke="#1f2c47" stroke-width="1"/>
+          <text x="180" y="210" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Total Assets</text>
+          <text x="180" y="232" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="18" font-weight="500">$6.2B</text>
+          <text x="180" y="252" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">First Financial Bank</text>
+          <text x="180" y="268" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">NYSE: THFF</text>
+
+          <!-- Arrow center -->
+          <line x1="316" y1="185" x2="424" y2="185" stroke="#5b8def" stroke-width="2" marker-end="url(#arr1)"/>
+          <rect x="316" y="155" width="108" height="58" rx="5" fill="#0f1623" stroke="#5b8def" stroke-width="1"/>
+          <text x="370" y="173" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8" letter-spacing="0.1em">DEAL VALUE</text>
+          <text x="370" y="192" text-anchor="middle" fill="#5b8def" font-family="JetBrains Mono,monospace" font-size="16" font-weight="600">$111.3M</text>
+          <text x="370" y="206" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8">70% stock · 30% cash</text>
+
+          <!-- ILLINOIS card (target, right) -->
+          <rect x="440" y="60" width="240" height="250" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
+          <rect x="440" y="60" width="240" height="4" rx="2" fill="#82aef2"/>
+          <text x="560" y="98" text-anchor="middle" fill="#82aef2" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">TARGET · ILLINOIS</text>
+          <text x="560" y="128" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="20">Hickory Point</text>
+          <text x="560" y="148" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="20">Bank &amp; Trust</text>
+          <text x="560" y="172" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="11">8 branches · Central IL</text>
+          <line x1="470" y1="188" x2="650" y2="188" stroke="#1f2c47" stroke-width="1"/>
+          <text x="560" y="210" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Total Assets</text>
+          <text x="560" y="232" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="18" font-weight="500">$717M</text>
+          <text x="560" y="252" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Decatur · Springfield · Champaign</text>
+
+          <!-- Combined bottom bar -->
+          <rect x="60" y="328" width="620" height="28" rx="4" fill="#1a2640" stroke="#2c3c5e"/>
+          <text x="370" y="347" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.08em">COMBINED ASSETS: $6.9B · EXPECTED CLOSE Q4 2026 · SUBJECT TO REGULATORY APPROVAL</text>
         </svg>
       </div>
       <figcaption class="hero-caption">First Financial Corporation, the Terre Haute, Indiana-based parent of First Financial Bank, agreed to acquire First Illinois Corporation and its subsidiary Hickory Point Bank and Trust in an all-cash-and-stock deal valued at approximately $111.3 million.</figcaption>
@@ -255,15 +254,15 @@
 
       <h2>What First Financial Is Buying</h2>
 
-      <p>Hickory Point Bank and Trust operates eight branches concentrated in central Illinois — Decatur, Springfield, and Champaign — markets that First Financial has not previously served. As of June 30, 2026, the bank held approximately $717 million in total assets, $438 million in total loans, and $627 million in total deposits. The transaction is structured so that 70% of First Illinois common stock is exchanged for First Financial shares, with the remaining 30% paid in cash at an implied price of $45.00 per share.</p>
+      <p>Hickory Point Bank and Trust operates eight branches across central Illinois, concentrated in Decatur, Springfield, and Champaign, markets that First Financial has not previously served. As of June 30, 2026, the bank held approximately $717 million in total assets, $438 million in total loans, and $627 million in total deposits. The transaction is structured so that 70% of First Illinois common stock is exchanged for First Financial shares, with the remaining 30% paid in cash at an implied price of $45.00 per share.</p>
 
       <p>The deal gives First Financial an immediate footprint in three of Illinois' larger secondary cities, each anchored by state government employment, a university, or both. Decatur hosts several large agricultural processing operations. Champaign-Urbana carries the University of Illinois. Springfield is the state capital. For a community bank looking to diversify its loan book, these markets offer a different economic profile than western Indiana.</p>
 
       <h2>Why the Timing Makes Sense</h2>
 
-      <p>The pressure on smaller community banks has been building for years. Regulatory compliance costs that were once manageable for a $500 million institution have grown substantially. Technology investment — core banking upgrades, digital banking platforms, fraud detection — requires scale to justify. And net interest margins, while recovering from their post-pandemic compression, remain thin enough that efficiency ratios matter more than ever.</p>
+      <p>The pressure on smaller community banks has been building for years. Regulatory compliance costs that were once manageable for a $500 million institution have grown substantially. Technology investment in things like core banking upgrades, digital banking platforms, and fraud detection requires scale to justify. And net interest margins, while recovering from their post-pandemic compression, remain thin enough that efficiency ratios matter more than ever.</p>
 
-      <p>For First Illinois, the deal offers shareholders a clean exit at a premium to book value. For First Financial, it adds low-cost deposit funding, a new geographic market, and enough scale to spread fixed costs across a larger balance sheet. The combined organization will hold approximately $6.9 billion in total assets — still community-sized, but well past the threshold where operational leverage starts to meaningfully improve.</p>
+      <p>For First Illinois, the deal offers shareholders a clean exit at a premium to book value. For First Financial, it adds low-cost deposit funding, a new geographic market, and enough scale to spread fixed costs across a larger balance sheet. At roughly $6.9 billion in combined assets, the organization is still community-sized but well past the point where operational leverage starts to move the needle.</p>
 
       <div class="pull-quote fade-in">
         <blockquote>"This transaction advances our long-term growth strategy and gives us an outstanding partner in First Illinois."</blockquote>
@@ -272,19 +271,19 @@
 
       <h2>The Broader Pattern</h2>
 
-      <p>This deal fits a pattern that has been playing out across the Midwest for the better part of a decade. Indiana's community banking landscape has compressed steadily — the number of state-chartered institutions has declined as mergers outpace new charters. The banks that remain independent tend to be either very local and relationship-driven, or actively acquiring to build the scale needed to compete.</p>
+      <p>This deal fits a pattern that has been playing out across the Midwest for years. Indiana's community banking landscape has compressed steadily. The number of state-chartered institutions has declined as mergers outpace new charters. The banks that remain independent tend to be either very local and relationship-driven, or actively acquiring to build the scale needed to compete.</p>
 
-      <p>First Financial has been in the latter camp. The Hickory Point acquisition is not its first move across a state line, and it likely won't be its last. Central Illinois, in particular, has a high density of community banks relative to population — which means more potential sellers for a buyer with the currency and appetite to keep growing.</p>
+      <p>First Financial has been in the latter camp. The Hickory Point acquisition is not its first move across a state line, and it likely won't be its last. Central Illinois has a high density of community banks relative to population, which means there's no shortage of potential sellers for a buyer with the balance sheet and appetite to keep growing.</p>
 
       <div class="section-rule"></div>
 
       <div class="context-box fade-in">
         <p class="context-box-title">What to Watch · Key Takeaways</p>
         <ul>
-          <li>The deal is structured 70% stock / 30% cash at $45.00 per First Illinois share — shareholders who want liquidity can take the cash election; those who want continued upside can take stock in the combined entity.</li>
-          <li>Regulatory approval is the key gating item — the deal is expected to close in Q4 2026, which assumes no extended review from Illinois or Indiana regulators.</li>
-          <li>The Champaign-Urbana market, anchored by the University of Illinois, adds a deposit base that tends to be stickier than purely commercial banking markets — a strategic plus for First Financial's funding profile.</li>
-          <li>Watch for additional M&amp;A from First Financial. At $6.9 billion pro forma, the bank is still well below the $10 billion asset threshold where regulatory scrutiny intensifies significantly — leaving room to keep acquiring.</li>
+          <li>The deal is structured 70% stock / 30% cash at $45.00 per First Illinois share. Shareholders who want liquidity can take the cash election; those who want continued upside can take stock in the combined entity.</li>
+          <li>Regulatory approval is the key gating item. The deal is expected to close in Q4 2026, which assumes no extended review from Illinois or Indiana regulators.</li>
+          <li>The Champaign-Urbana market, anchored by the University of Illinois, adds a deposit base that tends to be stickier than purely commercial banking markets, a real plus for First Financial's funding profile.</li>
+          <li>Watch for more M&amp;A from First Financial. At $6.9 billion pro forma, the bank is still well below the $10 billion asset threshold where regulatory scrutiny intensifies significantly, leaving room to keep acquiring.</li>
         </ul>
       </div>
 

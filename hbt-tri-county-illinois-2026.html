@@ -156,46 +156,53 @@
         <svg viewBox="0 0 740 370" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
           <rect width="740" height="370" fill="#0f1623"/>
           <defs>
-            <pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M40 0L0 0 0 40" fill="none" stroke="#1f2c47" stroke-width="0.5"/>
+            <pattern id="g2" width="50" height="50" patternUnits="userSpaceOnUse">
+              <path d="M50 0L0 0 0 50" fill="none" stroke="#1a2640" stroke-width="1"/>
             </pattern>
+            <marker id="arr2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6 Z" fill="#5b8def"/>
+            </marker>
           </defs>
-          <rect width="740" height="370" fill="url(#g2)" opacity="0.6"/>
-          <!-- Asset bar chart -->
-          <text x="90" y="55" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.1em" font-weight="600">TOTAL ASSETS (PRO FORMA)</text>
-          <!-- HBT bar -->
-          <rect x="90" y="70" width="248" height="38" rx="3" fill="#1f2c47" stroke="#2c3c5e"/>
-          <rect x="90" y="70" width="248" height="38" rx="3" fill="#5b8def" opacity="0.7"/>
-          <text x="96" y="93" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="13" font-weight="500">HBT Financial  $6.7B</text>
-          <!-- Tri-County bar -->
-          <rect x="90" y="118" width="60" height="38" rx="3" fill="#1f2c47" stroke="#2c3c5e"/>
-          <rect x="90" y="118" width="60" height="38" rx="3" fill="#82aef2" opacity="0.7"/>
-          <text x="160" y="141" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="13" font-weight="500">Tri-County  $1.6B</text>
-          <!-- Combined bar -->
-          <rect x="90" y="166" width="308" height="44" rx="3" fill="#1a2640" stroke="#5b8def" stroke-width="1.5"/>
-          <rect x="90" y="166" width="308" height="44" rx="3" fill="#5b8def" opacity="0.25"/>
-          <text x="96" y="191" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="16" font-weight="500">Combined  $8.3B</text>
-          <!-- $10B threshold warning line -->
-          <line x1="90" y1="236" x2="650" y2="236" stroke="#f87171" stroke-width="1" stroke-dasharray="6 4" opacity="0.6"/>
-          <text x="655" y="240" fill="#f87171" font-family="Inter,sans-serif" font-size="10" font-weight="600">$10B threshold</text>
-          <text x="655" y="252" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">Dodd-Frank trigger</text>
-          <!-- Gap annotation -->
-          <line x1="400" y1="188" x2="400" y2="234" stroke="#f87171" stroke-width="1" opacity="0.5"/>
-          <text x="406" y="215" fill="#f87171" font-family="Inter,sans-serif" font-size="9">$1.7B gap</text>
-          <!-- Bloomington HQ label -->
-          <rect x="490" y="70" width="220" height="130" rx="6" fill="#1a2640" stroke="#2c3c5e"/>
-          <text x="600" y="97" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.1em">ACQUIRER</text>
-          <text x="600" y="118" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="17">HBT Financial</text>
-          <text x="600" y="136" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Bloomington, IL</text>
-          <text x="600" y="152" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">Heartland Bank &amp; Trust</text>
-          <line x1="520" y1="172" x2="680" y2="172" stroke="#2c3c5e" stroke-width="0.5"/>
-          <text x="600" y="188" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.1em">TARGET</text>
-          <text x="600" y="205" text-anchor="middle" fill="#edf1fa" font-family="Inter,sans-serif" font-size="13" font-weight="500">Tri-County Financial</text>
-          <!-- Branches info -->
-          <rect x="90" y="270" width="360" height="40" rx="4" fill="#1a2640" stroke="#2c3c5e"/>
-          <text x="270" y="287" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.08em">BRANCHES ADDED</text>
-          <text x="270" y="303" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="15" font-weight="500">19 branches · Central + Northern Illinois</text>
-          <text x="370" y="348" text-anchor="middle" fill="#2c3c5e" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.1em">HBT FINANCIAL · $204.6M · AUG 10, 2026</text>
+          <rect width="740" height="370" fill="url(#g2)"/>
+
+          <!-- Acquirer card -->
+          <rect x="60" y="60" width="240" height="250" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
+          <rect x="60" y="60" width="240" height="4" rx="2" fill="#5b8def"/>
+          <text x="180" y="98" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">ACQUIRER · ILLINOIS</text>
+          <text x="180" y="128" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="20">HBT Financial</text>
+          <text x="180" y="150" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="11">Bloomington, IL · NASDAQ: HBT</text>
+          <line x1="90" y1="165" x2="270" y2="165" stroke="#1f2c47" stroke-width="1"/>
+          <text x="180" y="186" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Total Assets</text>
+          <text x="180" y="210" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="20" font-weight="500">$6.7B</text>
+          <text x="180" y="232" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Heartland Bank &amp; Trust</text>
+          <text x="180" y="254" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">Central + Northern IL, E. Iowa, St. Louis</text>
+
+          <!-- Arrow -->
+          <line x1="316" y1="185" x2="424" y2="185" stroke="#5b8def" stroke-width="2" marker-end="url(#arr2)"/>
+          <rect x="316" y="155" width="108" height="58" rx="5" fill="#0f1623" stroke="#5b8def" stroke-width="1"/>
+          <text x="370" y="173" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8" letter-spacing="0.1em">DEAL VALUE</text>
+          <text x="370" y="192" text-anchor="middle" fill="#5b8def" font-family="JetBrains Mono,monospace" font-size="15" font-weight="600">$204.6M</text>
+          <text x="370" y="206" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8">Cash or stock election</text>
+
+          <!-- Target card -->
+          <rect x="440" y="60" width="240" height="250" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
+          <rect x="440" y="60" width="240" height="4" rx="2" fill="#82aef2"/>
+          <text x="560" y="98" text-anchor="middle" fill="#82aef2" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">TARGET · ILLINOIS</text>
+          <text x="560" y="128" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="20">Tri-County</text>
+          <text x="560" y="150" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="11">First State Bank · 19 branches</text>
+          <line x1="470" y1="165" x2="650" y2="165" stroke="#1f2c47" stroke-width="1"/>
+          <text x="560" y="186" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Total Assets</text>
+          <text x="560" y="210" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="20" font-weight="500">$1.6B</text>
+          <text x="560" y="232" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Deposits: $1.3B</text>
+
+          <!-- $10B threshold warning -->
+          <rect x="440" y="255" width="240" height="38" rx="4" fill="#1c1018" stroke="#f87171" stroke-width="1" opacity="0.9"/>
+          <text x="560" y="272" text-anchor="middle" fill="#f87171" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.08em" font-weight="600">WATCH: $10B DODD-FRANK THRESHOLD</text>
+          <text x="560" y="285" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">Pro forma $8.3B · $1.7B gap remaining</text>
+
+          <!-- Bottom bar -->
+          <rect x="60" y="328" width="620" height="28" rx="4" fill="#1a2640" stroke="#2c3c5e"/>
+          <text x="370" y="347" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.08em">COMBINED ASSETS: $8.3B · 19 BRANCHES ADDED · EXPECTED CLOSE Q1 2027</text>
         </svg>
       </div>
       <figcaption class="hero-caption">HBT Financial, the Bloomington, Illinois-based parent of Heartland Bank and Trust, agreed to acquire Tri-County Financial Group and its subsidiary First State Bank in a $204.6 million cash-and-stock transaction announced August 10, 2026.</figcaption>
