@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 740 370" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+          <rect width="740" height="370" fill="#0f1623"/>
+          <defs>
+            <pattern id="g1" width="50" height="50" patternUnits="userSpaceOnUse">
+              <path d="M50 0L0 0 0 50" fill="none" stroke="#1a2640" stroke-width="1"/>
+            </pattern>
+            <marker id="arr1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6 Z" fill="#5b8def"/>
+            </marker>
+          </defs>
+          <rect width="740" height="370" fill="url(#g1)"/>
+
+          <!-- INDIANA card (acquirer, left) -->
+          <rect x="60" y="60" width="240" height="250" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
+          <rect x="60" y="60" width="240" height="4" rx="2" fill="#5b8def"/>
+          <text x="180" y="98" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">ACQUIRER · INDIANA</text>
+          <text x="180" y="128" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="20">First Financial</text>
+          <text x="180" y="148" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="20">Corporation</text>
+          <text x="180" y="172" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="11">Terre Haute, IN</text>
+          <line x1="90" y1="188" x2="270" y2="188" stroke="#1f2c47" stroke-width="1"/>
+          <text x="180" y="210" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Total Assets</text>
+          <text x="180" y="232" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="18" font-weight="500">$6.2B</text>
+          <text x="180" y="252" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">First Financial Bank</text>
+          <text x="180" y="268" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">NYSE: THFF</text>
+
+          <!-- Arrow center -->
+          <line x1="316" y1="185" x2="424" y2="185" stroke="#5b8def" stroke-width="2" marker-end="url(#arr1)"/>
+          <rect x="316" y="155" width="108" height="58" rx="5" fill="#0f1623" stroke="#5b8def" stroke-width="1"/>
+          <text x="370" y="173" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8" letter-spacing="0.1em">DEAL VALUE</text>
+          <text x="370" y="192" text-anchor="middle" fill="#5b8def" font-family="JetBrains Mono,monospace" font-size="16" font-weight="600">$111.3M</text>
+          <text x="370" y="206" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8">70% stock · 30% cash</text>
+
+          <!-- ILLINOIS card (target, right) -->
+          <rect x="440" y="60" width="240" height="250" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
+          <rect x="440" y="60" width="240" height="4" rx="2" fill="#82aef2"/>
+          <text x="560" y="98" text-anchor="middle" fill="#82aef2" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">TARGET · ILLINOIS</text>
+          <text x="560" y="128" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="20">Hickory Point</text>
+          <text x="560" y="148" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="20">Bank &amp; Trust</text>
+          <text x="560" y="172" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="11">8 branches · Central IL</text>
+          <line x1="470" y1="188" x2="650" y2="188" stroke="#1f2c47" stroke-width="1"/>
+          <text x="560" y="210" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Total Assets</text>
+          <text x="560" y="232" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="18" font-weight="500">$717M</text>
+          <text x="560" y="252" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Decatur · Springfield · Champaign</text>
+
+          <!-- Combined bottom bar -->
+          <rect x="60" y="328" width="620" height="28" rx="4" fill="#1a2640" stroke="#2c3c5e"/>
+          <text x="370" y="347" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.08em">COMBINED ASSETS: $6.9B · EXPECTED CLOSE Q4 2026 · SUBJECT TO REGULATORY APPROVAL</text>
+        </svg>
