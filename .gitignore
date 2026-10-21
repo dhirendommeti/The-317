@@ -4,3 +4,6 @@
 .DS_Store
 config.js
 .claude/
+
+# Local Netlify folder
+.netlify
