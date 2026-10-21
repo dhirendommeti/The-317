@@ -13,7 +13,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root { --paper: #0f1623; --paper-2: #1a2640; --ink: #edf1fa; --ink-mute: #8b9bbd; --rule: #1f2c47; --rule-dark: #2c3c5e; --ember: #5b8def; --ember-bright: #82aef2; }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -43,7 +43,7 @@
   .article-header { padding: 52px 0 36px; border-bottom: 1px solid var(--rule); margin-bottom: 40px; }
   .kicker { font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ember); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
   .kicker-dot { color: var(--rule-dark); }
-  .article-headline { font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(28px, 5vw, 46px); font-weight: 900; line-height: 1.08; letter-spacing: -0.025em; color: var(--ink); margin-bottom: 18px; }
+  .article-headline { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(28px, 5vw, 46px); font-weight: 900; line-height: 1.08; letter-spacing: -0.025em; color: var(--ink); margin-bottom: 18px; }
   .article-dek { font-family: 'Inter', sans-serif; font-size: 19px; line-height: 1.55; color: var(--ink-mute); margin-bottom: 24px; font-style: italic; }
   .article-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute); padding-top: 20px; border-top: 1px solid var(--rule); }
   .meta-dot { color: var(--rule-dark); }
@@ -54,10 +54,10 @@
   .hero-caption { font-family: 'Inter', Arial, sans-serif; font-size: 10px; letter-spacing: 0.04em; color: var(--ink-mute); margin-bottom: 40px; line-height: 1.5; }
   .article-body { font-size: 18px; line-height: 1.75; color: var(--ink); }
   .article-body p { margin-bottom: 1.4em; }
-  .article-body p:first-child::first-letter { font-family: 'DM Serif Display', Georgia, serif; font-size: 64px; font-weight: 900; line-height: 0.85; float: left; margin-right: 8px; margin-top: 6px; color: var(--ink); }
-  .article-body h2 { font-family: 'DM Serif Display', Georgia, serif; font-size: 24px; font-weight: 700; line-height: 1.25; color: var(--ink); margin: 2.2em 0 0.6em; letter-spacing: -0.01em; }
+  .article-body p:first-child::first-letter { font-family: 'Libre Baskerville', Georgia, serif; font-size: 64px; font-weight: 900; line-height: 0.85; float: left; margin-right: 8px; margin-top: 6px; color: var(--ink); }
+  .article-body h2 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 24px; font-weight: 700; line-height: 1.25; color: var(--ink); margin: 2.2em 0 0.6em; letter-spacing: -0.01em; }
   .pull-quote { border-left: 3px solid var(--ember); padding: 4px 0 4px 28px; margin: 2.4em 0; }
-  .pull-quote blockquote { font-family: 'DM Serif Display', Georgia, serif; font-size: 22px; font-style: italic; font-weight: 400; line-height: 1.4; color: var(--ink); margin-bottom: 10px; }
+  .pull-quote blockquote { font-family: 'Libre Baskerville', Georgia, serif; font-size: 22px; font-style: italic; font-weight: 400; line-height: 1.4; color: var(--ink); margin-bottom: 10px; }
   .pull-quote cite { font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); font-style: normal; }
   .data-strip { background: var(--paper-2); border: 1px solid var(--rule); border-left: 3px solid var(--ink); padding: 24px 28px; margin: 2.4em 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px 32px; }
   .data-label { font-family: 'Inter', Arial, sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 4px; }
@@ -79,7 +79,7 @@
   .related-card:last-child { border-right: none; padding-right: 0; }
   @media (max-width: 600px) { .related-card { border-right: none; border-bottom: 1px solid var(--rule); padding: 20px 0; } }
   .related-kicker { font-family: 'Inter', Arial, sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ember); margin-bottom: 8px; }
-  .related-headline { font-family: 'DM Serif Display', Georgia, serif; font-size: 16px; font-weight: 700; line-height: 1.3; color: var(--ink); transition: color 0.15s; }
+  .related-headline { font-family: 'Libre Baskerville', Georgia, serif; font-size: 16px; font-weight: 700; line-height: 1.3; color: var(--ink); transition: color 0.15s; }
   .related-card:hover .related-headline { color: var(--ember); }
   #footer { background: var(--paper); border-top: 3px double var(--rule-dark); padding: 36px 24px 28px; }
   .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
@@ -112,7 +112,7 @@
 <nav id="main-nav" aria-label="Primary navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="The 317 homepage">
-      <div style="flex-shrink:0;width:30px;height:30px;border-radius:4px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:11px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
+      <div style="flex-shrink:0;width:30px;height:30px;border-radius:4px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Libre Baskerville',sans-serif;font-weight:700;font-size:11px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
     </a>
     <div class="nav-links">
       <a href="deal-flow.html">Deals</a>
@@ -169,7 +169,7 @@
           <rect x="60" y="60" width="240" height="250" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
           <rect x="60" y="60" width="240" height="4" rx="2" fill="#5b8def"/>
           <text x="180" y="98" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">PLATFORM · PE ADD-ON</text>
-          <text x="180" y="128" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="19">ASA Safety Supply</text>
+          <text x="180" y="128" text-anchor="middle" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="19">ASA Safety Supply</text>
           <text x="180" y="150" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="10">Backed by Trivest Partners</text>
           <line x1="90" y1="165" x2="270" y2="165" stroke="#1f2c47" stroke-width="1"/>
           <text x="180" y="185" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Products distributed</text>
@@ -190,8 +190,8 @@
           <rect x="440" y="60" width="240" height="250" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
           <rect x="440" y="60" width="240" height="4" rx="2" fill="#82aef2"/>
           <text x="560" y="98" text-anchor="middle" fill="#82aef2" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">TARGET · INDIANA</text>
-          <text x="560" y="124" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="18">Indiana Safety</text>
-          <text x="560" y="146" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="18">&amp; Supply</text>
+          <text x="560" y="124" text-anchor="middle" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="18">Indiana Safety</text>
+          <text x="560" y="146" text-anchor="middle" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="18">&amp; Supply</text>
           <text x="560" y="168" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="10">Washington, IN (ISS)</text>
           <line x1="470" y1="182" x2="650" y2="182" stroke="#1f2c47" stroke-width="1"/>
           <text x="560" y="202" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Location</text>
@@ -307,7 +307,7 @@
 <footer id="footer">
   <div class="footer-inner">
     <a href="index.html" aria-label="The 317 homepage">
-      <div style="flex-shrink:0;width:26px;height:26px;border-radius:3px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:10px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
+      <div style="flex-shrink:0;width:26px;height:26px;border-radius:3px;overflow:hidden;background:#0f1623;position:relative;"><div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div><div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Libre Baskerville',sans-serif;font-weight:700;font-size:10px;letter-spacing:-0.5px;color:#edf1fa;">317</span></div></div>
     </a>
     <p class="footer-copy">© 2026 The 317 · Indianapolis, Indiana · <a href="index.html" style="color:var(--ink-mute)">Return to homepage</a></p>
   </div>
