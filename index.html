@@ -142,64 +142,36 @@
 
   /* ── MASTHEAD ── */
   #masthead {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 32px;
-    height: 56px;
+    text-align: center;
+    padding: 52px 24px 36px;
     border-bottom: 1px solid var(--rule);
-    gap: 24px;
-    position: sticky;
-    top: 0;
-    z-index: 80;
-    background: var(--paper);
-    transition: box-shadow 0.2s;
   }
 
-  #masthead.scrolled {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  .masthead-kicker {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 20px;
   }
-
-  .masthead-kicker { display: none; }
 
   .masthead-logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    text-decoration: none;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 20px;
   }
 
   .masthead-tagline {
     font-family: 'Inter', sans-serif;
     font-style: italic;
-    font-size: 13px;
+    font-size: 16px;
     color: var(--ink-mute);
     letter-spacing: 0.01em;
-    flex: 1;
-    text-align: center;
   }
-
-  .masthead-nav {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    flex-shrink: 0;
-  }
-
-  .masthead-nav a {
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink-mute);
-    text-decoration: none;
-    padding: 0 14px;
-    transition: color 0.15s;
-  }
-
-  .masthead-nav a:hover { color: var(--ink); }
 
   /* ── NAVIGATION ── */
   #main-nav {
@@ -1081,27 +1053,33 @@
   <div class="ticker-track" id="ticker-track"></div>
 </div>
 
-<!-- MASTHEAD + NAV (unified bar) -->
+<!-- MASTHEAD -->
 <header id="masthead">
-  <a href="/" class="masthead-logo">
-    <div style="flex-shrink:0;width:32px;height:32px;border-radius:5px;overflow:hidden;background:#0f1623;position:relative;">
+  <p class="masthead-kicker">Established 2026 · Indianapolis</p>
+  <div class="masthead-logo" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+    <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:13px;letter-spacing:.3em;color:#5b8def;text-transform:uppercase;">The</div>
+    <div style="flex-shrink:0;width:80px;height:80px;border-radius:10px;overflow:hidden;background:#0f1623;position:relative;">
       <div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:#5b8def;"></div>
       <div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
-        <span style="font-family:'Libre Baskerville',sans-serif;font-weight:700;font-size:13px;letter-spacing:-0.5px;color:#edf1fa;">317</span>
+        <span style="font-family:'Libre Baskerville',sans-serif;font-weight:700;font-size:32px;letter-spacing:-1.5px;color:#edf1fa;">317</span>
       </div>
-      <div style="position:absolute;top:3px;right:4px;width:3px;height:3px;border-radius:50%;background:#5b8def;"></div>
+      <div style="position:absolute;top:8px;right:9px;width:6px;height:6px;border-radius:50%;background:#5b8def;"></div>
     </div>
-    <span style="font-family:'Libre Baskerville',Georgia,serif;font-weight:700;font-size:18px;letter-spacing:-0.3px;color:var(--ink);">The 317</span>
-  </a>
-  <p class="masthead-tagline">Midwest M&amp;A and markets, covered with depth.</p>
-  <nav class="masthead-nav" aria-label="Primary navigation">
+  </div>
+  <p class="masthead-tagline">Middle-market deals and Midwest markets, covered with depth.</p>
+</header>
+
+<!-- PRIMARY NAV -->
+<nav id="main-nav" aria-label="Primary navigation">
+  <div class="nav-inner">
     <a href="deal-flow.html">Deals</a>
     <a href="markets.html">Markets</a>
+    <a href="pharma.html">Pharma</a>
     <a href="banking.html">Banking</a>
     <a href="industrials.html">Industrials</a>
     <a href="#newsletter">Newsletter</a>
-  </nav>
-</header>
+  </div>
+</nav>
 
 <!-- MAIN CONTENT -->
 <main>
@@ -1314,7 +1292,7 @@
   initDealNews();
 
   /* ── STICKY NAV SHADOW ── */
-  const nav = document.getElementById('masthead');
+  const nav = document.getElementById('main-nav');
   window.addEventListener('scroll', function() {
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 120);
   }, { passive: true });
