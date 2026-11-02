@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+      <rect width="720" height="340" fill="#0f1623"/>
+      <defs>
+        <pattern id="dots-rf" width="22" height="22" patternUnits="userSpaceOnUse">
+          <circle cx="11" cy="11" r="0.9" fill="#1a2640"/>
+        </pattern>
+        <radialGradient id="aurora-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#5b8def" stop-opacity="0.32"/>
+          <stop offset="100%" stop-color="#5b8def" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="720" height="340" fill="url(#dots-rf)"/>
+
+      <!-- Illinois state outline -->
+      <path d="M 98,26 L 268,26 L 294,37 L 292,54 L 289,268 L 270,294 L 200,330 L 172,314 L 140,280 L 110,248 L 93,188 L 91,100 Z"
+            fill="#111c2e" stroke="#2c3c5e" stroke-width="1.5" stroke-linejoin="round"/>
+
+      <!-- Lake Michigan arc -->
+      <path d="M 292,42 Q 312,18 303,5" fill="none" stroke="#1f2c47" stroke-width="1" stroke-dasharray="3 3"/>
+
+      <!-- ILLINOIS watermark -->
+      <text x="188" y="192" text-anchor="middle" fill="#1a2b42" font-family="Inter,sans-serif" font-size="20" font-weight="700" letter-spacing="0.2em">ILLINOIS</text>
+
+      <!-- Aurora glow -->
+      <ellipse cx="244" cy="76" rx="32" ry="26" fill="url(#aurora-glow)"/>
+
+      <!-- Aurora main dot -->
+      <circle cx="244" cy="76" r="8" fill="#0f1623" stroke="#5b8def" stroke-width="2.5"/>
+      <circle cx="244" cy="76" r="3.5" fill="#5b8def"/>
+
+      <!-- Aurora label -->
+      <text x="244" y="56" text-anchor="middle" fill="#edf1fa" font-family="Inter,sans-serif" font-size="11" font-weight="700">AURORA, IL</text>
+      <text x="244" y="44" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.06em">RENSA FILTRATION</text>
+
+      <!-- Chicago reference dot (smaller) -->
+      <circle cx="276" cy="64" r="4" fill="#0f1623" stroke="#2c3c5e" stroke-width="1.5"/>
+      <circle cx="276" cy="64" r="1.5" fill="#3d5580"/>
+      <text x="290" y="68" text-anchor="start" fill="#3d5580" font-family="Inter,sans-serif" font-size="8">Chicago</text>
+
+      <!-- Divider -->
+      <line x1="342" y1="14" x2="342" y2="326" stroke="#1f2c47" stroke-width="1"/>
+
+      <!-- RIGHT PANEL -->
+      <text x="364" y="46" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" font-weight="700" letter-spacing="0.14em">ILLINOIS INDUSTRIALS · OCT 2026</text>
+
+      <text x="364" y="80" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="19">Rensa Filtration</text>
+      <text x="364" y="102" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="13" font-style="italic">sold by Audax PE to</text>
+      <text x="364" y="130" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="16">AEA Investors + BCI</text>
+
+      <line x1="364" y1="148" x2="706" y2="148" stroke="#1f2c47" stroke-width="1"/>
+
+      <!-- Big stat: acquisitions under Audax -->
+      <text x="364" y="198" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="52" font-weight="500">10</text>
+      <text x="364" y="220" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="12">acquisitions under Audax (2022-2026)</text>
+
+      <line x1="364" y1="238" x2="706" y2="238" stroke="#1f2c47" stroke-width="1"/>
+
+      <text x="364" y="258" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">DATA CENTERS · POWER · SEMICONDUCTOR</text>
+      <text x="364" y="275" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">HEALTHCARE · LIFE SCIENCES</text>
+      <text x="364" y="292" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">DEAL TERMS UNDISCLOSED</text>
+
+      <rect x="364" y="308" width="112" height="17" rx="3" fill="#1a2640" stroke="#2c3c5e"/>
+      <text x="420" y="320" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.08em">SPONSOR TO SPONSOR</text>
+    </svg>

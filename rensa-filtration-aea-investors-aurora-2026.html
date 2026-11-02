@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AEA Investors and BCI Acquire Aurora's Rensa Filtration from Audax - The 317</title>
+<meta name="description" content="A Chicago-area air filtration platform built through ten acquisitions under Audax Private Equity just changed hands, with AEA Investors and a Canadian pension fund taking over to push the business further into data center and semiconductor markets.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AEA Investors and BCI Acquire Aurora's Rensa Filtration from Audax - The 317">
+<meta property="og:description" content="A Chicago-area air filtration platform built through ten acquisitions under Audax Private Equity just changed hands, with AEA Investors and a Canadian pension fund taking over to push the business further into data center and semiconductor markets.">
+<meta property="og:url" content="https://the317.com/rensa-filtration-aea-investors-aurora-2026.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AEA Investors and BCI Acquire Aurora's Rensa Filtration from Audax - The 317">
+<meta name="twitter:description" content="A Chicago-area air filtration platform built through ten acquisitions under Audax Private Equity just changed hands, with AEA Investors and a Canadian pension fund taking over to push the business further into data center and semiconductor markets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #0f1623;
+    --paper-2: #1a2640;
+    --ink: #edf1fa;
+    --ink-mute: #8b9bbd;
+    --rule: #1f2c47;
+    --rule-dark: #2c3c5e;
+    --ember: #5b8def;
+    --ember-bright: #82aef2;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--ember); }
+
+  #utility-bar {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    padding: 6px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+
+  #utility-bar .util-right { display: flex; gap: 20px; }
+  #utility-bar .util-right a { color: var(--ink-mute); transition: color 0.15s; }
+  #utility-bar .util-right a:hover { color: var(--ember); }
+
+  #ticker-bar {
+    background: var(--ink);
+    overflow: hidden;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  #ticker-bar::before, #ticker-bar::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; width: 32px; z-index: 2; pointer-events: none;
+  }
+  #ticker-bar::before { left: 0; background: linear-gradient(to right, var(--ink), transparent); }
+  #ticker-bar::after  { right: 0; background: linear-gradient(to left,  var(--ink), transparent); }
+
+  #ticker-track {
+    display: flex;
+    gap: 0;
+    white-space: nowrap;
+    animation: ticker-scroll 60s linear infinite;
+    will-change: transform;
+  }
+  #ticker-bar:hover #ticker-track { animation-play-state: paused; }
+
+  @keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: #0f1623;
+    border-right: 1px solid rgba(15,22,35,0.12);
+  }
+
+  .ticker-sym { font-weight: 500; }
+  .ticker-pct { font-size: 10px; padding: 1px 5px; border-radius: 3px; }
+  .ticker-pct.up   { background: rgba(34,197,94,0.18); color: #15803d; }
+  .ticker-pct.down { background: rgba(239,68,68,0.18);  color: #b91c1c; }
+
+  nav {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .nav-links a { color: var(--ink-mute); transition: color 0.15s; }
+  .nav-links a:hover { color: var(--ink); }
+
+  .nav-cta {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ember);
+    border: 1px solid var(--ember);
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-cta:hover { background: var(--ember); color: var(--paper); }
+
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  .article-header { margin-bottom: 40px; }
+
+  .article-kicker {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ember);
+    margin-bottom: 16px;
+  }
+
+  .article-title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: clamp(28px, 5vw, 44px);
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+
+  .article-dek {
+    font-size: 19px;
+    font-weight: 300;
+    color: var(--ink-mute);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 0;
+  }
+
+  .article-meta .byline { font-weight: 500; color: var(--ink); }
+  .article-meta .sep { opacity: 0.4; }
+
+  .article-hero {
+    width: 100%;
+    height: 340px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 36px 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .article-hero svg { width: 100%; height: 100%; }
+
+  .article-body { font-family: 'Merriweather', Georgia, serif; font-size: 18px; line-height: 1.8; }
+  .article-body p { margin-bottom: 1.4em; }
+  .article-body h2 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 2em 0 0.8em;
+  }
+
+  .data-strip {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--ember);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 32px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px 24px;
+  }
+
+  .data-strip dt {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 4px;
+  }
+
+  .data-strip dd {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .pull-quote {
+    border-left: 3px solid var(--ember);
+    margin: 36px 0;
+    padding: 4px 0 4px 24px;
+  }
+
+  .pull-quote blockquote {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .pull-quote cite {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-style: normal;
+  }
+
+  .context-box {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 24px;
+    margin: 36px 0;
+  }
+
+  .context-box h3 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ember);
+    margin-bottom: 12px;
+  }
+
+  .context-box p { font-size: 15px; line-height: 1.65; color: var(--ink-mute); margin-bottom: 0.8em; }
+  .context-box p:last-child { margin-bottom: 0; }
+
+  .article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .article-tags a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    padding: 5px 12px;
+    border-radius: 3px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .article-tags a:hover { border-color: var(--ember); color: var(--ember); }
+
+  .related-section {
+    background: var(--paper-2);
+    border-top: 1px solid var(--rule);
+    padding: 60px 32px;
+  }
+
+  .related-inner { max-width: 1100px; margin: 0 auto; }
+
+  .related-section h2 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 28px;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .related-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 24px;
+    transition: border-color 0.15s;
+  }
+  .related-card:hover { border-color: var(--rule-dark); }
+
+  .related-card .card-kicker {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ember);
+    margin-bottom: 10px;
+  }
+
+  .related-card h3 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .related-card p { font-size: 14px; color: var(--ink-mute); line-height: 1.55; }
+
+  footer {
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    padding: 40px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-logo {
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+
+  .footer-copy { font-size: 12px; color: var(--ink-mute); }
+
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { font-size: 12px; color: var(--ink-mute); transition: color 0.15s; }
+  .footer-links a:hover { color: var(--ember); }
+</style>
+</head>
+<body>
+
+<div id="utility-bar">
+  <span>The Midwest's Business Intelligence Layer</span>
+  <div class="util-right">
+    <a href="deals.html">Deal Flow</a>
+    <a href="companies.html">Companies</a>
+    <a href="mailto:tips@the317.com">Tips</a>
+  </div>
+</div>
+
+<div id="ticker-bar">
+  <div id="ticker-track"></div>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">The 317</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="deals.html">Deals</a></li>
+    <li><a href="companies.html">Companies</a></li>
+    <li><a href="markets.html">Markets</a></li>
+  </ul>
+  <a href="mailto:tips@the317.com" class="nav-cta">Submit a Tip</a>
+</nav>
+
+<main class="article-wrap">
+  <header class="article-header">
+    <p class="article-kicker">Industrials &middot; Illinois &middot; Private Equity</p>
+    <h1 class="article-title">AEA Investors and BCI Buy Aurora's Rensa Filtration After Audax Runs Ten Acquisitions in Three Years</h1>
+    <p class="article-dek">A Chicago-area air filtration platform built for the data center and semiconductor boom just traded hands in a sponsor-to-sponsor deal that signals how much institutional appetite there is for industrial businesses tied to the infrastructure behind AI.</p>
+    <div class="article-meta">
+      <span class="byline">Dhiren Dommeti</span>
+      <span class="sep">/</span>
+      <time datetime="2026-11-02">November 2, 2026</time>
+      <span class="sep">/</span>
+      <span>Industrials</span>
+    </div>
+  </header>
+
+  <div class="article-hero" aria-hidden="true">
+    <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+      <rect width="720" height="340" fill="#0f1623"/>
+      <defs>
+        <pattern id="dots-rf" width="22" height="22" patternUnits="userSpaceOnUse">
+          <circle cx="11" cy="11" r="0.9" fill="#1a2640"/>
+        </pattern>
+        <radialGradient id="aurora-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#5b8def" stop-opacity="0.32"/>
+          <stop offset="100%" stop-color="#5b8def" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="720" height="340" fill="url(#dots-rf)"/>
+
+      <!-- Illinois state outline -->
+      <path d="M 98,26 L 268,26 L 294,37 L 292,54 L 289,268 L 270,294 L 200,330 L 172,314 L 140,280 L 110,248 L 93,188 L 91,100 Z"
+            fill="#111c2e" stroke="#2c3c5e" stroke-width="1.5" stroke-linejoin="round"/>
+
+      <!-- Lake Michigan arc -->
+      <path d="M 292,42 Q 312,18 303,5" fill="none" stroke="#1f2c47" stroke-width="1" stroke-dasharray="3 3"/>
+
+      <!-- ILLINOIS watermark -->
+      <text x="188" y="192" text-anchor="middle" fill="#1a2b42" font-family="Inter,sans-serif" font-size="20" font-weight="700" letter-spacing="0.2em">ILLINOIS</text>
+
+      <!-- Aurora glow -->
+      <ellipse cx="244" cy="76" rx="32" ry="26" fill="url(#aurora-glow)"/>
+
+      <!-- Aurora main dot -->
+      <circle cx="244" cy="76" r="8" fill="#0f1623" stroke="#5b8def" stroke-width="2.5"/>
+      <circle cx="244" cy="76" r="3.5" fill="#5b8def"/>
+
+      <!-- Aurora label -->
+      <text x="244" y="56" text-anchor="middle" fill="#edf1fa" font-family="Inter,sans-serif" font-size="11" font-weight="700">AURORA, IL</text>
+      <text x="244" y="44" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.06em">RENSA FILTRATION</text>
+
+      <!-- Chicago reference dot (smaller) -->
+      <circle cx="276" cy="64" r="4" fill="#0f1623" stroke="#2c3c5e" stroke-width="1.5"/>
+      <circle cx="276" cy="64" r="1.5" fill="#3d5580"/>
+      <text x="290" y="68" text-anchor="start" fill="#3d5580" font-family="Inter,sans-serif" font-size="8">Chicago</text>
+
+      <!-- Divider -->
+      <line x1="342" y1="14" x2="342" y2="326" stroke="#1f2c47" stroke-width="1"/>
+
+      <!-- RIGHT PANEL -->
+      <text x="364" y="46" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" font-weight="700" letter-spacing="0.14em">ILLINOIS INDUSTRIALS · OCT 2026</text>
+
+      <text x="364" y="80" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="19">Rensa Filtration</text>
+      <text x="364" y="102" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="13" font-style="italic">sold by Audax PE to</text>
+      <text x="364" y="130" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="16">AEA Investors + BCI</text>
+
+      <line x1="364" y1="148" x2="706" y2="148" stroke="#1f2c47" stroke-width="1"/>
+
+      <!-- Big stat: acquisitions under Audax -->
+      <text x="364" y="198" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="52" font-weight="500">10</text>
+      <text x="364" y="220" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="12">acquisitions under Audax (2022-2026)</text>
+
+      <line x1="364" y1="238" x2="706" y2="238" stroke="#1f2c47" stroke-width="1"/>
+
+      <text x="364" y="258" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">DATA CENTERS · POWER · SEMICONDUCTOR</text>
+      <text x="364" y="275" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">HEALTHCARE · LIFE SCIENCES</text>
+      <text x="364" y="292" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">DEAL TERMS UNDISCLOSED</text>
+
+      <rect x="364" y="308" width="112" height="17" rx="3" fill="#1a2640" stroke="#2c3c5e"/>
+      <text x="420" y="320" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.08em">SPONSOR TO SPONSOR</text>
+    </svg>
+  </div>
+
+  <div class="article-body">
+    <p>Rensa Filtration, an Aurora, Illinois manufacturer of air filtration systems for data centers, semiconductor fabs, and other mission-critical facilities, has been acquired by AEA Investors' Middle Market Private Equity team and British Columbia Investment Management Corporation. The deal closed October 8, 2026. Financial terms were not disclosed. Audax Private Equity, the previous owner, retains a minority stake alongside the company's management team.</p>
+
+    <p>For Audax, the transaction marks the end of a concentrated three-and-a-half-year build. Since buying into Rensa in August 2022, the Boston-based firm ran ten acquisitions to assemble a vertically integrated filtration platform with the scale and product breadth to compete across industrial, commercial, and institutional customer segments. That kind of pacing, roughly three deals per year on average, is aggressive even by private equity add-on standards.</p>
+
+    <dl class="data-strip">
+      <div>
+        <dt>Deal Value</dt>
+        <dd>Undisclosed</dd>
+      </div>
+      <div>
+        <dt>Closed</dt>
+        <dd>Oct 8, 2026</dd>
+      </div>
+      <div>
+        <dt>Target HQ</dt>
+        <dd>Aurora, IL</dd>
+      </div>
+      <div>
+        <dt>Seller</dt>
+        <dd>Audax PE</dd>
+      </div>
+      <div>
+        <dt>Buyers</dt>
+        <dd>AEA + BCI</dd>
+      </div>
+      <div>
+        <dt>Add-ons</dt>
+        <dd>10 under Audax</dd>
+      </div>
+    </dl>
+
+    <p>Rensa makes highly engineered filtration products for applications where air quality directly affects process outcomes or equipment life. A data center that pulls in unfiltered air risks contaminating servers with dust and particulate that shortens hardware lifespan. A semiconductor fab operates under even stricter requirements, where a single particle in the wrong place can ruin a wafer worth thousands of dollars. Power generation facilities and pharmaceutical cleanrooms have similarly strict filtration standards. These are not commodity markets. The customers are sticky and the switching costs are meaningful.</p>
+
+    <h2>Why AEA and a Canadian Pension Fund Wanted This</h2>
+
+    <p>AEA Investors has been running a distinct middle market private equity strategy for decades, and its appetite for industrial platform businesses with defensible positions in specialty markets is well-established. BCI, the British Columbia Investment Management Corporation, manages pension assets for the Canadian province's public sector workers. The two co-investing on a deal of this type reflects a pattern that has become more common in private equity: a pension or sovereign fund co-investing directly alongside a PE manager rather than just writing a check into a fund. BCI gets direct exposure to a specific asset it has underwritten, and AEA gets additional capital without giving up carried interest to a fund-level investor.</p>
+
+    <p>The Rensa deal fits the BCI investment profile well. Industrial businesses with durable demand drivers, sticky customer relationships, and the ability to grow through acquisitions are exactly the kind of long-duration assets pension funds find attractive. The end markets here, data center infrastructure and semiconductor manufacturing, have multi-year capital spending commitments behind them that make the revenue relatively predictable even in an economic slowdown.</p>
+
+    <div class="pull-quote">
+      <blockquote>"Rensa has built an exceptional platform serving mission-critical applications, and we look forward to supporting their continued growth across North America and Europe."</blockquote>
+      <cite>AEA Investors</cite>
+    </div>
+
+    <h2>The Audax Playbook</h2>
+
+    <p>Audax Private Equity ran a textbook buy-and-build at Rensa. The firm acquired the original platform in August 2022 and then added ten businesses over roughly 38 months. The acquisitions expanded Rensa's product lines, geographic coverage, and end-market reach. Vertical integration, meaning owning more of the manufacturing and distribution process rather than sourcing components externally, was a consistent theme. A filtration company that controls its own media manufacturing, frame production, and distribution has better margins and more pricing power than one that assembles purchased components.</p>
+
+    <p>The result is a company that exits Audax's portfolio considerably larger and more defensible than when it entered. Barclays and Evercore advised AEA on the transaction, with Joele Frank handling communications. The caliber of the financial advisors reflects the seriousness of the deal even without a disclosed price tag.</p>
+
+    <div class="context-box">
+      <h3>Midwest Air Filtration and the Data Center Buildout</h3>
+      <p>The Chicago area has become an increasingly significant data center market over the past several years, driven by land availability, power infrastructure, and fiber connectivity. Companies including Google, Microsoft, and numerous cloud providers operate or have announced data center facilities in Illinois, and the state has positioned itself aggressively to attract further investment through favorable tax treatment for data center construction.</p>
+      <p>That regional buildout creates a steady pipeline of demand for filtration products. New data center construction requires initial filtration installations, and ongoing maintenance and replacement creates recurring revenue that is largely independent of the economic cycle. For a manufacturer based in Aurora, which sits roughly 40 miles west of downtown Chicago in Kane County, proximity to a major data center market is a tangible competitive advantage in bidding for both installation and service contracts.</p>
+      <p>AEA and BCI have indicated plans to continue expanding Rensa across North America and into Europe, which suggests further acquisitions are on the horizon under the new ownership structure.</p>
+    </div>
+
+    <p>Audax retaining a minority stake is notable. It is relatively uncommon for a PE seller to hold onto equity after closing, and it typically signals one of two things: either the seller believes there is meaningful upside still to be captured, or the buyer wanted continuity of institutional knowledge during the transition and offered Audax a structure to stay involved. Either way, it aligns incentives between the old and new owners during the critical post-close integration period.</p>
+
+    <div class="article-tags">
+      <a href="#">Industrials</a>
+      <a href="#">Illinois</a>
+      <a href="#">M&amp;A</a>
+      <a href="#">Private Equity</a>
+      <a href="#">Aurora</a>
+      <a href="#">Data Centers</a>
+      <a href="#">Midwest</a>
+    </div>
+  </div>
+</main>
+
+<section class="related-section">
+  <div class="related-inner">
+    <h2>Related Coverage</h2>
+    <div class="related-grid">
+      <a href="state-group-melkay-evansville-2026.html" class="related-card">
+        <p class="card-kicker">Industrials &middot; Indiana M&amp;A</p>
+        <h3>Apollo-Backed State Group Acquires MelKay Electric in Evansville</h3>
+        <p>Another Apollo industrial roll-up adds a 75-year-old Evansville MEP contractor with 400-plus union workers.</p>
+      </a>
+      <a href="byline-bancorp-illinois-state-bancorp-2026.html" class="related-card">
+        <p class="card-kicker">Banking &middot; Illinois M&amp;A</p>
+        <h3>Byline Bancorp to Acquire Illinois State Bancorp in $87.9M Deal</h3>
+        <p>Rosemont-based Byline adds First Nations Bank and The Bank of Bourbonnais, pushing the combined institution past $10.5 billion in assets.</p>
+      </a>
+      <a href="deals.html" class="related-card">
+        <p class="card-kicker">Deal Flow</p>
+        <h3>Full Midwest Deal Tracker</h3>
+        <p>Browse every tracked M&amp;A and private equity transaction across Indiana, Illinois, Ohio, Michigan, and Wisconsin.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">The 317</span>
+  <span class="footer-copy">&copy; 2026 The 317. All rights reserved.</span>
+  <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="deals.html">Deals</a>
+    <a href="mailto:tips@the317.com">Tips</a>
+  </nav>
+</footer>
+
+<script src="ticker.js"></script>
+<script>
+(function() {
+  const track = document.getElementById('ticker-track');
+  if (!track || typeof STOCK_TICKERS === 'undefined') return;
+
+  function buildItems(tickers) {
+    return tickers.map(t => {
+      const sign = t.up ? '+' : '';
+      return `<div class="ticker-item">
+        <span class="ticker-sym">${t.sym}</span>
+        <span class="ticker-price">$${t.price.toFixed(2)}</span>
+        <span class="ticker-pct ${t.up ? 'up' : 'down'}">${sign}${t.pct.toFixed(2)}%</span>
+      </div>`;
+    }).join('');
+  }
+
+  const html = buildItems(STOCK_TICKERS);
+  track.innerHTML = html + html;
+
+  STOCK_TICKERS.forEach(t => {
+    const apiKey = (typeof FINNHUB_API_KEY !== 'undefined') ? FINNHUB_API_KEY : null;
+    if (!apiKey) return;
+    fetch(`https://finnhub.io/api/v1/quote?symbol=${t.sym}&token=${apiKey}`)
+      .then(r => r.json())
+      .then(data => {
+        if (!data.c) return;
+        t.price = data.c;
+        t.pct = ((data.c - data.pc) / data.pc) * 100;
+        t.up = t.pct >= 0;
+        track.innerHTML = buildItems(STOCK_TICKERS) + buildItems(STOCK_TICKERS);
+      })
+      .catch(() => {});
+  });
+})();
+</script>
+</body>
+</html>
