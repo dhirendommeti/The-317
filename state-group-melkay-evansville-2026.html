@@ -443,54 +443,95 @@
   </header>
 
   <div class="article-hero" aria-hidden="true">
-    <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
-      <rect width="720" height="340" fill="#0f1623"/>
-      <defs>
-        <pattern id="grid-melkay" width="50" height="50" patternUnits="userSpaceOnUse">
-          <path d="M50 0L0 0 0 50" fill="none" stroke="#1a2640" stroke-width="1"/>
-        </pattern>
-        <marker id="arr-melkay" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6 Z" fill="#5b8def"/>
-        </marker>
-      </defs>
-      <rect width="720" height="340" fill="url(#grid-melkay)"/>
+    <svg style="width:100%;height:100%;display:block;" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="340" fill="#0f1623"/>
+  <defs>
+    <pattern id="dots-mk" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="0.9" fill="#1a2640"/>
+    </pattern>
+    <radialGradient id="ev-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5b8def" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#5b8def" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="river-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a58" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0e1e32" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="340" fill="url(#dots-mk)"/>
 
-      <!-- Acquirer card (State Group / Apollo) -->
-      <rect x="40" y="50" width="220" height="230" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
-      <rect x="40" y="50" width="220" height="4" rx="2" fill="#5b8def"/>
-      <text x="150" y="84" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">ACQUIRER · PE-BACKED</text>
-      <text x="150" y="110" text-anchor="middle" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="17">The State Group</text>
-      <text x="150" y="130" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="10">Franklin, TN · Apollo</text>
-      <line x1="65" y1="146" x2="235" y2="146" stroke="#1f2c47" stroke-width="1"/>
-      <text x="150" y="166" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">MEP contractor roll-up</text>
-      <text x="150" y="186" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">National platform build</text>
-      <text x="150" y="212" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="13" font-weight="500">Undisclosed</text>
-      <text x="150" y="230" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Deal terms not disclosed</text>
-      <text x="150" y="254" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">Berenson &amp; Co. advised buyer</text>
+  <!-- Kentucky region subtle fill (below the river) -->
+  <path d="M 20,200 C 90,195 155,210 220,200 C 258,194 268,202 288,195 C 348,188 400,196 460,190 L 460,340 L 20,340 Z"
+        fill="#0b1520" opacity="0.7"/>
 
-      <!-- Center connector -->
-      <line x1="280" y1="165" x2="440" y2="165" stroke="#5b8def" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.5"/>
-      <text x="360" y="152" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em">TRI-STATE</text>
-      <line x1="380" y1="165" x2="302" y2="165" stroke="#5b8def" stroke-width="2" marker-end="url(#arr-melkay)"/>
-      <text x="360" y="183" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8">IN / KY / IL</text>
+  <!-- Ohio River - base stroke (wide, dark) -->
+  <path d="M 20,200 C 90,195 155,210 220,200 C 258,194 268,202 288,195 C 348,188 400,196 460,190"
+        fill="none" stroke="#1d3550" stroke-width="10" stroke-linecap="round"/>
 
-      <!-- Target card (MelKay) -->
-      <rect x="460" y="50" width="220" height="230" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
-      <rect x="460" y="50" width="220" height="4" rx="2" fill="#82aef2"/>
-      <text x="570" y="84" text-anchor="middle" fill="#82aef2" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">TARGET · INDIANA</text>
-      <text x="570" y="112" text-anchor="middle" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="19">MelKay Electric</text>
-      <text x="570" y="132" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="10">Evansville, IN · Est. 1951</text>
-      <line x1="485" y1="148" x2="655" y2="148" stroke="#1f2c47" stroke-width="1"/>
-      <text x="570" y="168" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Electrical / Mechanical / Plumbing</text>
-      <text x="570" y="192" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="13" font-weight="500">400+ workers</text>
-      <text x="570" y="210" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Union tradespeople</text>
-      <text x="570" y="232" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">Family-owned, 3 generations</text>
-      <text x="570" y="252" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">75 years in Southern Indiana</text>
+  <!-- Ohio River - surface highlight -->
+  <path d="M 20,200 C 90,195 155,210 220,200 C 258,194 268,202 288,195 C 348,188 400,196 460,190"
+        fill="none" stroke="#2d5580" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
 
-      <!-- Bottom bar -->
-      <rect x="40" y="298" width="640" height="28" rx="4" fill="#1a2640" stroke="#2c3c5e"/>
-      <text x="360" y="317" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.08em">INDIANA INDUSTRIALS · MEP CONTRACTOR · APOLLO PE · SEP 2026</text>
-    </svg>
+  <!-- OHIO RIVER label along river -->
+  <text x="165" y="215" fill="#2a4a6e" font-family="Inter,sans-serif" font-size="9" font-weight="600" letter-spacing="0.15em">OHIO RIVER</text>
+
+  <!-- Indiana / Illinois border line (vertical dashed) -->
+  <line x1="188" y1="20" x2="200" y2="200" stroke="#1f2c47" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- State watermark labels -->
+  <text x="300" y="110" text-anchor="middle" fill="#1e2e45" font-family="Inter,sans-serif" font-size="28" font-weight="700" letter-spacing="0.18em">INDIANA</text>
+  <text x="370" y="280" text-anchor="middle" fill="#172030" font-family="Inter,sans-serif" font-size="24" font-weight="700" letter-spacing="0.18em">KENTUCKY</text>
+  <text x="104" y="145" text-anchor="middle" fill="#1e2e45" font-family="Inter,sans-serif" font-size="20" font-weight="700" letter-spacing="0.18em">ILLINOIS</text>
+
+  <!-- Coverage radius circle -->
+  <circle cx="268" cy="192" r="82" fill="none" stroke="#5b8def" stroke-width="1" stroke-dasharray="6 5" opacity="0.35"/>
+
+  <!-- Evansville glow -->
+  <ellipse cx="268" cy="190" rx="30" ry="25" fill="url(#ev-glow)"/>
+
+  <!-- Secondary city dots -->
+  <circle cx="138" cy="192" r="3" fill="#1f2c47" stroke="#2c3c5e" stroke-width="1"/>
+  <text x="138" y="182" text-anchor="middle" fill="#4a5e7a" font-family="Inter,sans-serif" font-size="8">Mt. Vernon, IL</text>
+
+  <circle cx="290" cy="222" r="3" fill="#1f2c47" stroke="#2c3c5e" stroke-width="1"/>
+  <text x="306" y="232" text-anchor="start" fill="#4a5e7a" font-family="Inter,sans-serif" font-size="8">Henderson, KY</text>
+
+  <circle cx="398" cy="242" r="3" fill="#1f2c47" stroke="#2c3c5e" stroke-width="1"/>
+  <text x="398" y="254" text-anchor="middle" fill="#4a5e7a" font-family="Inter,sans-serif" font-size="8">Owensboro, KY</text>
+
+  <!-- Evansville main dot -->
+  <circle cx="268" cy="190" r="10" fill="#0f1623" stroke="#5b8def" stroke-width="2.5"/>
+  <circle cx="268" cy="190" r="4.5" fill="#5b8def"/>
+
+  <!-- Evansville label -->
+  <text x="268" y="168" text-anchor="middle" fill="#edf1fa" font-family="Inter,sans-serif" font-size="11" font-weight="700">EVANSVILLE, IN</text>
+  <text x="268" y="156" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">MelKay Electric · Est. 1951</text>
+
+  <!-- Divider -->
+  <line x1="480" y1="14" x2="480" y2="326" stroke="#1f2c47" stroke-width="1"/>
+
+  <!-- RIGHT PANEL -->
+  <text x="500" y="46" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" font-weight="700" letter-spacing="0.14em">INDIANA INDUSTRIALS · SEP 2026</text>
+
+  <text x="500" y="80" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="20">MelKay Electric</text>
+  <text x="500" y="103" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="13" font-style="italic">acquired by</text>
+  <text x="500" y="132" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="17">The State Group</text>
+  <text x="500" y="154" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="11">Apollo Global Management</text>
+
+  <line x1="500" y1="170" x2="708" y2="170" stroke="#1f2c47" stroke-width="1"/>
+
+  <text x="500" y="214" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="50" font-weight="500">400+</text>
+  <text x="500" y="236" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="12">Union tradespeople · MEP</text>
+
+  <line x1="500" y1="252" x2="708" y2="252" stroke="#1f2c47" stroke-width="1"/>
+
+  <text x="500" y="272" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">75 YEARS IN SOUTHERN INDIANA</text>
+  <text x="500" y="289" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">IN / KY / IL COVERAGE AREA</text>
+  <text x="500" y="306" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">DEAL TERMS UNDISCLOSED</text>
+
+  <rect x="500" y="316" width="90" height="16" rx="3" fill="#1a2640" stroke="#2c3c5e"/>
+  <text x="545" y="328" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.08em">PE ADD-ON</text>
+</svg>
   </div>
 
   <div class="article-body">

@@ -443,55 +443,79 @@
   </header>
 
   <div class="article-hero" aria-hidden="true">
-    <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
-      <rect width="720" height="340" fill="#0f1623"/>
-      <defs>
-        <pattern id="grid-byline" width="50" height="50" patternUnits="userSpaceOnUse">
-          <path d="M50 0L0 0 0 50" fill="none" stroke="#1a2640" stroke-width="1"/>
-        </pattern>
-        <marker id="arr-byline" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6 Z" fill="#5b8def"/>
-        </marker>
-      </defs>
-      <rect width="720" height="340" fill="url(#grid-byline)"/>
+    <svg style="width:100%;height:100%;display:block;" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="340" fill="#0f1623"/>
+  <defs>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="0.9" fill="#1a2640"/>
+    </pattern>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5b8def" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#5b8def" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#82aef2" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#82aef2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="720" height="340" fill="url(#dots)"/>
 
-      <!-- Acquirer card (Byline) -->
-      <rect x="40" y="50" width="220" height="230" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
-      <rect x="40" y="50" width="220" height="4" rx="2" fill="#5b8def"/>
-      <text x="150" y="84" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">ACQUIRER · ILLINOIS</text>
-      <text x="150" y="112" text-anchor="middle" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="17">Byline Bancorp</text>
-      <text x="150" y="132" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="10">Rosemont, IL · NYSE: BY</text>
-      <line x1="65" y1="148" x2="235" y2="148" stroke="#1f2c47" stroke-width="1"/>
-      <text x="150" y="168" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Chicago-area commercial bank</text>
-      <text x="150" y="196" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="14" font-weight="500">$87.9M</text>
-      <text x="150" y="214" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Cash + stock</text>
-      <text x="150" y="232" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">$261.23 per share</text>
-      <text x="150" y="254" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">Expected close Q1 2027</text>
+  <!-- Illinois state outline -->
+  <path d="M 98,26 L 268,26 L 294,37 L 292,54 L 289,268 L 270,294 L 200,330 L 172,314 L 140,280 L 110,248 L 93,188 L 91,100 Z"
+        fill="#111c2e" stroke="#2c3c5e" stroke-width="1.5" stroke-linejoin="round"/>
 
-      <!-- Center connector -->
-      <line x1="280" y1="165" x2="440" y2="165" stroke="#5b8def" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.5"/>
-      <text x="360" y="152" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em">CHICAGO METRO</text>
-      <line x1="380" y1="165" x2="302" y2="165" stroke="#5b8def" stroke-width="2" marker-end="url(#arr-byline)"/>
-      <text x="360" y="183" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8">Greater Illinois</text>
+  <!-- Lake Michigan suggestion (dashed arc) -->
+  <path d="M 292,42 Q 312,18 303,5" fill="none" stroke="#1f2c47" stroke-width="1" stroke-dasharray="3 3"/>
 
-      <!-- Target card (Illinois State Bancorp) -->
-      <rect x="460" y="50" width="220" height="230" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
-      <rect x="460" y="50" width="220" height="4" rx="2" fill="#82aef2"/>
-      <text x="570" y="84" text-anchor="middle" fill="#82aef2" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">TARGET · ILLINOIS</text>
-      <text x="570" y="108" text-anchor="middle" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="14">Illinois State Bancorp</text>
-      <text x="570" y="128" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="10">Chicago, IL area</text>
-      <line x1="485" y1="144" x2="655" y2="144" stroke="#1f2c47" stroke-width="1"/>
-      <text x="570" y="164" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">First Nations Bank</text>
-      <text x="570" y="182" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Bank of Bourbonnais</text>
-      <text x="570" y="206" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="13" font-weight="500">$617M assets</text>
-      <text x="570" y="224" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">$470M loans</text>
-      <text x="570" y="242" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">$510M deposits</text>
-      <text x="570" y="260" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">1.07x tangible book</text>
+  <!-- ILLINOIS watermark inside state -->
+  <text x="190" y="192" text-anchor="middle" fill="#1a2b42" font-family="Inter,sans-serif" font-size="20" font-weight="700" letter-spacing="0.2em">ILLINOIS</text>
 
-      <!-- Bottom bar -->
-      <rect x="40" y="298" width="640" height="28" rx="4" fill="#1a2640" stroke="#2c3c5e"/>
-      <text x="360" y="317" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.08em">ILLINOIS BANKING CONSOLIDATION · $87.9M CASH + STOCK · OCT 2026</text>
-    </svg>
+  <!-- Glow halos for city dots -->
+  <ellipse cx="278" cy="67" rx="30" ry="24" fill="url(#glow1)"/>
+  <ellipse cx="276" cy="110" rx="24" ry="19" fill="url(#glow2)"/>
+
+  <!-- Dashed connector -->
+  <line x1="276" y1="74" x2="275" y2="104" stroke="#5b8def" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
+
+  <!-- City dot: North Chicago suburbs (Byline / Rosemont) -->
+  <circle cx="278" cy="67" r="7" fill="#0f1623" stroke="#5b8def" stroke-width="2"/>
+  <circle cx="278" cy="67" r="3" fill="#5b8def"/>
+
+  <!-- City dot: Bourbonnais / Kankakee Co. (Illinois State Bancorp) -->
+  <circle cx="276" cy="110" r="6" fill="#0f1623" stroke="#82aef2" stroke-width="1.5"/>
+  <circle cx="276" cy="110" r="2.5" fill="#82aef2"/>
+
+  <!-- Labels left of dots -->
+  <text x="264" y="62" text-anchor="end" fill="#edf1fa" font-family="Inter,sans-serif" font-size="10" font-weight="600">N. Chicago suburbs</text>
+  <text x="264" y="75" text-anchor="end" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.04em">BYLINE BANCORP</text>
+
+  <text x="262" y="106" text-anchor="end" fill="#edf1fa" font-family="Inter,sans-serif" font-size="10" font-weight="600">Bourbonnais</text>
+  <text x="262" y="119" text-anchor="end" fill="#82aef2" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.04em">ILLINOIS STATE BANCORP</text>
+
+  <!-- Divider -->
+  <line x1="342" y1="14" x2="342" y2="326" stroke="#1f2c47" stroke-width="1"/>
+
+  <!-- RIGHT PANEL -->
+  <text x="364" y="46" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" font-weight="700" letter-spacing="0.14em">ILLINOIS BANKING · CHICAGO AREA · OCT 2026</text>
+
+  <text x="364" y="82" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="21">Byline Bancorp</text>
+  <text x="364" y="104" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="13" font-style="italic">acquires</text>
+  <text x="364" y="134" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="17">Illinois State Bancorp</text>
+
+  <line x1="364" y1="152" x2="706" y2="152" stroke="#1f2c47" stroke-width="1"/>
+
+  <text x="364" y="204" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="50" font-weight="500">$87.9M</text>
+  <text x="364" y="225" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="12">Cash + stock · $261.23 per share</text>
+
+  <line x1="364" y1="244" x2="706" y2="244" stroke="#1f2c47" stroke-width="1"/>
+
+  <text x="364" y="264" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">$10.5B COMBINED ASSETS</text>
+  <text x="364" y="281" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">48 BRANCHES ACROSS GREATER ILLINOIS</text>
+  <text x="364" y="298" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.07em">EXPECTED CLOSE Q1 2027</text>
+
+  <rect x="364" y="312" width="80" height="17" rx="3" fill="#1a2640" stroke="#2c3c5e"/>
+  <text x="404" y="324" text-anchor="middle" fill="#5b8def" font-family="JetBrains Mono,monospace" font-size="9">NYSE: BY</text>
+</svg>
   </div>
 
   <div class="article-body">
