@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apollo-Backed State Group Acquires MelKay Electric in Evansville - The 317</title>
+<meta name="description" content="The State Group, an Apollo portfolio company, has acquired Evansville's 75-year-old MelKay Electric, adding more than 400 union tradespeople and deepening its reach across Southern Indiana, Western Kentucky, and Southern Illinois.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apollo-Backed State Group Acquires MelKay Electric in Evansville - The 317">
+<meta property="og:description" content="The State Group, an Apollo portfolio company, has acquired Evansville's 75-year-old MelKay Electric, adding more than 400 union tradespeople and deepening its reach across Southern Indiana, Western Kentucky, and Southern Illinois.">
+<meta property="og:url" content="https://the317.com/state-group-melkay-evansville-2026.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Apollo-Backed State Group Acquires MelKay Electric in Evansville - The 317">
+<meta name="twitter:description" content="The State Group, an Apollo portfolio company, has acquired Evansville's 75-year-old MelKay Electric, adding more than 400 union tradespeople and deepening its reach across Southern Indiana, Western Kentucky, and Southern Illinois.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #0f1623;
+    --paper-2: #1a2640;
+    --ink: #edf1fa;
+    --ink-mute: #8b9bbd;
+    --rule: #1f2c47;
+    --rule-dark: #2c3c5e;
+    --ember: #5b8def;
+    --ember-bright: #82aef2;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--ember); }
+
+  #utility-bar {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    padding: 6px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+
+  #utility-bar .util-right { display: flex; gap: 20px; }
+  #utility-bar .util-right a { color: var(--ink-mute); transition: color 0.15s; }
+  #utility-bar .util-right a:hover { color: var(--ember); }
+
+  #ticker-bar {
+    background: var(--ink);
+    overflow: hidden;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  #ticker-bar::before, #ticker-bar::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; width: 32px; z-index: 2; pointer-events: none;
+  }
+  #ticker-bar::before { left: 0; background: linear-gradient(to right, var(--ink), transparent); }
+  #ticker-bar::after  { right: 0; background: linear-gradient(to left,  var(--ink), transparent); }
+
+  #ticker-track {
+    display: flex;
+    gap: 0;
+    white-space: nowrap;
+    animation: ticker-scroll 60s linear infinite;
+    will-change: transform;
+  }
+  #ticker-bar:hover #ticker-track { animation-play-state: paused; }
+
+  @keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: #0f1623;
+    border-right: 1px solid rgba(15,22,35,0.12);
+  }
+
+  .ticker-sym { font-weight: 500; }
+  .ticker-pct { font-size: 10px; padding: 1px 5px; border-radius: 3px; }
+  .ticker-pct.up   { background: rgba(34,197,94,0.18); color: #15803d; }
+  .ticker-pct.down { background: rgba(239,68,68,0.18);  color: #b91c1c; }
+
+  nav {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .nav-links a { color: var(--ink-mute); transition: color 0.15s; }
+  .nav-links a:hover { color: var(--ink); }
+
+  .nav-cta {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ember);
+    border: 1px solid var(--ember);
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-cta:hover { background: var(--ember); color: var(--paper); }
+
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  .article-header { margin-bottom: 40px; }
+
+  .article-kicker {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ember);
+    margin-bottom: 16px;
+  }
+
+  .article-title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: clamp(28px, 5vw, 44px);
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+
+  .article-dek {
+    font-size: 19px;
+    font-weight: 300;
+    color: var(--ink-mute);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 0;
+  }
+
+  .article-meta .byline { font-weight: 500; color: var(--ink); }
+  .article-meta .sep { opacity: 0.4; }
+
+  .article-hero {
+    width: 100%;
+    height: 340px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 36px 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .article-hero svg { width: 100%; height: 100%; }
+
+  .article-body { font-family: 'Merriweather', Georgia, serif; font-size: 18px; line-height: 1.8; }
+  .article-body p { margin-bottom: 1.4em; }
+  .article-body h2 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 2em 0 0.8em;
+  }
+
+  .data-strip {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--ember);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 32px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px 24px;
+  }
+
+  .data-strip dt {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 4px;
+  }
+
+  .data-strip dd {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .pull-quote {
+    border-left: 3px solid var(--ember);
+    margin: 36px 0;
+    padding: 4px 0 4px 24px;
+  }
+
+  .pull-quote blockquote {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .pull-quote cite {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-style: normal;
+  }
+
+  .context-box {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 24px;
+    margin: 36px 0;
+  }
+
+  .context-box h3 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ember);
+    margin-bottom: 12px;
+  }
+
+  .context-box p { font-size: 15px; line-height: 1.65; color: var(--ink-mute); margin-bottom: 0.8em; }
+  .context-box p:last-child { margin-bottom: 0; }
+
+  .article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .article-tags a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    padding: 5px 12px;
+    border-radius: 3px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .article-tags a:hover { border-color: var(--ember); color: var(--ember); }
+
+  .related-section {
+    background: var(--paper-2);
+    border-top: 1px solid var(--rule);
+    padding: 60px 32px;
+  }
+
+  .related-inner { max-width: 1100px; margin: 0 auto; }
+
+  .related-section h2 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 28px;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .related-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 24px;
+    transition: border-color 0.15s;
+  }
+  .related-card:hover { border-color: var(--rule-dark); }
+
+  .related-card .card-kicker {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ember);
+    margin-bottom: 10px;
+  }
+
+  .related-card h3 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .related-card p { font-size: 14px; color: var(--ink-mute); line-height: 1.55; }
+
+  footer {
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    padding: 40px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-logo {
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+
+  .footer-copy { font-size: 12px; color: var(--ink-mute); }
+
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { font-size: 12px; color: var(--ink-mute); transition: color 0.15s; }
+  .footer-links a:hover { color: var(--ember); }
+</style>
+</head>
+<body>
+
+<div id="utility-bar">
+  <span>The Midwest's Business Intelligence Layer</span>
+  <div class="util-right">
+    <a href="deals.html">Deal Flow</a>
+    <a href="companies.html">Companies</a>
+    <a href="mailto:tips@the317.com">Tips</a>
+  </div>
+</div>
+
+<div id="ticker-bar">
+  <div id="ticker-track"></div>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">The 317</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="deals.html">Deals</a></li>
+    <li><a href="companies.html">Companies</a></li>
+    <li><a href="markets.html">Markets</a></li>
+  </ul>
+  <a href="mailto:tips@the317.com" class="nav-cta">Submit a Tip</a>
+</nav>
+
+<main class="article-wrap">
+  <header class="article-header">
+    <p class="article-kicker">Industrials &middot; Indiana M&amp;A &middot; Private Equity</p>
+    <h1 class="article-title">Apollo-Backed State Group Acquires MelKay Electric in Evansville</h1>
+    <p class="article-dek">The State Group has bought 75-year-old MelKay Electric, adding more than 400 union tradespeople and a deep book of MEP work across Southern Indiana, Western Kentucky, and Southern Illinois. For Apollo, it is one more piece of a national skilled-trades roll-up that has been moving fast.</p>
+    <div class="article-meta">
+      <span class="byline">Dhiren Dommeti</span>
+      <span class="sep">/</span>
+      <time datetime="2026-09-08">September 8, 2026</time>
+      <span class="sep">/</span>
+      <span>Industrials</span>
+    </div>
+  </header>
+
+  <div class="article-hero" aria-hidden="true">
+    <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+      <rect width="720" height="340" fill="#0f1623"/>
+      <defs>
+        <pattern id="grid-melkay" width="50" height="50" patternUnits="userSpaceOnUse">
+          <path d="M50 0L0 0 0 50" fill="none" stroke="#1a2640" stroke-width="1"/>
+        </pattern>
+        <marker id="arr-melkay" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#5b8def"/>
+        </marker>
+      </defs>
+      <rect width="720" height="340" fill="url(#grid-melkay)"/>
+
+      <!-- Acquirer card (State Group / Apollo) -->
+      <rect x="40" y="50" width="220" height="230" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
+      <rect x="40" y="50" width="220" height="4" rx="2" fill="#5b8def"/>
+      <text x="150" y="84" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">ACQUIRER · PE-BACKED</text>
+      <text x="150" y="110" text-anchor="middle" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="17">The State Group</text>
+      <text x="150" y="130" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="10">Franklin, TN · Apollo</text>
+      <line x1="65" y1="146" x2="235" y2="146" stroke="#1f2c47" stroke-width="1"/>
+      <text x="150" y="166" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">MEP contractor roll-up</text>
+      <text x="150" y="186" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">National platform build</text>
+      <text x="150" y="212" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="13" font-weight="500">Undisclosed</text>
+      <text x="150" y="230" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Deal terms not disclosed</text>
+      <text x="150" y="254" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">Berenson &amp; Co. advised buyer</text>
+
+      <!-- Center connector -->
+      <line x1="280" y1="165" x2="440" y2="165" stroke="#5b8def" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.5"/>
+      <text x="360" y="152" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em">TRI-STATE</text>
+      <line x1="380" y1="165" x2="302" y2="165" stroke="#5b8def" stroke-width="2" marker-end="url(#arr-melkay)"/>
+      <text x="360" y="183" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8">IN / KY / IL</text>
+
+      <!-- Target card (MelKay) -->
+      <rect x="460" y="50" width="220" height="230" rx="8" fill="#131d2e" stroke="#1f2c47" stroke-width="1.5"/>
+      <rect x="460" y="50" width="220" height="4" rx="2" fill="#82aef2"/>
+      <text x="570" y="84" text-anchor="middle" fill="#82aef2" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">TARGET · INDIANA</text>
+      <text x="570" y="112" text-anchor="middle" fill="#edf1fa" font-family="Libre Baskerville,Georgia,serif" font-size="19">MelKay Electric</text>
+      <text x="570" y="132" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="10">Evansville, IN · Est. 1951</text>
+      <line x1="485" y1="148" x2="655" y2="148" stroke="#1f2c47" stroke-width="1"/>
+      <text x="570" y="168" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Electrical / Mechanical / Plumbing</text>
+      <text x="570" y="192" text-anchor="middle" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="13" font-weight="500">400+ workers</text>
+      <text x="570" y="210" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Union tradespeople</text>
+      <text x="570" y="232" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">Family-owned, 3 generations</text>
+      <text x="570" y="252" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="9">75 years in Southern Indiana</text>
+
+      <!-- Bottom bar -->
+      <rect x="40" y="298" width="640" height="28" rx="4" fill="#1a2640" stroke="#2c3c5e"/>
+      <text x="360" y="317" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10" letter-spacing="0.08em">INDIANA INDUSTRIALS · MEP CONTRACTOR · APOLLO PE · SEP 2026</text>
+    </svg>
+  </div>
+
+  <div class="article-body">
+    <p>The State Group, a mechanical, electrical, and plumbing contractor backed by Apollo Global Management, has acquired MelKay Electric of Evansville, Indiana. The deal, announced September 8, brings into the fold a 75-year-old trade contractor with more than 400 union workers and a deep book of construction and maintenance work spanning Southern Indiana, Western Kentucky, and Southern Illinois. Financial terms were not disclosed.</p>
+
+    <p>MelKay was founded in 1951 and has been run by the same family across three generations. Scott Hartig, the founder's grandson and current CEO, has led the company through a period of steady growth in the Evansville market. Chad Thompson, MelKay's president, will stay on with the combined organization.</p>
+
+    <dl class="data-strip">
+      <div>
+        <dt>Deal Value</dt>
+        <dd>Undisclosed</dd>
+      </div>
+      <div>
+        <dt>Announced</dt>
+        <dd>Sep 8, 2026</dd>
+      </div>
+      <div>
+        <dt>Target HQ</dt>
+        <dd>Evansville, IN</dd>
+      </div>
+      <div>
+        <dt>Founded</dt>
+        <dd>1951</dd>
+      </div>
+      <div>
+        <dt>Workforce</dt>
+        <dd>400+ union</dd>
+      </div>
+      <div>
+        <dt>PE Sponsor</dt>
+        <dd>Apollo</dd>
+      </div>
+    </dl>
+
+    <p>For The State Group, MelKay is another add-on in what has become an aggressive regional build-out since Apollo funds took a majority stake in the company from Blue Wolf Capital in November 2024. Blue Wolf retained a minority position alongside existing management. The acquisition follows a similar move earlier in 2026 when The State Group acquired Ruder Electric, a Kankakee, Illinois-based contractor, also expanding its Illinois presence.</p>
+
+    <p>Berenson and Company advised The State Group on the MelKay transaction. No financial advisor was named for the seller.</p>
+
+    <h2>What Apollo Is Building</h2>
+
+    <p>The State Group's acquisition strategy reflects a broader private equity thesis that has been running in the skilled trades sector for several years now. MEP contractors, which handle the mechanical, electrical, and plumbing systems that make industrial and commercial facilities function, have historically been fragmented across hundreds of regional owner-operated businesses. Many of these firms have ownership succession problems, since the founders who built them over decades do not have a clear path to passing them to the next generation or to employees. That creates a natural market for a well-capitalized roll-up platform.</p>
+
+    <p>The logic is straightforward: a national platform can win contracts that regional shops cannot, offer customers consistent service across multiple geographies, and invest in training programs and technology that a 400-person regional contractor does not have the balance sheet to fund on its own. Union workforce density, which MelKay has in spades, is a particular draw in an environment where labor is the binding constraint on construction project timelines.</p>
+
+    <div class="pull-quote">
+      <blockquote>"MelKay has served Southern Indiana for over seven decades, and joining The State Group gives us the resources to take on larger projects and grow our workforce into new markets."</blockquote>
+      <cite>Chad Thompson, President, MelKay Electric</cite>
+    </div>
+
+    <h2>Evansville as a Foothold</h2>
+
+    <p>Evansville sits at the confluence of Indiana, Kentucky, and Illinois, making it a natural hub for a contractor looking to operate across all three states. The city's industrial base includes automotive suppliers, food processing operations, and a number of petrochemical and plastics manufacturers tied to the Ohio River corridor. Maintenance and capital improvement work for those facilities requires exactly the kind of MEP expertise that MelKay has built over 75 years.</p>
+
+    <p>Southern Indiana has also benefited from a wave of economic development tied to electric vehicle battery manufacturing and semiconductor supply chain investment that has been reshaping the state's industrial geography since 2022. New plant construction in that environment is labor-intensive and MEP-heavy, which plays directly into the kind of work MelKay's workforce is positioned to pursue under the resources of a larger platform.</p>
+
+    <div class="context-box">
+      <h3>The MEP Roll-Up Landscape</h3>
+      <p>The State Group is one of several Apollo portfolio companies pursuing a skilled trades consolidation strategy. The MEP contracting sector in the United States is estimated to represent hundreds of billions in annual revenue, yet the top 10 firms account for a relatively small share of that total. The fragmentation creates both an opportunity and a challenge for roll-up platforms: each acquired company has its own culture, customer relationships, and labor agreements that must be preserved to avoid disrupting ongoing projects.</p>
+      <p>Blue Wolf Capital, which backed The State Group before Apollo, has a history of investments in industrial services businesses and was an early believer in the MEP consolidation theme. Apollo's involvement since late 2024 has accelerated the platform's pace of acquisitions and expanded its geographic ambitions from regional to national.</p>
+    </div>
+
+    <p>For the Evansville community, the acquisition brings some uncertainty alongside the resources of a larger owner. MelKay has operated as an independent contractor for three-quarters of a century, and its union relationships are deeply local. The State Group has emphasized continuity of management and workforce in each of its acquisitions, and Thompson's retention is consistent with that approach. Whether that holds as the platform scales will be one of the more interesting things to watch in the coming years.</p>
+
+    <div class="article-tags">
+      <a href="#">Industrials</a>
+      <a href="#">Indiana</a>
+      <a href="#">M&amp;A</a>
+      <a href="#">Private Equity</a>
+      <a href="#">Apollo</a>
+      <a href="#">Evansville</a>
+      <a href="#">Skilled Trades</a>
+      <a href="#">Midwest</a>
+    </div>
+  </div>
+</main>
+
+<section class="related-section">
+  <div class="related-inner">
+    <h2>Related Coverage</h2>
+    <div class="related-grid">
+      <a href="resultant-liberty-advisor-2026.html" class="related-card">
+        <p class="card-kicker">Professional Services &middot; Indiana</p>
+        <h3>Resultant Acquires Liberty Advisor Group</h3>
+        <p>Indianapolis-based Resultant adds a Chicago strategy and technology consulting firm, deepening its financial services and public sector footprint.</p>
+      </a>
+      <a href="byline-bancorp-illinois-state-bancorp-2026.html" class="related-card">
+        <p class="card-kicker">Banking &middot; Illinois M&amp;A</p>
+        <h3>Byline Bancorp to Acquire Illinois State Bancorp in $87.9M Deal</h3>
+        <p>Rosemont-based Byline adds First Nations Bank and The Bank of Bourbonnais in a cash-and-stock deal that pushes the combined bank past $10.5 billion in assets.</p>
+      </a>
+      <a href="deals.html" class="related-card">
+        <p class="card-kicker">Deal Flow</p>
+        <h3>Full Midwest Deal Tracker</h3>
+        <p>Browse every tracked M&amp;A and private equity transaction across Indiana, Illinois, Ohio, Michigan, and Wisconsin.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">The 317</span>
+  <span class="footer-copy">&copy; 2026 The 317. All rights reserved.</span>
+  <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="deals.html">Deals</a>
+    <a href="mailto:tips@the317.com">Tips</a>
+  </nav>
+</footer>
+
+<script src="ticker.js"></script>
+<script>
+(function() {
+  const track = document.getElementById('ticker-track');
+  if (!track || typeof STOCK_TICKERS === 'undefined') return;
+
+  function buildItems(tickers) {
+    return tickers.map(t => {
+      const sign = t.up ? '+' : '';
+      return `<div class="ticker-item">
+        <span class="ticker-sym">${t.sym}</span>
+        <span class="ticker-price">$${t.price.toFixed(2)}</span>
+        <span class="ticker-pct ${t.up ? 'up' : 'down'}">${sign}${t.pct.toFixed(2)}%</span>
+      </div>`;
+    }).join('');
+  }
+
+  const html = buildItems(STOCK_TICKERS);
+  track.innerHTML = html + html;
+
+  STOCK_TICKERS.forEach(t => {
+    const apiKey = (typeof FINNHUB_API_KEY !== 'undefined') ? FINNHUB_API_KEY : null;
+    if (!apiKey) return;
+    fetch(`https://finnhub.io/api/v1/quote?symbol=${t.sym}&token=${apiKey}`)
+      .then(r => r.json())
+      .then(data => {
+        if (!data.c) return;
+        t.price = data.c;
+        t.pct = ((data.c - data.pc) / data.pc) * 100;
+        t.up = t.pct >= 0;
+        track.innerHTML = buildItems(STOCK_TICKERS) + buildItems(STOCK_TICKERS);
+      })
+      .catch(() => {});
+  });
+})();
+</script>
+</body>
+</html>
