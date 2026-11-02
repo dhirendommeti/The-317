@@ -1,13 +1,8 @@
 <svg viewBox="0 0 800 200" width="800" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="0.9" fill="#8b9bbd" opacity="0.28"/>
-    </pattern>
   </defs>
 
   <rect width="800" height="200" fill="#f4f5f7"/>
-  <rect width="800" height="200" fill="url(#dots)"/>
-
   <!-- ── LEFT: Church's ── -->
   <rect x="52" y="72" width="52" height="52" fill="#e8421a" rx="3"/>
   <text x="78" y="107" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="#ffffff" text-anchor="middle">C</text>

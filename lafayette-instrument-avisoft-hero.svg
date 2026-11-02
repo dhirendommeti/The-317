@@ -1,10 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
   <rect width="800" height="200" fill="#f4f5f7"/>
-  <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-    <circle cx="10" cy="10" r="0.9" fill="#c0c6d0" opacity="0.7"/>
-  </pattern>
-  <rect width="800" height="200" fill="url(#dots)"/>
-
   <!-- Lafayette: Li box x=55, text x=125, right edge ~280 -->
   <rect x="55" y="70" width="60" height="60" fill="#1565C0" rx="3"/>
   <rect x="65" y="80" width="10" height="38" fill="white"/>

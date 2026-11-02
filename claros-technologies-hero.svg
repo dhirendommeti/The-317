@@ -1,9 +1,6 @@
 <svg viewBox="0 0 800 200" width="800" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="0.9" fill="#8b9bbd" opacity="0.28"/>
-    </pattern>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
@@ -11,7 +8,6 @@
 
   <!-- Background -->
   <rect width="800" height="200" fill="#f4f5f7"/>
-  <rect width="800" height="200" fill="url(#dots)"/>
   <rect x="0" y="0" width="380" height="200" fill="rgba(91,141,239,0.04)"/>
 
   <!-- Molecular chain — larger, fills right half -->
