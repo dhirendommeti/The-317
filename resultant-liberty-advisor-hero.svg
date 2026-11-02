@@ -12,7 +12,7 @@
           <rect x="60" y="60" width="240" height="4" rx="2" fill="#5b8def"/>
           <text x="180" y="98" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">ACQUIRER · INDIANAPOLIS</text>
           <text x="180" y="130" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="22">Resultant</text>
-          <text x="180" y="152" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="10">Backed by Investcorp</text>
+          <text x="180" y="152" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Backed by Investcorp</text>
           <line x1="90" y1="168" x2="270" y2="168" stroke="#1f2c47" stroke-width="1"/>
           <text x="180" y="190" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Specialty</text>
           <text x="180" y="210" text-anchor="middle" fill="#edf1fa" font-family="Inter,sans-serif" font-size="12" font-weight="600">Data &amp; Digital</text>
@@ -24,7 +24,7 @@
           <line x1="316" y1="185" x2="424" y2="185" stroke="#5b8def" stroke-width="2" marker-end="url(#arr3)"/>
           <rect x="316" y="155" width="108" height="58" rx="5" fill="#0f1623" stroke="#5b8def" stroke-width="1"/>
           <text x="370" y="173" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8" letter-spacing="0.1em">DEAL VALUE</text>
-          <text x="370" y="192" text-anchor="middle" fill="#5b8def" font-family="JetBrains Mono,monospace" font-size="13" font-weight="600">Undisclosed</text>
+          <text x="370" y="192" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="13" font-weight="600">Undisclosed</text>
           <text x="370" y="206" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8">Privately held</text>
 
           <!-- Liberty card (target) -->

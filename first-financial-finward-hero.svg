@@ -33,5 +33,5 @@
 
   <!-- Bottom strip -->
   <rect x="0" y="180" width="800" height="20" fill="#e2e4e9"/>
-  <text x="400" y="193" font-family="JetBrains Mono,monospace" font-size="9" fill="#666" text-anchor="middle" letter-spacing="2">FIRST FINANCIAL BANCORP · FINWARD BANCORP · ALL-STOCK · $208M · 2026</text>
+  <text x="400" y="193" font-family="Inter,sans-serif" font-size="9" fill="#666" text-anchor="middle" letter-spacing="2">FIRST FINANCIAL BANCORP · FINWARD BANCORP · ALL-STOCK · $208M · 2026</text>
 </svg>

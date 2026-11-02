@@ -12,7 +12,7 @@
           <rect x="60" y="60" width="240" height="4" rx="2" fill="#5b8def"/>
           <text x="180" y="98" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">PLATFORM · PE ADD-ON</text>
           <text x="180" y="128" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="19">ASA Safety Supply</text>
-          <text x="180" y="150" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="10">Backed by Trivest Partners</text>
+          <text x="180" y="150" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Backed by Trivest Partners</text>
           <line x1="90" y1="165" x2="270" y2="165" stroke="#1f2c47" stroke-width="1"/>
           <text x="180" y="185" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Products distributed</text>
           <text x="180" y="205" text-anchor="middle" fill="#edf1fa" font-family="Inter,sans-serif" font-size="11">Hard hats · Gloves</text>
@@ -25,7 +25,7 @@
           <line x1="316" y1="185" x2="424" y2="185" stroke="#5b8def" stroke-width="2" marker-end="url(#arr4)"/>
           <rect x="316" y="155" width="108" height="58" rx="5" fill="#0f1623" stroke="#5b8def" stroke-width="1"/>
           <text x="370" y="173" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8" letter-spacing="0.1em">DEAL TYPE</text>
-          <text x="370" y="192" text-anchor="middle" fill="#5b8def" font-family="JetBrains Mono,monospace" font-size="13" font-weight="600">PE Add-On</text>
+          <text x="370" y="192" text-anchor="middle" fill="#5b8def" font-family="Inter,sans-serif" font-size="13" font-weight="600">PE Add-On</text>
           <text x="370" y="206" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="8">Terms undisclosed</text>
 
           <!-- Target card -->
@@ -34,7 +34,7 @@
           <text x="560" y="98" text-anchor="middle" fill="#82aef2" font-family="Inter,sans-serif" font-size="9" letter-spacing="0.14em" font-weight="700">TARGET · INDIANA</text>
           <text x="560" y="124" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="18">Indiana Safety</text>
           <text x="560" y="146" text-anchor="middle" fill="#edf1fa" font-family="DM Serif Display,Georgia,serif" font-size="18">&amp; Supply</text>
-          <text x="560" y="168" text-anchor="middle" fill="#8b9bbd" font-family="JetBrains Mono,monospace" font-size="10">Washington, IN (ISS)</text>
+          <text x="560" y="168" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Washington, IN (ISS)</text>
           <line x1="470" y1="182" x2="650" y2="182" stroke="#1f2c47" stroke-width="1"/>
           <text x="560" y="202" text-anchor="middle" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="10">Location</text>
           <text x="560" y="224" text-anchor="middle" fill="#edf1fa" font-family="Inter,sans-serif" font-size="13" font-weight="600">Daviess County, IN</text>

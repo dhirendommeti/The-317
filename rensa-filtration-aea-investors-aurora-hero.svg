@@ -46,7 +46,7 @@
       <line x1="364" y1="148" x2="706" y2="148" stroke="#1f2c47" stroke-width="1"/>
 
       <!-- Big stat: acquisitions under Audax -->
-      <text x="364" y="198" fill="#edf1fa" font-family="JetBrains Mono,monospace" font-size="52" font-weight="500">10</text>
+      <text x="364" y="198" fill="#edf1fa" font-family="Inter,sans-serif" font-size="52" font-weight="500">10</text>
       <text x="364" y="220" fill="#8b9bbd" font-family="Inter,sans-serif" font-size="12">acquisitions under Audax (2022-2026)</text>
 
       <line x1="364" y1="238" x2="706" y2="238" stroke="#1f2c47" stroke-width="1"/>
