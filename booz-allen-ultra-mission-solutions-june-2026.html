@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Booz Allen's $720 Million Shortcut — The 317</title>
-<meta name="description" content="Booz Allen Hamilton agreed to buy Ultra I&C Mission Solutions for $720 million. The deal is less about capability and more about time — and what it says about where defense tech M&A is headed.">
+<title>Booz Allen Paid $720 Million to Find Out Whether It Can Run a Product Company | The 317</title>
+<meta name="description" content="The Ultra Mission Solutions deal closed in August. Read against Booz Allen's last two quarters, it looks less like a capability purchase and more like a test of whether a services firm can grow without adding people.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Booz Allen's $720 Million Shortcut — The 317">
-<meta property="og:description" content="Booz Allen Hamilton agreed to buy Ultra I&C Mission Solutions for $720 million. The deal is less about capability and more about time.">
+<meta property="og:title" content="Booz Allen Paid $720 Million to Find Out Whether It Can Run a Product Company | The 317">
+<meta property="og:description" content="The Ultra Mission Solutions deal closed in August. Read against Booz Allen's last two quarters, it looks less like a capability purchase and more like a test of whether a services firm can grow without adding people.">
 <meta property="og:image" content="booz-allen-hero.jpg">
 <meta property="og:url" content="https://the317.com/booz-allen-ultra-mission-solutions-june-2026.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Booz Allen's $720 Million Shortcut — The 317">
-<meta name="twitter:description" content="Booz Allen Hamilton agreed to buy Ultra I&C Mission Solutions for $720 million. The deal is less about capability and more about time.">
+<meta name="twitter:title" content="Booz Allen Paid $720 Million to Find Out Whether It Can Run a Product Company | The 317">
+<meta name="twitter:description" content="The Ultra Mission Solutions deal closed in August. Read against Booz Allen's last two quarters, it looks less like a capability purchase and more like a test of whether a services firm can grow without adding people.">
 <meta name="twitter:image" content="booz-allen-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -275,7 +275,7 @@
     margin-bottom: 1.4em;
   }
 
-  .article-body p:first-child::first-letter {
+  .article-body > p:first-child::first-letter {
     font-family: 'Libre Baskerville', Georgia, serif;
     font-size: 64px;
     font-weight: 900;
@@ -331,7 +331,7 @@
     padding: 24px 28px;
     margin: 2.4em 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px 32px;
   }
 
@@ -404,7 +404,7 @@
   }
 
   .context-box li::before {
-    content: '—';
+    content: '•';
     position: absolute;
     left: 0;
     color: var(--ember);
@@ -544,10 +544,35 @@
   }
 
   @media (max-width: 600px) {
-    .article-body p:first-child::first-letter { font-size: 48px; }
+    .article-body > p:first-child::first-letter { font-size: 48px; }
     .data-strip { grid-template-columns: repeat(2, 1fr); }
     #utility-bar .util-right { display: none; }
   }
+  .deal-math { width: 100%; border-collapse: collapse; margin: 36px 0 12px; font-family: 'Inter', Arial, sans-serif; }
+  .deal-math caption { text-align: left; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); padding-bottom: 12px; }
+  .deal-math td { padding: 12px 0; border-top: 1px solid var(--rule); font-size: 15px; color: var(--ink); vertical-align: top; }
+  .deal-math td.num { text-align: right; font-weight: 600; white-space: nowrap; padding-left: 24px; letter-spacing: -0.01em; }
+  .deal-math td .how { display: block; font-size: 12px; color: var(--ink-mute); margin-top: 3px; }
+  .chart-figure { margin: 40px 0 12px; padding: 24px; background: var(--paper-2); border: 1px solid var(--rule); }
+  .chart-figure svg { width: 100%; height: auto; display: block; }
+  .chart-figure figcaption { font-family: 'Inter', Arial, sans-serif; font-size: 12px; color: var(--ink-mute); margin-top: 14px; line-height: 1.5; }
+  .chart-title { font-family: 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 16px; }
+  .methods-note { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--rule); font-family: 'Inter', Arial, sans-serif; font-size: 12px; line-height: 1.65; color: var(--ink-mute); }
+  .methods-note p { font-family: inherit; font-size: inherit; line-height: inherit; color: inherit; margin: 0 0 10px; }
+  .mix-row { margin-bottom: 18px; }
+  .mix-year { font-family: 'Inter', Arial, sans-serif; font-size: 13px; font-weight: 600; color: var(--ink); margin: 0 0 6px; }
+  .mix-year span { font-weight: 400; color: var(--ink-mute); margin-left: 8px; }
+  .mix-bar { display: flex; height: 28px; }
+  .mix-bar .seg, .mix-legend .key { background: #6b7fa8; }
+  .mix-bar .seg.civil, .mix-legend .key.civil { background: #5b8def; }
+  .mix-bar .seg.defense, .mix-legend .key.defense { background: #3a4d75; }
+  .mix-legend { width: 100%; border-collapse: collapse; margin-top: 22px; font-family: 'Inter', Arial, sans-serif; font-size: 13px; color: var(--ink); }
+  .mix-legend td { padding: 8px 0; border-top: 1px solid var(--rule); }
+  .mix-legend td + td { text-align: right; padding-left: 12px; white-space: nowrap; }
+  .mix-legend .key { display: inline-block; width: 10px; height: 10px; margin-right: 8px; vertical-align: 0; }
+  .mix-legend .chg { color: var(--ink-mute); }
+  .mix-legend .mix-head td { border-top: none; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); padding-bottom: 4px; }
+  .mix-legend .chg.neg { color: #82aef2; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -600,25 +625,27 @@
         <span>Defense</span>
         <span class="kicker-dot">·</span>
         <span>M&amp;A</span>
+        <span class="kicker-dot">·</span>
+        <span>Analysis</span>
       </p>
       <h1 class="article-headline">
-        Booz Allen's $720 Million Shortcut
+        Booz Allen Paid $720 Million to Find Out Whether It Can Run a Product Company
       </h1>
       <p class="article-dek">
-        Booz Allen Hamilton agreed to buy Ultra I&amp;C Mission Solutions from Cobham Ultra Group. The deal is less about capability and more about time — and what it reveals about where defense tech M&amp;A is headed.
+        The Ultra Mission Solutions deal closed in August. Read against Booz Allen's last two quarters, it looks less like a capability purchase and more like a test of whether a 31,000-person services firm can grow without adding people.
       </p>
       <div class="article-meta">
         <span>By Dhiren Dommeti</span>
         <span class="meta-dot">·</span>
-        <span>June 23, 2026</span>
+        <span>November 12, 2026</span>
         <span class="meta-dot">·</span>
-        <span>6 min read</span>
+        <span>8 min read</span>
         <span class="meta-dot">·</span>
         <span>Defense · M&amp;A</span>
       </div>
     </header>
 
-    <!-- HERO IMAGE PLACEHOLDER -->
+    <!-- HERO IMAGE -->
     <figure class="hero-figure fade-in">
       <img
         src="booz-allen-hero.jpg"
@@ -627,105 +654,161 @@
         onerror="this.parentElement.classList.add('img-missing')"
       >
       <div class="hero-img hero-fallback" role="img" aria-hidden="true">
-        <div class="grid-lines"></div>
         <p class="hero-img-label">Add hero image · save as booz-allen-hero.jpg in this folder</p>
       </div>
-      <figcaption class="hero-caption">Booz Allen Hamilton (NYSE: BAH) announced the acquisition of Ultra I&amp;C Mission Solutions on June 22, 2026, for $720 million. The deal is expected to close by September 30.</figcaption>
+      <figcaption class="hero-caption">Booz Allen Hamilton (NYSE: BAH) announced the acquisition of Ultra I&amp;C Mission Solutions on June 22, 2026, and closed it on August 24. Ultra is headquartered in Austin, Texas.</figcaption>
     </figure>
 
     <!-- BODY -->
     <div class="article-body">
 
-      <p>Building an encryption division takes years. Acquiring one takes a wire transfer.</p>
+      <p>In the fiscal year that ended March 31, Booz Allen Hamilton's civil business lost $920 million of revenue. The firm finished the year with about 31,500 employees, down from 35,800 twelve months earlier. In the quarter that followed, it spent $729 million in cash on a company with 220 people.</p>
 
-      <p>Booz Allen Hamilton announced Monday it would buy Ultra I&amp;C Mission Solutions from Cobham Ultra Group for $720 million — picking up a defense technology business that already has engineers with clearances, contracts with the Army, Air Force, and Navy, and products deployed in the field. The deal is expected to close by September.</p>
-
-      <p>What Booz Allen actually bought is time.</p>
+      <p>On its own, the purchase of Ultra I&amp;C Mission Solutions from Advent International's Cobham Ultra Group reads like a tidy capability deal. Ultra makes mission software, ruggedized edge processors and encryption management tools for the Army, Air Force and Navy, and its product line (Apex, ADSI, ACTS, Rain and Knox) sits naturally beside Booz Allen's own tactical kit. Set next to the firm's financials, the deal carries more weight than that. It is the most expensive piece of evidence so far for an argument Booz Allen's leadership has been making since it built out a dedicated defense technology business under Steve Escaravage: that the firm's next decade of growth has to come from products it owns rather than hours it bills.</p>
 
       <!-- DATA STRIP -->
       <div class="data-strip fade-in">
         <div class="data-item">
-          <p class="data-label">Deal Value</p>
+          <p class="data-label">Purchase Price</p>
           <p class="data-value">$720M</p>
-          <p class="data-sub">Cash · Stock purchase</p>
+          <p class="data-sub">Closed Aug. 24, 2026</p>
         </div>
         <div class="data-item">
-          <p class="data-label">BAH Pre-Market</p>
-          <p class="data-value positive">+1.7%</p>
-          <p class="data-sub">Day of announcement</p>
+          <p class="data-label">Ultra Headcount</p>
+          <p class="data-value">220</p>
+          <p class="data-sub">~135 specialized engineers</p>
         </div>
         <div class="data-item">
-          <p class="data-label">BAH Backlog</p>
-          <p class="data-value">$38B</p>
-          <p class="data-sub">Record Q4 FY2026</p>
-        </div>
-        <div class="data-item">
-          <p class="data-label">Projected EBITDA Margin</p>
+          <p class="data-label">Ultra EBITDA Margin</p>
           <p class="data-value">&gt;20%</p>
-          <p class="data-sub">Double-digit rev. growth</p>
+          <p class="data-sub">Company guidance</p>
+        </div>
+        <div class="data-item">
+          <p class="data-label">BAH Adj. EBITDA Margin</p>
+          <p class="data-value">11.3%</p>
+          <p class="data-sub">Q2 fiscal 2027</p>
         </div>
       </div>
 
-      <p>The company's backlog hit $38 billion last quarter. A 1.1x book-to-bill ratio. Demand is not the constraint. The constraint is having the right products sitting under the right contract vehicles fast enough to capture it. Ultra Mission Solutions — which makes mission software, ruggedized edge processors, and encryption management tools for battlefield communications — fits that gap directly.</p>
+      <h2>What $720 million buys</h2>
 
-      <h2>The Advent side of this</h2>
+      <p>Booz Allen has not disclosed Ultra's revenue, so the usual multiple math can't be done from public filings. What can be measured is what the firm paid in physical terms and how much of its capacity the payment absorbed.</p>
 
-      <p>The seller is doing something worth watching separately.</p>
+      <table class="deal-math fade-in">
+        <caption>The deal, broken down</caption>
+        <tr>
+          <td>Price per employee<span class="how">$720M ÷ 220 employees</span></td>
+          <td class="num">$3.3M</td>
+        </tr>
+        <tr>
+          <td>Price per specialized engineer<span class="how">$720M ÷ ~135 engineers</span></td>
+          <td class="num">$5.3M</td>
+        </tr>
+        <tr>
+          <td>Share of Q2 FY27 capital deployed<span class="how">$729M of $965M; the rest was $170M in dividends and buybacks and $66M in venture investments</span></td>
+          <td class="num">76%</td>
+        </tr>
+        <tr>
+          <td>Share of FY27 free cash flow guidance<span class="how">$729M ÷ $887.5M, the midpoint of the $850M to $925M range</span></td>
+          <td class="num">~82%</td>
+        </tr>
+      </table>
 
-      <p>Advent International spent roughly $8 billion assembling a defense electronics platform — buying Cobham in 2020 for £4 billion, then Ultra Electronics two years later for £2.5 billion. It was a big bet on Western rearmament. The bet paid. Now Advent is cutting the platform into pieces and selling each one to the strategic buyer best positioned to scale it.</p>
+      <p>The second line is the one worth sitting with. At $5.3 million per engineer, Booz Allen bought people whose value lives mostly in what they know and in the code they maintain. The firm has bought technical shops before, including PAR Government Systems in 2024 for its rapid prototyping work. This one is different in kind. The asset is a product roadmap, and the price only holds if the engineers who built Apex and Knox are still writing the next versions three years from now.</p>
 
-      <p>March: Ultra Cyber goes to Airbus Defence and Space. June: Ultra Mission Solutions goes to Booz Allen.</p>
+      <p>Horacio Rozanski pointed to one mitigating fact on the October earnings call: "Ultra and Booz Allen have partnered successfully for years." Teams that already know each other's engineering habits integrate faster than strangers do. That lowers the integration risk without removing it.</p>
+
+      <h2>The hole Ultra was never going to fill</h2>
+
+      <p>It's tempting to read the deal as a patch for civil. The numbers don't support that reading, and it helps to be explicit about why.</p>
+
+      <p>Booz Allen doesn't report margins by segment. If civil earned something close to the firm's adjusted EBITDA margin of roughly 11%, the $920 million of civil revenue that disappeared in fiscal 2026 took around $100 million of annual EBITDA with it. Replacing that at a 20% to 25% margin would take $400 million to $500 million a year of product revenue. A 220-person company does not produce that, and nobody at Booz Allen has suggested it will. Civil isn't done shrinking, either. It fell 15% in the second quarter, and CFO Troy Lahr guided to a low double-digit decline for the full fiscal year, citing recompetes that came back with "smaller size and scope."</p>
+
+      <p>The more useful question is what Ultra changes about the shape of the firm.</p>
+
+      <figure class="chart-figure fade-in">
+        <p class="chart-title">Booz Allen revenue by market, fiscal years ended March 31</p>
+        <div class="mix-row">
+          <p class="mix-year">FY2025 <span>$11.98B</span></p>
+          <div class="mix-bar" style="width:100%">
+            <span class="seg civil" style="width:34.8%"></span><span class="seg defense" style="width:49.6%"></span><span class="seg intel" style="width:15.6%"></span>
+          </div>
+        </div>
+        <div class="mix-row">
+          <p class="mix-year">FY2026 <span>$11.22B</span></p>
+          <div class="mix-bar" style="width:93.7%">
+            <span class="seg civil" style="width:29.0%"></span><span class="seg defense" style="width:54.1%"></span><span class="seg intel" style="width:16.9%"></span>
+          </div>
+        </div>
+        <table class="mix-legend">
+          <tr class="mix-head"><td></td><td>FY2025</td><td>FY2026</td><td>Change</td></tr>
+          <tr><td><i class="key civil"></i>Civil</td><td>$4.17B</td><td>$3.25B</td><td class="chg neg">−22.1%</td></tr>
+          <tr><td><i class="key defense"></i>Defense</td><td>$5.94B</td><td>$6.07B</td><td class="chg">+2.2%</td></tr>
+          <tr><td><i class="key intel"></i>Intelligence</td><td>$1.87B</td><td>$1.90B</td><td class="chg">+1.6%</td></tr>
+        </table>
+        <figcaption>Civil fell from 34.8% of revenue to 29.0% in a single year, while defense rose from 49.6% to 54.1%. Bar lengths are to scale. Source: Booz Allen fiscal 2026 fourth-quarter results.</figcaption>
+      </figure>
+
+      <p>The mix shift happened before Ultra arrived. Defense is now more than half the business. What Booz Allen lacked was a way to make that defense revenue earn more per person. Ultra's margin, which the company describes as "well above 20%," is roughly double the 11.3% adjusted EBITDA margin Booz Allen reported for the second quarter. At those margins, a dollar of Ultra revenue carries about twice the EBITDA of the firm's average dollar, and delivering it doesn't require a new hire.</p>
+
+      <h2>The contract type matters more than the product</h2>
+
+      <p>Products only earn product margins if the government buys them like products. Under cost-plus or time-and-materials contracts, a contractor that delivers the same result with fewer hours earns less. Under firm fixed price contracts and Other Transaction agreements, it keeps the difference.</p>
+
+      <p>This was the most telling part of the second-quarter call. Kristine Martin Anderson, Booz Allen's president and chief operating officer, said the firm's national security "firm fixed price contract mix has increased by 3 percentage points year to date." Rozanski said the company is "seeing strong growth in our OT pipeline" and called outcome-based contracting "something we have been pushing for a long time."</p>
+
+      <p>Put those together and the logic of the deal gets sharper. Ultra's products were built to be sold on fixed terms to programs that want a working capability rather than a staffing plan. Booz Allen's contract mix is moving toward the vehicles where that model pays. The acquisition is as much a bet on how the Pentagon will pay over the next five years as on what it will buy.</p>
+
+      <h2>The consulting firm problem</h2>
+
+      <p>The hardest part of this deal won't show up on an integration checklist. It comes down to how the two businesses define a productive engineer.</p>
+
+      <p>In a services firm, an engineer who isn't charging to a contract is overhead, and utilization is the number that runs the business. In a product company, an engineer who spends a quarter on the next release, with no customer paying for those specific hours, is the business. At a government contractor, that work is usually funded as independent research and development and recovered through indirect rates. That keeps it allowable, but it also puts it in competition with every other cost in a pool that a services organization works hard to keep lean so it can win on price.</p>
+
+      <p>Large firms that buy small product teams tend to go wrong in one of two ways. They protect the team so completely that it never connects to the larger sales engine, or they absorb it so fully that the roadmap gets rewritten around whatever the next services contract needs. Booz Allen has said Ultra will operate as the commercial products arm of its defense technology business, which guards against the second failure better than the first. Rozanski also told analysts the firm is "productizing a lot of our IP," so Ultra's engineers are arriving in an organization that already has product ambitions of its own, including the Velox cyber suite.</p>
+
+      <p>The 135 engineers will notice which way it goes long before the financial statements do.</p>
+
+      <h2>Advent's side of the table</h2>
+
+      <p>The seller's math is cleaner. Advent bought Cobham in 2020 for about £4 billion and Ultra Electronics in 2022 for about £2.6 billion, then combined them. It has spent 2026 taking the combination apart: Ultra Cyber, a Maidenhead business with more than 200 staff, went to Airbus Defence and Space in March, and Ultra Mission Solutions went to Booz Allen in June.</p>
 
       <div class="pull-quote fade-in">
-        <blockquote>"Ultra Mission Solutions has established itself as a trusted partner to the U.S. military and its allies with a portfolio of capabilities designed for the next generation of national security missions."</blockquote>
-        <cite>— Mike Marshall, Managing Director, Advent International</cite>
+        <blockquote>"Booz Allen is the right home to scale that vision further."</blockquote>
+        <cite>Mike Marshall, Managing Director, Advent International</cite>
       </div>
 
-      <p>That's not a fire sale. That's a playbook. Find the right strategic home for each asset, collect a premium from buyers who can plug the product into existing contract vehicles, and exit cleanly. Marshall called Booz Allen "the right home to scale that vision further." That's exit language, but it's accurate exit language.</p>
-
-      <h2>The part that doesn't get written about</h2>
-
-      <p>Booz Allen is a 34,000-person firm. Ultra Mission Solutions has 220 employees, 135 of them specialized engineers who built focused products inside a focused company.</p>
-
-      <p>Large defense primes buy small technical shops all the time. Sometimes the engineers stay, the products get integrated, and the acquisition looks smart in five years. Sometimes the culture dissolves, the engineers leave, and the buyer ends up with contracts but no one who understands the technology well enough to win the follow-on work.</p>
-
-      <p>Booz Allen paid a price that assumes the former. The next few years will say which one it gets.</p>
-
-      <h2>Why this deal is bigger than $720 million</h2>
-
-      <p>The defense tech M&amp;A market has been moving in one direction for three years. Strategics are winning. PE is selling.</p>
-
-      <p>The reason is structural. A financial sponsor can own an encryption company and run it well. But it can't plug that company's products into a $38 billion contract backlog on day one. Booz Allen can. That's not a competitive advantage — it's a different category of buyer entirely. And sellers, and their bankers, have figured that out.</p>
-
-      <p>What you're seeing in the Cobham Ultra carve-outs isn't Advent struggling to find exits. It's Advent running a disciplined process where each business unit goes to whoever can generate the most value from it — and collecting accordingly. That's how the best PE firms operate at the end of a hold period. The $720 million Booz Allen is paying for 220 people and three product lines reflects that leverage.</p>
+      <p>Each piece went to a buyer that could put the product straight onto existing programs: a European prime building a UK sovereign cyber capability, and an American contractor whose backlog now stands near $41 billion. That's how a sponsor gets paid at the end of a hold, and it says something about the market Booz Allen now competes in. Advent alone says it has put more than $15 billion of enterprise value into defense since 2020. As those holds run out, the most natural buyers for the pieces will be strategics with contract access. Booz Allen will see more deals like this one, and so will every competitor that wants to make the same shift.</p>
 
       <div class="section-rule"></div>
 
       <!-- CONTEXT BOX -->
       <div class="context-box fade-in">
-        <p class="context-box-title">What to Watch · Key Takeaways</p>
+        <p class="context-box-title">What to Watch</p>
         <ul>
-          <li>The close is targeted for September 30, 2026 — pending Hart-Scott-Rodino antitrust clearance. No major obstacles are expected given the complementary nature of the two businesses.</li>
-          <li>Booz Allen was awarded a Space Force contract under the Golden Dome program in May. Ultra Mission Solutions' edge compute and encryption stack slots directly into that kind of program.</li>
-          <li>Advent still holds other Ultra Electronics assets. The pace of remaining exits will signal how much dry powder the firm is returning to LPs — and whether a broader realization event is coming.</li>
-          <li>The integration question is real. Ultra Mission Solutions operates across five facilities with a tight engineering headcount. Retention packages and operational autonomy will determine whether the acquisition holds its value.</li>
-          <li>For defense tech M&amp;A broadly, this deal reinforces a pattern: strategics with existing DoD contract vehicles are outcompeting PE for technical assets. Expect more carve-outs like this in 2026 and into 2027.</li>
+          <li><strong>Disclosure.</strong> Booz Allen doesn't break out product revenue today. If Ultra grows at the "strong double-digit rate" management has guided to, the firm will have reasons to start showing it. If it never does, that is information too.</li>
+          <li><strong>Retention.</strong> Most of the deal's value sits with roughly 135 engineers. Departures around the first anniversary of the close, in August 2027, would say more than any earnings call.</li>
+          <li><strong>Contract mix.</strong> The 3-point gain in fixed price mix is the leading indicator. Product margins need fixed price and OT vehicles to survive inside a services firm.</li>
+          <li><strong>Foreign Military Sales.</strong> The announcement named FMS as a sales channel. Allied orders for Ultra products would be the clearest sign that Booz Allen can sell hardware-enabled products outside its traditional customer relationships.</li>
+          <li><strong>The next deal.</strong> Fiscal 2027 free cash flow guidance of $850 million to $925 million already absorbs Ultra's costs and interest. A second product acquisition of similar size within a year would signal that leadership sees Ultra as the start of a pattern rather than a single bet.</li>
         </ul>
       </div>
 
-      <p>There will be more deals like this. The DoD's push toward AI-enabled battlefield systems, resilient communications, and hardened edge infrastructure is not slowing down. The companies that move first lock in the contract vehicles. The ones that wait buy at a higher price, or don't get to buy at all.</p>
+      <p>Booz Allen has spent most of its 112 years selling expertise by the hour, and it has been very good at it. The past year showed the limits of that model when a large customer decides to buy less of it. Ultra is a small company carrying a large question: whether a firm built on billable expertise can also own, fund and patiently improve products. The $720 million will be judged on that answer, and getting it will take longer than one integration cycle.</p>
 
-      <p>Booz Allen moved first. Whether $720 million was the right price for that position is a question the September close will start to answer — and the integration will finish.</p>
+      <div class="methods-note">
+        <p><strong>Sources and method.</strong> Deal terms, Ultra's headcount and margin guidance come from Booz Allen's June 22 and August 24, 2026 press releases filed with the SEC. Revenue by market and headcount come from Booz Allen's fiscal 2026 fourth-quarter results (fiscal year ended March 31, 2026). Contract mix, capital deployment, the civil decline and fiscal 2027 guidance come from the October 23, 2026 second-quarter earnings call.</p>
+        <p>Per-employee and per-engineer prices are simple division of the headline price. The EBITDA replacement estimate assumes civil earned a margin near the firm-wide average, which Booz Allen doesn't disclose. It is illustrative, not a reported figure.</p>
+      </div>
 
       <!-- TAGS -->
       <div class="article-tags">
-        <span class="tag">Defense</span>
+        <span class="tag">Defense Tech</span>
         <span class="tag">M&amp;A</span>
         <span class="tag">Booz Allen Hamilton</span>
-        <span class="tag">Private Equity</span>
         <span class="tag">Advent International</span>
-        <span class="tag">Defense Tech</span>
-        <span class="tag">Carve-Out</span>
+        <span class="tag">Government Services</span>
+        <span class="tag">Analysis</span>
       </div>
 
     </div>
@@ -745,7 +828,7 @@
       </article>
       <article class="related-card" onclick="window.location='deal-flow.html'">
         <p class="related-kicker">Deal Flow</p>
-        <h3 class="related-headline">Every Midwest Deal We're Tracking — Sourced and Verified</h3>
+        <h3 class="related-headline">Every Midwest Deal We're Tracking, Sourced and Verified</h3>
       </article>
     </div>
   </div>
